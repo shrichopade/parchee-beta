@@ -44,6 +44,11 @@ const styles = StyleSheet.create({
     color: '#202020',
     fontSize: 12,
     fontWeight: '600'
+  },
+  RNPickerSelectStyle: {
+    width: '80%',
+    fontSize: 18,
+    color: '#101010'
   }
 });
 

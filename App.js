@@ -48,12 +48,6 @@ export default function App() {
             headerStyle: {
               backgroundColor: 'green',
             },
-            headerTitleStyle: {
-              color:'green'
-            },
-            headerLeft: () => (
-              <img src='./screens/images/preferences.png' width="40" height="40" />
-            ),
             headerRight: () => (
               <img src='./screens/images/avatar-photo.jpg' width="40" height="40"/>
             ),
