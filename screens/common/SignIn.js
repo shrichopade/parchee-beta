@@ -28,7 +28,7 @@ export default function SignIn({ navigation }) {
             <AppTextInput
               value={username}
               onChangeText={text => setUsername(text)}
-              leftIcon="account"
+              leftIcon="email-open"
               placeholder="Enter username"
               autoCapitalize="none"
               keyboardType="email-address"

@@ -9,6 +9,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 //Screens import
 import SignIn from './screens/common/SignIn';
+import SignUp from './screens/common/SignUp';
 import PatientHome from './screens/patient/PatientHome';
 
 //Aws Amplify Imports
@@ -22,8 +23,42 @@ export default function App() {
   return (  
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SignIn">
-        <Stack.Screen name="SignIn" component={SignIn} />
-        <Stack.Screen name="PatientHome" component={PatientHome} />
+        <Stack.Screen name="SignIn" component={SignIn} 
+            options={{
+              headerStyle: {
+                backgroundColor: '#ffffff',
+              },
+              headerTitleStyle: {
+                color:'#ffffff'
+              },
+            }}
+        />
+        <Stack.Screen name="SignUp" component={SignUp} 
+            options={{
+              headerStyle: {
+                backgroundColor: '#ffffff',
+              },
+              headerTitleStyle: {
+                color:'#ffffff'
+              },
+            }}
+        />
+        <Stack.Screen name="PatientHome" component={PatientHome} 
+          options={{
+            headerStyle: {
+              backgroundColor: 'green',
+            },
+            headerTitleStyle: {
+              color:'green'
+            },
+            headerLeft: () => (
+              <img src='./screens/images/preferences.png' width="40" height="40" />
+            ),
+            headerRight: () => (
+              <img src='./screens/images/avatar-photo.jpg' width="40" height="40"/>
+            ),
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
