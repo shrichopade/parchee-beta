@@ -44,6 +44,7 @@ export default function SignIn({ navigation }) {
               secureTextEntry
               textContentType="password"
             />
+            <AppButton title="Login" onPress={signIn} />
             <View style={styles.footerButtonContainer}>
               <TouchableOpacity onPress={() => navigation.navigate('ResetPassword')}>
                 <Text style={styles.forgotPasswordButtonText}>
@@ -51,7 +52,6 @@ export default function SignIn({ navigation }) {
                 </Text>
               </TouchableOpacity>
             </View>
-            <AppButton title="Login" onPress={signIn} />
             <View style={styles.footerButtonContainer}>
                 <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
                     <Text style={styles.forgotPasswordButtonText}>

@@ -14,7 +14,7 @@ import AdvtBanner from '../patient/AdvtBanner.js';
 export default function SignUp({ navigation }) {
     const [givenName, setGivenname] = useState('');
     const [familyName, setFamilyname] = useState('');
-    const [dateOfBirth, setDateOfBirth] = useState('');
+    const [dateOfBirth, setDateOfBirth] = useState(new Date());
 
     const [mobileNumber, setMobileNumber] = useState('');
     const [username, setUsername] = useState('');
@@ -63,7 +63,7 @@ export default function SignUp({ navigation }) {
                     <DatePicker
                         defaultDate={new Date(2018, 4, 4)}
                         minimumDate={new Date(2018, 1, 1)}
-                        maximumDate={new Date(2018, 12, 31)}
+                        maximumDate={new Date(1920, 12, 31)}
                         locale={"en"}
                         timeZoneOffsetInMinutes={undefined}
                         modalTransparent={false}
@@ -71,10 +71,10 @@ export default function SignUp({ navigation }) {
                         androidMode={"default"}
                         placeHolderText="Select date"
                         textStyle={{ color: "green" }}
-                        placeHolderTextStyle={{ color: "#d3d3d3" }}
-                        onDateChange={text => setFamilyname(text)}
+                        placeHolderTextStyle={{ fontFamily:'Arial', fontSize:'16',fontWeight: '600', color: "#8B918D" }}
+                        onDateChange={newDate => setDateOfBirth(newDate)}
                         disabled={false}
-                        style={{height: 50, width: '80%', color: '#101010'}}
+                        style={{height: 70, width: '80%', color: '#8B918D'}}
                     />
                     <AppTextInput
                         value={mobileNumber}
@@ -133,7 +133,7 @@ export default function SignUp({ navigation }) {
                         textContentType="numeric"
                     />
                     <View style={styles.checkboxInput}>
-                        <Text style={styles.textLabel}>
+                        <Text style={styles.forgotPasswordButtonText}>
                             <Checkbox  status={mktPref ? 'checked' : 'unchecked'}
                                 onPress={() => {
                                     setMktPref(!mktPref);
@@ -142,7 +142,7 @@ export default function SignUp({ navigation }) {
                         Marketing Preferences</Text>
                     </View>
                     <View style={styles.checkboxInput}>
-                        <Text style={styles.textLabel}>
+                        <Text style={styles.forgotPasswordButtonText}>
                             <Checkbox  status={termsConditions ? 'checked' : 'unchecked'}
                                 onPress={() => {
                                     setTermsConditions(!termsConditions);

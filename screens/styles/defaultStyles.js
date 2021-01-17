@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   forgotPasswordButtonText: {
-    color: 'tomato',
-    fontSize: 18,
+    color: '#8B918D',
+    fontSize: 16,
     fontWeight: '600'
   },
   textLabel: {
@@ -72,14 +72,14 @@ const styles = StyleSheet.create({
     marginVertical: 8
   },
   buttonText: {
-    fontSize: 14,
+    fontSize: 16,
     fontFamily: 'Arial',
     color: '#ffffff',
-    fontWeight: '100'
+    fontWeight: '200'
   },
   tableHeaderBgColor: {
     flex: 1,
-    backgroundColor: '#C3E9C3'
+    backgroundColor: '#AAE7B2'
   },
   tableHeaderText: {
     fontSize: 14,
