@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { DataTable } from 'react-native-paper';
+import { Thumbnail } from 'native-base';
 import { styles } from '../styles/defaultStyles.js'
 
 const ActivePrescription = () => (
@@ -17,8 +18,8 @@ const ActivePrescription = () => (
       <DataTable.Cell style={styles.tableCellText}>Amoxycyline</DataTable.Cell>
       <DataTable.Cell>500 mg</DataTable.Cell>
       <DataTable.Cell>1-1-0</DataTable.Cell>
-      <DataTable.Cell>Tablet</DataTable.Cell>
-      <DataTable.Cell>Dr Bapat</DataTable.Cell>
+      <DataTable.Cell><Thumbnail small square source={require('../images/tablet.jfif')}/></DataTable.Cell>
+      <DataTable.Cell><Thumbnail small source={require('../images/drjoshi.jfif')}/></DataTable.Cell>
       <DataTable.Cell></DataTable.Cell>
     </DataTable.Row>
 
@@ -26,8 +27,8 @@ const ActivePrescription = () => (
       <DataTable.Cell>Amlodipine</DataTable.Cell>
       <DataTable.Cell>10 mg</DataTable.Cell>
       <DataTable.Cell>1-0-0</DataTable.Cell>
-      <DataTable.Cell>Capsule</DataTable.Cell>
-      <DataTable.Cell>Dr Bapat</DataTable.Cell>
+      <DataTable.Cell><Thumbnail small square source={require('../images/capsule.jfif')}/></DataTable.Cell>
+      <DataTable.Cell><Thumbnail small source={require('../images/drmote.png')}/></DataTable.Cell>
       <DataTable.Cell></DataTable.Cell>
     </DataTable.Row>
 
@@ -35,8 +36,8 @@ const ActivePrescription = () => (
       <DataTable.Cell>Novolin Insulin</DataTable.Cell>
       <DataTable.Cell>30 ml</DataTable.Cell>
       <DataTable.Cell>1-0-1</DataTable.Cell>
-      <DataTable.Cell>Insulin</DataTable.Cell>
-      <DataTable.Cell>Dr Joshi</DataTable.Cell>
+      <DataTable.Cell><Thumbnail small square source={require('../images/insulin.jfif')}/></DataTable.Cell>
+      <DataTable.Cell><Thumbnail small source={require('../images/drkhote.jfif')}/></DataTable.Cell>
       <DataTable.Cell>10 min before meal</DataTable.Cell>
     </DataTable.Row>
 

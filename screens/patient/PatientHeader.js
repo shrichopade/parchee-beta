@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native';
 import { Footer, FooterTab, Button, Icon, Text, Thumbnail } from 'native-base';
 import { headerStyles } from '../styles/headerStyles.js'
 
@@ -10,11 +9,11 @@ export default class PatientHeader extends Component {
         <FooterTab>
             <Button vertical>
               <Icon name="alarm" /> 
-              <Text style={headerStyles.headerMenu}>Reminders</Text>
+              <Text style={headerStyles.headerMenu}>My Alerts</Text>
             </Button>
             <Button vertical>
               <Icon active name="keypad" />
-              <Text style={headerStyles.headerMenu}>Notes</Text>
+              <Text style={headerStyles.headerMenu}>My Notes</Text>
             </Button>
             <Button vertical>
               <Icon name="film" />
@@ -22,13 +21,11 @@ export default class PatientHeader extends Component {
             </Button>
             <Button vertical>
               <Icon name="medkit" />
-              <Text style={headerStyles.headerMenu}>Special Offers</Text>
+              <Text style={headerStyles.headerMenu}>My Offers</Text>
             </Button>
             <Button vertical>
-              <Icon name="person" />
-              <Image style={{width: '100%', height: '100%'}} 
-                source = {require('../images/profile.jpg')} resizeMode={'cover'} />
-              <Text style={headerStyles.headerMenu}>Profile</Text>
+              <Thumbnail small source={require('../images/profile.jpg')}/>
+              <Text style={headerStyles.headerMenu}>Mrs Shinde</Text>
             </Button>
           </FooterTab>
       </Footer>

@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     marginVertical: 8
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: 14,
     fontFamily: 'Arial',
     color: '#ffffff',
     fontWeight: '200'
