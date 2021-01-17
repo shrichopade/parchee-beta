@@ -9,7 +9,7 @@ import { styles } from '../styles/defaultStyles.js'
 import AppTextInput from '../components/AppTextInput';
 import AppButton from '../components/AppButton';
 import DefaultHeader from '../components/DefaultHeader.js';
-import DefaultFooter from '../components/DefaultFooter.js';
+import AdvtBanner from '../patient/AdvtBanner.js';
 
 export default function SignUp({ navigation }) {
     const [givenName, setGivenname] = useState('');
@@ -148,7 +148,7 @@ export default function SignUp({ navigation }) {
                 </View>
                 </SafeAreaView>
             </Content>
-            <DefaultFooter />
+            <AdvtBanner />
       </Container>
     );
 };

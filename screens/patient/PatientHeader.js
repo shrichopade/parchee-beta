@@ -7,10 +7,6 @@ export default class PatientHeader extends Component {
       <Footer>
         <FooterTab>
             <Button vertical>
-              <Icon name="arrow-back" />
-              <Text>Back</Text>
-            </Button>
-            <Button vertical>
               <Icon name="alarm" /> 
               <Text>Reminders</Text>
             </Button>
@@ -23,7 +19,7 @@ export default class PatientHeader extends Component {
               <Text>QR Code</Text>
             </Button>
             <Button vertical>
-              <Icon name="navigate" />
+              <Icon name="medkit" />
               <Text>Special Offers</Text>
             </Button>
             <Button vertical>

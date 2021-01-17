@@ -9,19 +9,19 @@ export default class PatientFooter extends Component {
           <FooterTab>
             <Button vertical>
               <Icon name="apps" />
-              <Text>Apps</Text>
+              <Text>My Appointments</Text>
             </Button>
             <Button vertical>
-              <Icon name="camera" /> 
-              <Text>Camera</Text>
+              <Icon name="person" /> 
+              <Text>My Doctors/ Chemists</Text>
             </Button>
             <Button vertical active>
-              <Icon active name="navigate" />
-              <Text>Navigate</Text>
+              <Icon active name="grid" />
+              <Text>My Orders</Text>
             </Button>
             <Button vertical>
-              <Icon name="person" />
-              <Text>Contact</Text>
+              <Icon name="navigate" />
+              <Text>Menu</Text>
             </Button>
           </FooterTab>
         </Footer>
