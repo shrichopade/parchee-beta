@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const headerStyles = StyleSheet.create({
     headerBgColor: {
         flex: 1,
-        backgroundColor: 'green'
+        backgroundColor: '#4CAF50'
     },
     headerTitle: {
         fontSize: 20,
@@ -13,9 +13,9 @@ const headerStyles = StyleSheet.create({
         marginVertical: 15
     },
     headerMenu: {
-        fontSize: 9,
+        fontSize: 7,
         fontFamily: 'Arial',
-        color: '#ffffff',
+        color: '#000000',
         fontWeight: '100',
         marginVertical: 4
     }

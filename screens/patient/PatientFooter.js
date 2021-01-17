@@ -9,19 +9,15 @@ export default class PatientFooter extends Component {
           <FooterTab>
             <Button vertical>
               <Icon name="apps" />
-              <Text style={footerStyles.footerMenu}>Appointments</Text>
             </Button>
             <Button vertical>
               <Icon name="person" /> 
-              <Text style={footerStyles.footerMenu}>My Agencies</Text>
             </Button>
             <Button vertical>
               <Icon active name="grid" />
-              <Text style={footerStyles.footerMenu}>My Orders</Text>
             </Button>
             <Button vertical>
               <Icon name="menu" />
-              <Text style={footerStyles.footerMenu}>Menu</Text>
             </Button>
           </FooterTab>
         </Footer>

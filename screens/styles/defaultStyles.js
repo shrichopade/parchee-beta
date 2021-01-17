@@ -37,13 +37,13 @@ const styles = StyleSheet.create({
     fontWeight: '600'
   },
   pageTitle: {
-    color: 'green',
+    color: '#4CAF50',
     fontSize: 28,
     fontWeight: '900',
     marginVertical: 8
   },
   pageTitle2: {
-    color: 'green',
+    color: '#4CAF50',
     fontSize: 22,
     fontWeight: '700',
     marginVertical: 8
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'gray'
   },
   buttonStyle: {
-    backgroundColor:'green',
+    backgroundColor:'#4CAF50',
     marginVertical: 8
   },
   buttonText: {

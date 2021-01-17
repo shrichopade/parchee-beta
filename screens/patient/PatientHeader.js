@@ -8,24 +8,19 @@ export default class PatientHeader extends Component {
       <Footer style={headerStyles.headerBgColor}>
         <FooterTab>
             <Button vertical>
-              <Icon name="alarm" /> 
-              <Text style={headerStyles.headerMenu}>My Alerts</Text>
+              <Thumbnail small squre source={require('../images/bell.svg')}/> 
             </Button>
             <Button vertical>
-              <Icon active name="keypad" />
-              <Text style={headerStyles.headerMenu}>My Notes</Text>
+            <Thumbnail small square source={require('../images/note2.svg')}/>
             </Button>
             <Button vertical>
-              <Icon name="film" />
-              <Text style={headerStyles.headerMenu}>QR Code</Text>
+              <Thumbnail small square source={require('../images/QR_code.svg')}/>
             </Button>
             <Button vertical>
               <Icon name="medkit" />
-              <Text style={headerStyles.headerMenu}>My Offers</Text>
             </Button>
             <Button vertical>
               <Thumbnail small source={require('../images/profile.jpg')}/>
-              <Text style={headerStyles.headerMenu}>Mrs Shinde</Text>
             </Button>
           </FooterTab>
       </Footer>
