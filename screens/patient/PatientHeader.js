@@ -1,30 +1,37 @@
 import React, { Component } from 'react';
-import { Container, Header, Left, Body, Right, Button, Icon, Title, Thumbnail } from 'native-base';
+import { Footer, FooterTab, Button, Icon, Text } from 'native-base';
 
 export default class PatientHeader extends Component {
   render() {
     return (
-        <Header>
-          <Left>
-            <Button transparent>
-              <Icon name='arrow-back' />
+      <Footer>
+        <FooterTab>
+            <Button vertical>
+              <Icon name="arrow-back" />
+              <Text>Back</Text>
             </Button>
-          </Left>
-          <Body>
-            <Title>Header</Title>
-          </Body>
-          <Right>
-            <Button transparent>
-              <Icon name='search' />
+            <Button vertical>
+              <Icon name="alarm" /> 
+              <Text>Reminders</Text>
             </Button>
-            <Button transparent>
-              <Icon name='heart' />
+            <Button vertical active>
+              <Icon active name="keypad" />
+              <Text>Notes</Text>
             </Button>
-            <Button transparent>
-            <Thumbnail source={{ uri: '../images/profile.jpg' }} />
+            <Button vertical>
+              <Icon name="film" />
+              <Text>QR Code</Text>
             </Button>
-          </Right>
-        </Header>
+            <Button vertical>
+              <Icon name="navigate" />
+              <Text>Special Offers</Text>
+            </Button>
+            <Button vertical>
+              <Icon name="person" />
+              <Text>Profile</Text>
+            </Button>
+          </FooterTab>
+      </Footer>
     );
   }
 }

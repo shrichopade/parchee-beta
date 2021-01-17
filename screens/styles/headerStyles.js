@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const headerStyles = StyleSheet.create({
     headerBgColor: {
         flex: 1,
-        tabBarBackgroundColor: 'C3E9C3'
+        tabBarBackgroundColor: '#C3E9C3'
     },
     headerTitle: {
         fontSize: 20,

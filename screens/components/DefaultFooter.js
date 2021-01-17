@@ -6,7 +6,7 @@ export default class DefaultFooter extends Component {
   render() {
     return (
         <Footer>
-          <FooterTab style={footerStyles.containerStyle}>
+          <FooterTab>
             <Button vertical>
               <Icon name="apps" />
               <Text>Apps</Text>

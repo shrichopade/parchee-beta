@@ -9,6 +9,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center'
   },
+  buttonContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  },
   title: {
     fontSize: 20,
     color: '#202020',

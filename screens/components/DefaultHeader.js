@@ -5,7 +5,7 @@ import { headerStyles } from '../styles/headerStyles.js'
 export default class DefaultHeader extends Component {
   render() {
     return (
-        <Header style={headerStyles.headerBgColor}>
+        <Header>
           <Left>
             <Button transparent>
               <Icon name='arrow-back' />
