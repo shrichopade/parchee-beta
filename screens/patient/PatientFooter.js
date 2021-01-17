@@ -20,7 +20,7 @@ export default class PatientFooter extends Component {
               <Text style={footerStyles.footerMenu}>My Orders</Text>
             </Button>
             <Button vertical>
-              <Icon name="navigate" />
+              <Icon name="menu" />
               <Text style={footerStyles.footerMenu}>Menu</Text>
             </Button>
           </FooterTab>

@@ -13,7 +13,7 @@ const headerStyles = StyleSheet.create({
         marginVertical: 15
     },
     headerMenu: {
-        fontSize: 12,
+        fontSize: 9,
         fontFamily: 'Arial',
         color: '#ffffff',
         fontWeight: '100',

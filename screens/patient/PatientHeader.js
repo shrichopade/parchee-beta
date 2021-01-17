@@ -25,9 +25,9 @@ export default class PatientHeader extends Component {
               <Text style={headerStyles.headerMenu}>Special Offers</Text>
             </Button>
             <Button vertical>
-            <Icon name="person" />
+              <Icon name="person" />
               <Image style={{width: '100%', height: '100%'}} 
-                source={{uri: '../images/profile.jpg'}} resizeMode={'cover'} />
+                source = {require('../images/profile.jpg')} resizeMode={'cover'} />
               <Text style={headerStyles.headerMenu}>Profile</Text>
             </Button>
           </FooterTab>

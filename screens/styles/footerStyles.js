@@ -6,7 +6,7 @@ const footerStyles = StyleSheet.create({
         backgroundColor: 'green'
     },
     footerMenu: {
-        fontSize: 12,
+        fontSize: 9,
         fontFamily: 'Arial',
         color: '#ffffff',
         fontWeight: '100',
