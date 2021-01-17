@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { DataTable } from 'react-native-paper';
+import { styles } from '../styles/defaultStyles.js'
 
 const ActiveOrders = () => (
   <DataTable>
-    <DataTable.Header>
+    <DataTable.Header style={styles.tableHeaderBgColor}>
       <DataTable.Title>Order No</DataTable.Title>
-      <DataTable.Title>Order Date</DataTable.Title>
+      <DataTable.Title sortDirection='descending'>Order Date</DataTable.Title>
       <DataTable.Title>Amount</DataTable.Title>
       <DataTable.Title>Status</DataTable.Title>
       <DataTable.Title>Chemist</DataTable.Title>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Picker } from 'react-native';
 import { Checkbox } from 'react-native-paper';
-import { Container, Header, Content } from 'native-base';
+import { Container, DatePicker, Content } from 'native-base';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from '../styles/defaultStyles.js'
@@ -60,14 +60,21 @@ export default function SignUp({ navigation }) {
                         keyboardType="default"
                         textContentType="familyName"
                     />
-                    <AppTextInput
-                        value={dateOfBirth}
-                        onChangeText={text => setDateOfBirth(text)}
-                        leftIcon="text"
-                        placeholder="Enter Date of Birth"
-                        autoCapitalize="none"
-                        keyboardType="numeric"
-                        textContentType="numeric"
+                    <DatePicker
+                        defaultDate={new Date(2018, 4, 4)}
+                        minimumDate={new Date(2018, 1, 1)}
+                        maximumDate={new Date(2018, 12, 31)}
+                        locale={"en"}
+                        timeZoneOffsetInMinutes={undefined}
+                        modalTransparent={false}
+                        animationType={"fade"}
+                        androidMode={"default"}
+                        placeHolderText="Select date"
+                        textStyle={{ color: "green" }}
+                        placeHolderTextStyle={{ color: "#d3d3d3" }}
+                        onDateChange={text => setFamilyname(text)}
+                        disabled={false}
+                        style={{height: 50, width: '80%', color: '#101010'}}
                     />
                     <AppTextInput
                         value={mobileNumber}

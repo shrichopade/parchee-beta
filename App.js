@@ -11,7 +11,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SignIn from './screens/common/SignIn';
 import SignUp from './screens/common/SignUp';
 import PatientHome from './screens/patient/PatientHome';
-import DefaultHeader from './screens/components/DefaultHeader';
 
 //Aws Amplify Imports
 import Amplify from 'aws-amplify';

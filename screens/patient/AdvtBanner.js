@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Card, CardItem, Body, Text } from 'native-base';
-import { footerStyles } from '../styles/footerStyles.js'
+import { styles } from '../styles/defaultStyles.js'
 
 const AdvtBanner = () => (
-    <Card>
-        <CardItem>
+    <Card> 
+        <CardItem style={styles.advtBannerBgColor}>
             <Body>
-                <Text>
+                <Text style={styles.textLabel}>
                     Your advertisement goes here...
                 </Text>
             </Body>

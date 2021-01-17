@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { DataTable } from 'react-native-paper';
+import { styles } from '../styles/defaultStyles.js'
 
 const ActivePrescription = () => (
   <DataTable>
-    <DataTable.Header>
-      <DataTable.Title>Medicine Name</DataTable.Title>
+    <DataTable.Header style={styles.tableHeaderBgColor}>
+      <DataTable.Title sortDirection='ascending' style={styles.tableHeaderText}>Medicine Name</DataTable.Title>
       <DataTable.Title>Strength</DataTable.Title>
       <DataTable.Title>Dosage</DataTable.Title>
       <DataTable.Title>Image</DataTable.Title>
@@ -13,7 +14,7 @@ const ActivePrescription = () => (
     </DataTable.Header>
 
     <DataTable.Row>
-      <DataTable.Cell>Amoxycyline</DataTable.Cell>
+      <DataTable.Cell style={styles.tableCellText}>Amoxycyline</DataTable.Cell>
       <DataTable.Cell>500 mg</DataTable.Cell>
       <DataTable.Cell>1-1-0</DataTable.Cell>
       <DataTable.Cell>Tablet</DataTable.Cell>

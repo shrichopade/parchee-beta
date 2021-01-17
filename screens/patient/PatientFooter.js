@@ -5,23 +5,23 @@ import { footerStyles } from '../styles/footerStyles.js'
 export default class PatientFooter extends Component {
   render() {
     return (
-        <Footer>
+        <Footer style={footerStyles.footerBgColor}>>
           <FooterTab>
             <Button vertical>
               <Icon name="apps" />
-              <Text>My Appointments</Text>
+              <Text style={footerStyles.footerMenu}>My Appointments</Text>
             </Button>
             <Button vertical>
               <Icon name="person" /> 
-              <Text>My Doctors/ Chemists</Text>
+              <Text style={footerStyles.footerMenu}>My Doctors/ Chemists</Text>
             </Button>
-            <Button vertical active>
+            <Button vertical>
               <Icon active name="grid" />
-              <Text>My Orders</Text>
+              <Text style={footerStyles.footerMenu}>My Orders</Text>
             </Button>
             <Button vertical>
               <Icon name="navigate" />
-              <Text>Menu</Text>
+              <Text style={footerStyles.footerMenu}>Menu</Text>
             </Button>
           </FooterTab>
         </Footer>

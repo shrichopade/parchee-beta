@@ -1,9 +1,16 @@
 import { StyleSheet } from 'react-native';
 
 const footerStyles = StyleSheet.create({
-    containerStyle: {
+    footerBgColor: {
         flex: 1,
-        backgroundColor: '#C3E9C3'
+        backgroundColor: 'green'
+    },
+    footerMenu: {
+        fontSize: 12,
+        fontFamily: 'Arial',
+        color: '#ffffff',
+        fontWeight: '100',
+        marginVertical: 4
     }
 });
 

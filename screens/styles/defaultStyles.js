@@ -33,17 +33,20 @@ const styles = StyleSheet.create({
   textLabel: {
     color: '#202020',
     fontSize: 18,
+    fontFamily: 'Arial',
     fontWeight: '600'
   },
   pageTitle: {
     color: 'green',
     fontSize: 28,
-    fontWeight: '900'
+    fontWeight: '900',
+    marginVertical: 8
   },
   pageTitle2: {
     color: 'green',
     fontSize: 22,
-    fontWeight: '700'
+    fontWeight: '700',
+    marginVertical: 8
   },
   footerText: {
     color: '#202020',
@@ -59,6 +62,36 @@ const styles = StyleSheet.create({
   },
   checkboxInput: {
     textAlign: 'left'
+  },
+  advtBannerBgColor: {
+    flex: 1,
+    backgroundColor: 'gray'
+  },
+  buttonStyle: {
+    backgroundColor:'green',
+    marginVertical: 8
+  },
+  buttonText: {
+    fontSize: 14,
+    fontFamily: 'Arial',
+    color: '#ffffff',
+    fontWeight: '100'
+  },
+  tableHeaderBgColor: {
+    flex: 1,
+    backgroundColor: '#C3E9C3'
+  },
+  tableHeaderText: {
+    fontSize: 14,
+    fontFamily: 'Arial',
+    color: '#000000',
+    fontWeight: '200'
+  },
+  tableCellsText: {
+    fontSize: 12,
+    fontFamily: 'Arial',
+    color: 'gray',
+    fontWeight: '100'
   }
 });
 
