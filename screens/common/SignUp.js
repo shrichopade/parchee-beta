@@ -99,7 +99,7 @@ export default function SignUp({ navigation }) {
                     />
                     <Picker
                         selectedValue={whoAreYou}
-                        style={{height: 50, width: '20%', color: '#101010'}}
+                        style={{height: 50, width: '80%', color: '#101010'}}
                         onValueChange={(itemValue, itemIndex) =>
                             this.setState({language: itemValue})
                         }>
