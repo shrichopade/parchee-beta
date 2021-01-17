@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
+import { Container, Header, Left, Body, Right, Button, Icon, Title, Thumbnail } from 'native-base';
 
 export default class PatientHeader extends Component {
   render() {
@@ -21,7 +21,7 @@ export default class PatientHeader extends Component {
               <Icon name='heart' />
             </Button>
             <Button transparent>
-              <Icon name='more' />
+            <Thumbnail source={{ uri: '../images/profile.jpg' }} />
             </Button>
           </Right>
         </Header>
