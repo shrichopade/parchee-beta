@@ -1,22 +1,25 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Dimensions } from 'react-native';
+import { Container, Header, Content, Icon } from 'native-base';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from '../styles/defaultStyles.js'
 
 import AppTextInput from '../components/AppTextInput';
 import AppButton from '../components/AppButton';
-
-var { height } = Dimensions.get('window');
-var box_count = 3;
-var box_height = height / box_count;
+import PatientHeader from './PatientHeader.js';
+import PatientFooter from './PatientFooter.js';
 
 export default function PatientHome({ navigation }) {
     return (
-        <SafeAreaView style={styles.safeAreaContainer}>
-            <View style={styles.container}>
-                
-            </View>
-        </SafeAreaView>
+        <Container>
+            <PatientHeader />
+            <Content>
+                <Icon name='home' />
+                <Icon ios='ios-menu' android="md-menu" style={{fontSize: 20, color: 'red'}}/>
+                <Icon type="FontAwesome" name="home" />
+            </Content>
+            <PatientFooter />
+      </Container>
     );
 }

@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   safeAreaContainer: {
     flex: 1,
-    backgroundColor: 'white'
+    backgroundColor: '#FFFFFF'
   },
   container: {
     flex: 1,
@@ -45,10 +45,15 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '600'
   },
-  RNPickerSelectStyle: {
-    width: '80%',
+  pickerStyle: {
+    width: '500',
+    height: '40',
     fontSize: 18,
+    fontColor: '#101010',
     color: '#101010'
+  },
+  checkboxInput: {
+    textAlign: 'left'
   }
 });
 
