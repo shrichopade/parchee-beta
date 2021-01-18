@@ -155,7 +155,6 @@ export default function SignUp({ navigation }) {
                 </View>
                 </SafeAreaView>
             </Content>
-            <AdvtBanner />
       </Container>
     );
 };
