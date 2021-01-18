@@ -69,7 +69,8 @@ const styles = StyleSheet.create({
   },
   buttonStyle: {
     backgroundColor:'#4CAF50',
-    marginVertical: 8
+    marginVertical: 8,
+    alignItems: 'center'
   },
   buttonText: {
     fontSize: 14,
@@ -91,6 +92,12 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: 'Arial',
     color: 'gray',
+    fontWeight: '100'
+  },
+  textLabelNormal: {
+    color: '#202020',
+    fontSize: 16,
+    fontFamily: 'Arial',
     fontWeight: '100'
   }
 });

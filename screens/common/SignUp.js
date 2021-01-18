@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Picker } from 'react-native';
 import { Checkbox } from 'react-native-paper';
-import { Container, DatePicker, Content } from 'native-base';
+import { Container, Content } from 'native-base';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from '../styles/defaultStyles.js'
 
 import AppTextInput from '../components/AppTextInput';
 import AppButton from '../components/AppButton';
+import DatePicker from '../components/DatePicker';
 import DefaultHeader from '../components/DefaultHeader.js';
 import AdvtBanner from '../patient/AdvtBanner.js';
 
@@ -60,22 +61,7 @@ export default function SignUp({ navigation }) {
                         keyboardType="default"
                         textContentType="familyName"
                     />
-                    <DatePicker
-                        defaultDate={new Date(2018, 4, 4)}
-                        minimumDate={new Date(2018, 1, 1)}
-                        maximumDate={new Date(1920, 12, 31)}
-                        locale={"en"}
-                        timeZoneOffsetInMinutes={undefined}
-                        modalTransparent={false}
-                        animationType={"fade"}
-                        androidMode={"default"}
-                        placeHolderText="Select date"
-                        textStyle={{ color: "green" }}
-                        placeHolderTextStyle={{ fontFamily:'Arial', fontSize:'16',fontWeight: '600', color: "#8B918D" }}
-                        onDateChange={newDate => setDateOfBirth(newDate)}
-                        disabled={false}
-                        style={{height: 70, width: '80%', color: '#8B918D'}}
-                    />
+                    <DatePicker />
                     <AppTextInput
                         value={mobileNumber}
                         onChangeText={text => setMobileNumber(text)}

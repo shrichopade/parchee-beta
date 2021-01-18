@@ -11,10 +11,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SignIn from './screens/common/SignIn';
 import SignUp from './screens/common/SignUp';
 import PatientHome from './screens/patient/PatientHome';
+import UploadPrescription from './screens/patient/UploadPrescription';
 
 //Aws Amplify Imports
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
+
 Amplify.configure(config);
 
 const Stack = createStackNavigator();
@@ -26,6 +28,7 @@ export default function App() {
         <Stack.Screen name="SignIn" component={SignIn}/>
         <Stack.Screen name="SignUp" component={SignUp}/>
         <Stack.Screen name="PatientHome" component={PatientHome}/>
+        <Stack.Screen name="UploadPrescription" component={UploadPrescription}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
