@@ -12,7 +12,7 @@ import AdvtBanner from './AdvtBanner.js';
 
 export default function PatientHome({ navigation }) {
     return (
-        <Container>
+        <Container style={styles.container}>
             <PatientHeader />
             <Content>
                 <Text style={styles.pageTitle2}>My Prescription</Text>
