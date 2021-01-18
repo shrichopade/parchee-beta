@@ -12,7 +12,7 @@ import AdvtBanner from './AdvtBanner.js';
 
 export default function PatientHome({ navigation }) {
     return (
-        <Container style={styles.container}>
+        <Container>
             <PatientHeader />
             <Content>
                 <Text style={styles.pageTitle2}>My Prescription</Text>
@@ -28,7 +28,6 @@ export default function PatientHome({ navigation }) {
                     </Button>
                 </View>
                 <Text style={styles.pageTitle2}>My Orders</Text>
-                <ActiveOrders />
             </Content>
             <PatientFooter />
       </Container>

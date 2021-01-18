@@ -5,7 +5,7 @@ import { footerStyles } from '../styles/footerStyles.js'
 export default class PatientFooter extends Component {
   render() {
     return (
-        <Footer style={footerStyles.footerBgColor}>>
+        <Footer style={footerStyles.footerBgColor}>
           <FooterTab>
             <Button vertical>
               <Icon name="apps" />

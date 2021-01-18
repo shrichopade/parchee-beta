@@ -7,8 +7,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF'
+    alignItems: 'center'
   },
   buttonContainer: {
     flex: 1,
