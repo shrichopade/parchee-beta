@@ -15,7 +15,7 @@ import AdvtBanner from '../patient/AdvtBanner.js';
 export default function SignUp({ navigation }) {
     const [givenName, setGivenname] = useState('');
     const [familyName, setFamilyname] = useState('');
-    const [dateOfBirth, setDateOfBirth] = useState(new Date());
+    const [dateOfBirth, setDateOfBirth] = useState('');
 
     const [mobileNumber, setMobileNumber] = useState('');
     const [username, setUsername] = useState('');
@@ -61,7 +61,16 @@ export default function SignUp({ navigation }) {
                         keyboardType="default"
                         textContentType="familyName"
                     />
-                    <DatePicker />
+                    <AppTextInput
+                        type="date"
+                        value={dateOfBirth}
+                        onChangeText={text => setDateOfBirth(text)}
+                        leftIcon="text"
+                        placeholder="Enter Date of Birth"
+                        autoCapitalize="none"
+                        keyboardType="phone-pad"
+                        textContentType="numeric"
+                    />
                     <AppTextInput
                         value={mobileNumber}
                         onChangeText={text => setMobileNumber(text)}
