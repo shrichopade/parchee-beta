@@ -13,7 +13,15 @@ export default function SignIn({ navigation }) {
 
     async function signIn() {
         try {
-            navigation.navigate('PatientHome')
+            if(username == "P" || username == "p" ) {
+              navigation.navigate('PatientHome')
+            } else if(username == "D" || username == "d" ) {
+              navigation.navigate('DoctorHome')
+            } else if(username == "C" || username == "c" ) {
+              navigation.navigate('ChemistHome')
+            } else {
+              navigation.navigate('PatientHome')
+            }
             console.log(' Success');
         } catch (error) {
             console.log(' Error signing in...', error);
@@ -46,7 +54,7 @@ export default function SignIn({ navigation }) {
             />
             <AppButton title="Login" onPress={signIn} />
             <View style={styles.footerButtonContainer}>
-              <TouchableOpacity onPress={() => navigation.navigate('ResetPassword')}>
+              <TouchableOpacity onPress={() => navigation.navigate('ResetPasswd')}>
                 <Text style={styles.forgotPasswordButtonText}>
                   Forgot Password? Reset Password
                 </Text>
