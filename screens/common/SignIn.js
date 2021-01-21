@@ -31,7 +31,7 @@ export default function SignIn({ navigation }) {
     return (
         <SafeAreaView style={styles.safeAreaContainer}>
           <View style={styles.container}>
-            <Text style={styles.pageTitle}>Welcome to Parchee</Text>
+            <Text style={styles.pageTitle}>Welcome to Parchee App</Text>
             <Text style={styles.pageTitle2}>Your Medical Assistant</Text>
             <AppTextInput
               value={username}
