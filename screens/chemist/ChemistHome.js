@@ -11,7 +11,7 @@ export default function ChemistHome({ navigation }) {
 
     return (
         <Container>
-            <ChemistHeader />
+            <ChemistHeader navigation={navigation}/>
             <Content>
                 <Text style={styles.pageTitle2}>Chemist Home Page</Text>
             </Content>
