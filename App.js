@@ -1,7 +1,5 @@
 //Default imports
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Text, View, Image } from 'react-native';
 
 //Navigation
 import { NavigationContainer } from '@react-navigation/native';

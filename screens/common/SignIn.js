@@ -1,26 +1,43 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import React, { Component } from 'react';
+import { Container, Content, Text, Form, Item, Input, Label, Card, CardItem, Button } from 'native-base';
 
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { styles } from '../styles/defaultStyles.js'
+import { dStyles } from '../styles/DefaultStyleSheet.js'
 
-import AppTextInput from '../components/AppTextInput';
-import AppButton from '../components/AppButton';
+export default class SignIn extends Component {
 
-export default function SignIn({ navigation }) {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    constructor() {
+      super();
+      this.state = {
+        username: '',
+        password: ''
+      }
+    }
 
-    async function signIn() {
+    inputValueUpdate = (val, prop) => {
+      const state = this.state;
+      state[prop] = val;
+      this.setState(state);
+    }
+
+    validateInput() {
+      if(this.state.username === '') {
+        alert('User name is mandatory')
+      }
+      if(this.state.password === '') {
+        alert('Password is mandatory')
+      }
+    }
+
+    signIn = () => {
         try {
-            if(username == "P" || username == "p" ) {
-              navigation.navigate('PatientHome')
-            } else if(username == "D" || username == "d" ) {
-              navigation.navigate('DoctorHome')
-            } else if(username == "C" || username == "c" ) {
-              navigation.navigate('ChemistHome')
+            if(this.state.username == "P" || this.state.username == "p" ) {
+              this.props.navigation.navigate('PatientHome')
+            } else if(this.state.username == "D" || this.state.username == "d" ) {
+              this.props.navigation.navigate('DoctorHome')
+            } else if(this.state.username == "C" || this.state.username == "c" ) {
+              this.props.navigation.navigate('ChemistHome')
             } else {
-              navigation.navigate('PatientHome')
+              this.props.navigation.navigate('PatientHome')
             }
             console.log(' Success');
         } catch (error) {
@@ -28,47 +45,39 @@ export default function SignIn({ navigation }) {
         }
     }
 
-    return (
-        <SafeAreaView style={styles.safeAreaContainer}>
-          <View style={styles.container}>
-            <Text style={styles.pageTitle}>Welcome to Parchee App</Text>
-            <Text style={styles.pageTitle2}>Your Medical Assistant</Text>
-            <AppTextInput
-              value={username}
-              onChangeText={text => setUsername(text)}
-              leftIcon="email-open"
-              placeholder="Enter username"
-              autoCapitalize="none"
-              keyboardType="email-address"
-              textContentType="emailAddress"
-            />
-            <AppTextInput
-              value={password}
-              onChangeText={text => setPassword(text)}
-              leftIcon="lock"
-              placeholder="Enter password"
-              autoCapitalize="none"
-              autoCorrect={false}
-              secureTextEntry
-              textContentType="password"
-            />
-            <AppButton title="Login" onPress={signIn} />
-            <View style={styles.footerButtonContainer}>
-              <TouchableOpacity onPress={() => navigation.navigate('ResetPasswd')}>
-                <Text style={styles.forgotPasswordButtonText}>
-                  Forgot Password? Reset Password
-                </Text>
-              </TouchableOpacity>
-            </View>
-            <View style={styles.footerButtonContainer}>
-                <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
-                    <Text style={styles.forgotPasswordButtonText}>
-                    Don't have an account? Sign Up
-                    </Text>
-                </TouchableOpacity>
-            </View>
-            <Text style={styles.footerText}>Copyright Parchee, all rights reserved</Text>
-          </View>
-        </SafeAreaView>
-    );
+    render() {
+      return (
+          <Container style={dStyles.container}>
+            <Content>
+              <Text style={dStyles.pageTitle}>Welcome to Parchee App</Text>
+              <Text style={dStyles.pageSubTitle}>Your Medical Assistant</Text>
+              <Card style={dStyles.content}>
+                <CardItem header bordered>
+                  <Text style={dStyles.formTitle}> Sign In </Text>
+                </CardItem>
+                <CardItem bordered>
+                  <Form>
+                    <Item stackedLabel>
+                      <Label>Username (Email)</Label>
+                      <Input value={this.state.username} 
+                        onChangeText={(val) => this.inputValueUpdate(val, 'username')} />
+                    </Item>
+                    <Item stackedLabel>
+                      <Label>Password</Label>
+                      <Input value={this.state.password}  secureTextEntry
+                        onChangeText={(val) => this.inputValueUpdate(val, 'password')}  />
+                    </Item>
+                    <Button success style={dStyles.buttonStyle} onPress={() => this.signIn()}>
+                      <Text style={dStyles.buttonText}>Login</Text>
+                    </Button>
+                  </Form>
+                </CardItem>
+                <CardItem footer bordered>
+                  <Text style={dStyles.footerText}>Copyright Parchee, all rights reserved</Text>
+                </CardItem>
+              </Card>
+            </Content>
+          </Container>
+      );
+    }
 };
