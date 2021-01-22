@@ -1,39 +1,54 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import React, { Component } from 'react';
+import { Container, Content, Text, Form, Item, Input, Label, Card, CardItem, Button } from 'native-base';
 
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { styles } from '../styles/defaultStyles.js'
+import { dStyles } from '../styles/DefaultStyleSheet.js'
 
-import AppTextInput from '../components/AppTextInput';
-import AppButton from '../components/AppButton';
-
-export default function ResetPasswd({ navigation }) {
-    const [username, setUsername] = useState('');
-
-    async function sendCode() {
-        try {
-            navigation.navigate('ConfirmSignUp')
-            console.log(' Success');
-        } catch (error) {
-            console.log(' Error signing in...', error);
-        }
+export default class ResetPasswd extends Component {
+  constructor() {
+    super();
+    this.state = {
+      username: ''
     }
+  }
 
+  inputValueUpdate = (val, prop) => {
+    const state = this.state;
+    state[prop] = val;
+    this.setState(state);
+  }
+
+  validateInput() {
+    if(this.state.username === '') {
+      alert('User name is mandatory')
+    }
+  }
+
+  render() {
     return (
-        <SafeAreaView style={styles.safeAreaContainer}>
-          <View style={styles.container}>
-            <AppTextInput
-              value={username}
-              onChangeText={text => setUsername(text)}
-              leftIcon="email-open"
-              placeholder="Enter username"
-              autoCapitalize="none"
-              keyboardType="email-address"
-              textContentType="emailAddress"
-            />
-            <AppButton title="Send Code" onPress={sendCode} />
-            <Text style={styles.footerText}>Copyright Parchee, all rights reserved</Text>
-          </View>
-        </SafeAreaView>
+      <Container style={dStyles.container}>
+        <Content>
+          <Card style={dStyles.cardStyle}>
+            <CardItem header bordered>
+              <Text style={dStyles.formTitle}> Request OTP </Text>
+            </CardItem>
+            <CardItem bordered>
+              <Form>
+                <Item stackedLabel>
+                  <Label>Username (Email)</Label>
+                  <Input value={this.state.username} 
+                    onChangeText={(val) => this.inputValueUpdate(val, 'username')} />
+                </Item>
+                <Button success style={dStyles.buttonStyle} onPress={() => this.props.navigation.navigate('ConfirmSignUp')}>
+                  <Text style={dStyles.buttonText}>Send Code</Text>
+                </Button>
+              </Form>
+            </CardItem>
+            <CardItem footer bordered>
+              <Text style={dStyles.footerText}>Copyright Parchee, all rights reserved</Text>
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>
     );
+  }
 };

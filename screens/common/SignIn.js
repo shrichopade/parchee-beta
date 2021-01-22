@@ -68,15 +68,15 @@ export default class SignIn extends Component {
                       <Input value={this.state.password}  secureTextEntry
                         onChangeText={(val) => this.inputValueUpdate(val, 'password')}  />
                     </Item>
-                      <Button success style={dStyles.buttonStyle} onPress={() => this.signIn()}>
-                        <Text style={dStyles.buttonText}>Login</Text>
-                      </Button>
-                      <TouchableOpacity onPress={() => this.props.navigation.navigate('ResetPasswd')}>
-                        <Text style={dStyles.linkText}>Forgot Password? Reset Password</Text>
-                      </TouchableOpacity>
-                      <TouchableOpacity onPress={() => this.props.navigation.navigate('SignUp')}>
-                        <Text style={dStyles.linkText}>Don't have an account? Sign Up</Text>
-                      </TouchableOpacity>
+                    <Button success style={dStyles.buttonStyle} onPress={() => this.signIn()}>
+                      <Text style={dStyles.buttonText}>Login</Text>
+                    </Button>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('ResetPasswd')}>
+                      <Text style={dStyles.linkText}>Forgot Password? Reset Password</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('SignUp')}>
+                      <Text style={dStyles.linkText}>Don't have an account? Sign Up</Text>
+                    </TouchableOpacity>
                   </Form>
                 </CardItem>
                 <CardItem footer bordered>

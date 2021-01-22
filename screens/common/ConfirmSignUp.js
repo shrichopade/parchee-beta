@@ -1,61 +1,60 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import React, { Component } from 'react';
+import { Container, Content, Text, Form, Item, Input, Label, Card, CardItem, Button } from 'native-base';
 
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { styles } from '../styles/defaultStyles.js'
+import { dStyles } from '../styles/DefaultStyleSheet.js'
 
-import AppTextInput from '../components/AppTextInput';
-import AppButton from '../components/AppButton';
-
-export default function ConfirmSignUp({ navigation }) {
-    const [passCode, setPassCode] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPasswd, setConfirmPasswd] = useState('');
-
-    async function confirmSignUp() {
-        try {
-            navigation.navigate('SignIn')
-            console.log(' Success');
-        } catch (error) {
-            console.log(' Error signing in...', error);
-        }
+export default class ConfirmSignUp extends Component {
+  constructor() {
+    super();
+    this.state = {
+      passcode: '',
+      password: '',
+      confirmPassword: ''
     }
+  }
 
+  inputValueUpdate = (val, prop) => {
+    const state = this.state;
+    state[prop] = val;
+    this.setState(state);
+  }
+
+  render() {
     return (
-        <SafeAreaView style={styles.safeAreaContainer}>
-          <View style={styles.container}>
-            <AppTextInput
-              value={passCode}
-              onChangeText={text => setPassCode(text)}
-              leftIcon="text"
-              placeholder="Enter Passcode"
-              autoCapitalize="none"
-              keyboardType="phone-pad"
-              textContentType="numeric"
-            />
-            <AppTextInput
-              value={password}
-              onChangeText={text => setPassword(text)}
-              leftIcon="lock"
-              placeholder="Enter new password"
-              autoCapitalize="none"
-              autoCorrect={false}
-              secureTextEntry
-              textContentType="password"
-            />
-            <AppTextInput
-              value={confirmPasswd}
-              onChangeText={text => setConfirmPasswd(text)}
-              leftIcon="lock"
-              placeholder="Confirm new password"
-              autoCapitalize="none"
-              autoCorrect={false}
-              secureTextEntry
-              textContentType="password"
-            />
-            <AppButton title="Confirm" onPress={confirmSignUp} />
-            <Text style={styles.footerText}>Copyright Parchee, all rights reserved</Text>
-          </View>
-        </SafeAreaView>
+      <Container style={dStyles.container}>
+        <Content>
+          <Card style={dStyles.cardStyle}>
+            <CardItem header bordered>
+              <Text style={dStyles.formTitle}> Reset Password </Text>
+            </CardItem>
+            <CardItem bordered>
+              <Form>
+                <Item stackedLabel>
+                  <Label>Passcode</Label>
+                  <Input value={this.state.passcode} 
+                    onChangeText={(val) => this.inputValueUpdate(val, 'passcode')} />
+                </Item>
+                <Item stackedLabel>
+                  <Label>Password</Label>
+                  <Input value={this.state.password}  secureTextEntry
+                    onChangeText={(val) => this.inputValueUpdate(val, 'password')}  />
+                </Item>
+                <Item stackedLabel>
+                  <Label>Confirm Password</Label>
+                  <Input value={this.state.confirmPassword}  secureTextEntry
+                    onChangeText={(val) => this.inputValueUpdate(val, 'confirmPassword')}  />
+                </Item>
+                <Button success style={dStyles.buttonStyle} onPress={() => this.props.navigation.navigate('SignIn')}>
+                  <Text style={dStyles.buttonText}>Confirm</Text>
+                </Button>
+              </Form>
+            </CardItem>
+            <CardItem footer bordered>
+              <Text style={dStyles.footerText}>Copyright Parchee, all rights reserved</Text>
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>  
     );
+  }
 };
