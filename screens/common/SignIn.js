@@ -61,6 +61,7 @@ export default class SignIn extends Component {
                     <Item stackedLabel>
                       <Label>Username (Email)</Label>
                       <Input value={this.state.username} 
+                        keyboardType="email-address"
                         onChangeText={(val) => this.inputValueUpdate(val, 'username')} />
                     </Item>
                     <Item stackedLabel>
@@ -71,7 +72,7 @@ export default class SignIn extends Component {
                     <Button success style={dStyles.buttonStyle} onPress={() => this.signIn()}>
                       <Text style={dStyles.buttonText}>Login</Text>
                     </Button>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('ResetPasswd')}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('RequestOTP')}>
                       <Text style={dStyles.linkText}>Forgot Password? Reset Password</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => this.props.navigation.navigate('SignUp')}>

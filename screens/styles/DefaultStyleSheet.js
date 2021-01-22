@@ -65,6 +65,13 @@ const dStyles = StyleSheet.create({
         fontWeight: '400',
         alignSelf: 'right'
     },
+    labelText: {
+        color: '#546467',
+        fontFamily: 'Arial',
+        fontSize: 12,
+        fontWeight: '300',
+        marginVertical: 6
+    },
     generalText: {
         color: '#546467',
         fontFamily: 'Arial',
@@ -78,6 +85,11 @@ const dStyles = StyleSheet.create({
         fontSize: 12,
         fontWeight: '400',
         marginVertical: 12
+    },
+    buttonContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-around'
     },
 })
 

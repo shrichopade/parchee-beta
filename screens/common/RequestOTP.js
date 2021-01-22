@@ -3,7 +3,7 @@ import { Container, Content, Text, Form, Item, Input, Label, Card, CardItem, But
 
 import { dStyles } from '../styles/DefaultStyleSheet.js'
 
-export default class ResetPasswd extends Component {
+export default class RequestOTP extends Component {
   constructor() {
     super();
     this.state = {
@@ -36,9 +36,11 @@ export default class ResetPasswd extends Component {
                 <Item stackedLabel>
                   <Label>Username (Email)</Label>
                   <Input value={this.state.username} 
+                    keyboardType="email-address"
                     onChangeText={(val) => this.inputValueUpdate(val, 'username')} />
                 </Item>
-                <Button success style={dStyles.buttonStyle} onPress={() => this.props.navigation.navigate('ConfirmSignUp')}>
+                <Button success style={dStyles.buttonStyle} 
+                  onPress={() => this.props.navigation.navigate('ResetPassword')}>
                   <Text style={dStyles.buttonText}>Send Code</Text>
                 </Button>
               </Form>

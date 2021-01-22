@@ -3,11 +3,13 @@ import { Container, Content, Text, Form, Item, Input, Label, Card, CardItem, But
 
 import { dStyles } from '../styles/DefaultStyleSheet.js'
 
-export default class ConfirmSignUp extends Component {
+export default class ResetPassword extends Component {
   constructor() {
     super();
     this.state = {
       passcode: '',
+      password: '',
+      confirmPassword: ''
     }
   }
 
@@ -34,9 +36,19 @@ export default class ConfirmSignUp extends Component {
                     textContentType="numeric"
                     onChangeText={(val) => this.inputValueUpdate(val, 'passcode')} />
                 </Item>
+                <Item stackedLabel>
+                  <Label>Password</Label>
+                  <Input value={this.state.password}  secureTextEntry
+                    onChangeText={(val) => this.inputValueUpdate(val, 'password')}  />
+                </Item>
+                <Item stackedLabel>
+                  <Label>Confirm Password</Label>
+                  <Input value={this.state.confirmPassword}  secureTextEntry
+                    onChangeText={(val) => this.inputValueUpdate(val, 'confirmPassword')}  />
+                </Item>
                 <Button success style={dStyles.buttonStyle} 
-                    onPress={() => this.props.navigation.navigate('SignIn')}>
-                  <Text style={dStyles.buttonText}>Confirm Registration</Text>
+                  onPress={() => this.props.navigation.navigate('SignIn')}>
+                  <Text style={dStyles.buttonText}>Reset Password</Text>
                 </Button>
               </Form>
             </CardItem>
