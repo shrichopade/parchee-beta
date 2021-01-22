@@ -7,8 +7,10 @@ const dStyles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#FFFFFF'
     },  
-    content: {
+    cardStyle: {
         padding:0,
+        alignSelf: 'center',
+        width:'95%'
     },
     pageTitle: {
         color: '#4CAF50',
@@ -43,7 +45,7 @@ const dStyles = StyleSheet.create({
     buttonStyle: {
         flex: 1,
         padding: 0,
-        marginVertical: 8,
+        marginVertical: 20,
         alignSelf: 'center'
     },
     buttonText: {
@@ -58,6 +60,20 @@ const dStyles = StyleSheet.create({
         fontSize: 10,
         fontWeight: '400',
         alignSelf: 'right'
+    },
+    generalText: {
+        color: '#546467',
+        fontFamily: 'Arial',
+        fontSize: 12,
+        fontWeight: '400',
+        marginVertical: 15
+    },
+    linkText: {
+        color: '#ff6633',
+        fontFamily: 'Arial',
+        fontSize: 12,
+        fontWeight: '400',
+        marginVertical: 12
     },
 })
 
