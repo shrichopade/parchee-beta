@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { TouchableOpacity } from 'react-native';
-import { Container, Content, Text, Form, Item, Input, Label, Card, CardItem, Button } from 'native-base';
+import { Container, Content, Text, Form, Item, 
+  Input, Label, Card, CardItem, Button } from 'native-base';
 
 import { dStyles } from '../styles/DefaultStyleSheet.js'
 

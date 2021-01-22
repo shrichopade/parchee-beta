@@ -1,21 +1,26 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Dimensions } from 'react-native';
-import { Container, Header, Content, Icon, Button } from 'native-base';
+import React, { Component } from 'react';
+import { Container, Text, Content } from 'native-base';
 
-import { styles } from '../styles/defaultStyles.js'
+import { dStyles } from '../styles/DefaultStyleSheet.js'
 
 import ChemistHeader from './ChemistHeader.js';
 import ChemistFooter from './ChemistFooter.js';
 
-export default function ChemistHome({ navigation }) {
+export default class ChemistHome extends Component {
 
-    return (
-        <Container>
-            <ChemistHeader navigation={navigation}/>
-            <Content>
-                <Text style={styles.pageTitle2}>Chemist Home Page</Text>
-            </Content>
-            <ChemistFooter />
-      </Container>
-    );
+    constructor() {
+        super();
+    }
+
+    render(){
+        return (
+            <Container>
+                <ChemistHeader navigation={this.props.navigation}/>
+                <Content>
+                    <Text style={dStyles.pageSubTitle}>Chemist Home Page</Text>
+                </Content>
+                <ChemistFooter />
+        </Container>
+        );
+    }
 }

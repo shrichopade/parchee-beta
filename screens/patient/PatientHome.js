@@ -1,42 +1,38 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Dimensions } from 'react-native';
-import { Container, Header, Content, Icon, Button } from 'native-base';
+import React, { Component } from 'react';
+import { View } from 'react-native';
+import { Container, Content, Button, Text } from 'native-base';
 
-import { styles } from '../styles/defaultStyles.js'
+import { dStyles } from '../styles/DefaultStyleSheet.js'
 
-import PatientHeader from './PatientHeader.js';
-import PatientFooter from './PatientFooter.js';
-import ActivePrescription from './ActivePrescription.js';
+import PatientHeader from './PatientHeader';
+import PatientFooter from './PatientFooter';
+import ActivePrescription from './ActivePrescription';
 
-export default function PatientHome({ navigation }) {
+export default class PatientHome extends Component {
 
-    async function uploadPrescription() {
-        try {
-            navigation.navigate('UploadPrescription')
-            console.log(' Success');
-        } catch (error) {
-            console.log(' Error signing in...', error);
-        }
+    constructor() {
+        super();
     }
 
-    return (
-        <Container>
-            <PatientHeader />
-            <Content>
-                <Text style={styles.pageTitle2}>My Prescription</Text>
-                <ActivePrescription />
-                <View style={styles.buttonContainer}>
-                    <Button iconLeft style={styles.buttonStyle} onPress={uploadPrescription}>
-                        <Icon name='eye' />
-                        <Text style={styles.buttonText}>&nbsp;&nbsp;Upload Prescription&nbsp;&nbsp;</Text>
-                    </Button>
-                    <Button iconLeft style={styles.buttonStyle}>
-                        <Icon name='person' />
-                        <Text style={styles.buttonText}>&nbsp;&nbsp;Send to Chemist&nbsp;&nbsp;</Text>
-                    </Button>
-                </View>
-            </Content>
-            <PatientFooter />
-      </Container>
-    );
+    render() {
+        return (
+            <Container>
+                <PatientHeader />
+                <Content>
+                    <Text style={dStyles.pageSubTitle}>My Prescription</Text>
+                    <ActivePrescription props={this.props} navigation={this.props.navigation} />
+                    <View style={dStyles.buttonContainer}>
+                        <Button success style={dStyles.buttonStyle} 
+                            onPress={() => this.props.navigation.navigate('UploadPrescription')}>
+                            <Text style={dStyles.buttonText}>Upload Prescription</Text>
+                        </Button>
+                        <Button success style={dStyles.buttonStyle}>
+                            <Text style={dStyles.buttonText}>Send to Chemist</Text>
+                        </Button>
+                    </View>
+                </Content>
+                <PatientFooter />
+            </Container>
+        );
+    }
 }

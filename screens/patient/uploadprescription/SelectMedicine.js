@@ -1,9 +1,9 @@
-import React, { Component, useState } from "react";
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, TouchableOpacity} from "react-native";
-import { Content, ListItem, CheckBox, Body, Text, Thumbnail } from 'native-base';
+import React, { Component } from "react";
+import { View, TouchableOpacity } from "react-native";
+import { Container, Content, Text, Form, ListItem, CheckBox, Body, 
+  Card, CardItem, Thumbnail } from 'native-base';
 
-import { styles } from '../../styles/defaultStyles.js'
+import { dStyles } from '../../styles/DefaultStyleSheet.js'
 
 class SelectMedicine extends Component {
 
@@ -42,50 +42,52 @@ class SelectMedicine extends Component {
     const { currentStep, totalSteps } = this.state;
     
     return (
-      <SafeAreaView style={styles.safeAreaContainer}>
-          <View style={styles.container}>
-            <View>
-              <Text style={styles.pageTitle2}>{`Step ${currentStep} of ${totalSteps}`}</Text>
-            </View>
-            
-            <Content>
+      <Container style={dStyles.container}>
+        <Content>
+          <Card style={dStyles.cardStyle}>
+            <CardItem header bordered>
+              <Text style={dStyles.formTitle}> Select Medicine - {`Step ${currentStep} of ${totalSteps}`}</Text>
+            </CardItem>
+            <CardItem bordered style={dStyles.cardItemBodyStyle}>
+              <Form>
                 <ListItem>
                     <CheckBox checked={false}  color="green"/>
                     <Body>
-                        <Text style={styles.textLabelNormal}>Amoxcyline</Text>
+                        <Text style={dStyles.textLabelNormal}>Amoxcyline</Text>
                     </Body>
                 </ListItem>
                 <ListItem>
                     <CheckBox checked={false}  color="green"/>
                     <Body>
-                        <Text style={styles.textLabelNormal}>Amoldipine</Text>
+                        <Text style={dStyles.textLabelNormal}>Amoldipine</Text>
                     </Body>
                 </ListItem>
                 <ListItem>
                     <CheckBox checked={false} color="green"/>
                     <Body>
-                        <Text style={styles.textLabelNormal}>Novolin Insulin</Text>
+                        <Text style={dStyles.textLabelNormal}>Novolin Insulin</Text>
                     </Body>
                 </ListItem>
                 <ListItem>
                     <CheckBox checked={false} color="green"/>
                     <Body>
-                        <Text style={styles.textLabelNormal}>Insulin Syringes</Text>
+                        <Text style={dStyles.textLabelNormal}>Insulin Syringes</Text>
                     </Body>
                 </ListItem>
-            </Content>
-
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity onPress={this.goBack} >
-                <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
-              </TouchableOpacity>
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              <TouchableOpacity onPress={this.nextStep} >
-                <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
-              </TouchableOpacity>
-            </View>
-        </View>
-      </SafeAreaView>
+                <View style={dStyles.buttonContainer}>
+                  <TouchableOpacity onPress={this.goBack} >
+                    <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                  </TouchableOpacity>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <TouchableOpacity onPress={this.nextStep} >
+                    <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
+                  </TouchableOpacity>
+                </View>
+              </Form>
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>
     );
   }
 }

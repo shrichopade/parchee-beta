@@ -1,21 +1,26 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Dimensions } from 'react-native';
-import { Container, Header, Content, Icon, Button } from 'native-base';
+import React, { Component } from 'react';
+import { Container, Text, Content } from 'native-base';
 
-import { styles } from '../styles/defaultStyles.js'
+import { dStyles } from '../styles/DefaultStyleSheet.js'
 
 import DoctorHeader from './DoctorHeader.js';
 import DoctorFooter from './DoctorFooter.js';
 
-export default function DoctorHome({ navigation }) {
+export default class DoctorHome extends Component {
 
-    return (
-        <Container>
-            <DoctorHeader />
-            <Content>
-                <Text style={styles.pageTitle2}>Doctor Home Page</Text>
-            </Content>
-            <DoctorFooter />
-      </Container>
-    );
+    constructor() {
+        super();
+    }
+
+    render() {
+        return (
+            <Container>
+                <DoctorHeader />
+                <Content>
+                    <Text style={dStyles.pageSubTitle}>Doctor Home Page</Text>
+                </Content>
+                <DoctorFooter />
+        </Container>
+        );
+    }
 }

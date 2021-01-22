@@ -1,10 +1,9 @@
-import React, { Component, useState } from "react";
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, TouchableOpacity} from "react-native";
-import { Content, ListItem, Radio, Left, Right, Text, Button, Icon } from 'native-base';
+import React, { Component } from "react";
+import { View } from "react-native";
+import { Container, Content, Text, Form, Radio, ListItem,
+  Left, Right, Card, CardItem, Button } from 'native-base';
 
-import { styles } from '../../styles/defaultStyles.js'
-import PatientHome from '../PatientHome.js';
+import { dStyles } from '../../styles/DefaultStyleSheet.js'
 
 class SelectChemist extends Component {
 
@@ -52,49 +51,51 @@ class SelectChemist extends Component {
     const { currentStep, totalSteps } = this.state;
     
     return (
-      <SafeAreaView style={styles.safeAreaContainer}>
-          <View style={styles.container}>
-            <View>
-              <Text style={styles.pageTitle2}>{`Step ${currentStep} of ${totalSteps}`}</Text>
-            </View>
-            
-            <Content>
-                <ListItem selected={true} >
-                    <Left>
-                        <Text style={styles.textLabelNormal}>Mahalaxmi Medicals, Kothrud, Pune</Text>
-                    </Left>
-                    <Right>
-                        <Radio color={"#f0ad4e"} selectedColor={"#5cb85c"} selected={true}
-                     />
-                    </Right>
-                </ListItem>
-                <ListItem selected={false} >
-                    <Left>
-                        <Text style={styles.textLabelNormal}>Surendra Medical, Kothrud, Pune</Text>
-                    </Left>
-                    <Right>
-                        <Radio color={"#f0ad4e"} selectedColor={"#5cb85c"} selected={false}
-                     />
-                    </Right>
-                </ListItem>
-                <ListItem selected={false} >
-                    <Left>
-                        <Text style={styles.textLabelNormal}>Krishna Medicals, Kothrud, Pune</Text>
-                    </Left>
-                    <Right>
-                        <Radio color={"#f0ad4e"} selectedColor={"#5cb85c"} selected={false}
-                     />
-                    </Right>
-                </ListItem>
-            </Content>
-            <View style={styles.container}>
-                <Button iconLeft style={styles.buttonStyle}  onPress={PatientHome}>
-                    <Icon name='medkit' />
-                    <Text style={styles.buttonText}>&nbsp;&nbsp;Send to Chemist&nbsp;&nbsp;</Text>
-                </Button>
-            </View>
-        </View>
-      </SafeAreaView>
+      <Container style={dStyles.container}>
+        <Content>
+          <Card style={dStyles.cardStyle}>
+            <CardItem header bordered>
+              <Text style={dStyles.formTitle}> Select Chemist - {`Step ${currentStep} of ${totalSteps}`}</Text>
+            </CardItem>
+            <CardItem bordered style={dStyles.cardItemBodyStyle}>
+              <Form>
+                  <ListItem selected={true} >
+                      <Left>
+                          <Text style={dStyles.textLabelNormal}>Mahalaxmi Medicals, Kothrud, Pune</Text>
+                      </Left>
+                      <Right>
+                          <Radio color={"#f0ad4e"} selectedColor={"#5cb85c"} selected={true}
+                      />
+                      </Right>
+                  </ListItem>
+                  <ListItem selected={false} >
+                      <Left>
+                          <Text style={dStyles.textLabelNormal}>Surendra Medical, Kothrud, Pune</Text>
+                      </Left>
+                      <Right>
+                          <Radio color={"#f0ad4e"} selectedColor={"#5cb85c"} selected={false}
+                      />
+                      </Right>
+                  </ListItem>
+                  <ListItem selected={false} >
+                      <Left>
+                          <Text style={dStyles.textLabelNormal}>Krishna Medicals, Kothrud, Pune</Text>
+                      </Left>
+                      <Right>
+                          <Radio color={"#f0ad4e"} selectedColor={"#5cb85c"} selected={false}
+                      />
+                      </Right>
+                  </ListItem>
+                  <View style={dStyles.container}>
+                    <Button iconLeft style={dStyles.buttonStyle}  onPress={() => this.props.navigation.navigate('PatientHome')}>
+                        <Text style={dStyles.buttonText}>&nbsp;&nbsp;Send to Chemist&nbsp;&nbsp;</Text>
+                    </Button>
+                  </View>
+              </Form>
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>
     );
   }
 }

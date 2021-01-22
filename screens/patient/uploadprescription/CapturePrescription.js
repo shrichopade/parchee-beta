@@ -1,11 +1,9 @@
-import React, { Component, useState } from "react";
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, TouchableOpacity, TextInput, Text } from "react-native";
-import { Thumbnail } from 'native-base';
+import React, { Component } from "react";
+import { View, TouchableOpacity } from "react-native";
+import { Container, Content, Text, Form, Item, 
+  Input, Label, Card, CardItem, Thumbnail } from 'native-base';
 
-import AppTextInput from '../../components/AppTextInput';
-
-import { styles } from '../../styles/defaultStyles.js'
+import { dStyles } from '../../styles/DefaultStyleSheet.js'
 
 class CapturePrescription extends Component {
 
@@ -13,7 +11,10 @@ class CapturePrescription extends Component {
     super(props);
     this.state = {
       totalSteps: "",
-      currentStep: ""
+      currentStep: "",
+      uploadDoc: '',
+      uploadPic: '',
+      takePhoto: ''
     };
   }
 
@@ -44,39 +45,39 @@ class CapturePrescription extends Component {
     const { currentStep, totalSteps } = this.state;
 
     return (
-      <SafeAreaView style={styles.safeAreaContainer}>
-          <View style={styles.container}>
-            <View>
-              <Text style={styles.pageTitle2}>{`Step ${currentStep} of ${totalSteps}`}</Text>
-            </View>
-            <AppTextInput
-                  value={this.state.text}
-                  onChangeText={text => this.setState({text})}
-                  leftIcon="text"
-                  placeholder="Upload Document"
-                  keyboardType="default"
-            />
-            <AppTextInput
-                  value={this.state.text}
-                  onChangeText={text => this.setState({text})}
-                  leftIcon="sim"
-                  placeholder="Upload from PhotoLibrary"
-                  keyboardType="default"
-            />
-            <AppTextInput
-                  value={this.state.text}
-                  onChangeText={text => this.setState({text})}
-                  leftIcon="camera"
-                  placeholder="Take Picture from Camera"
-                  keyboardType="default"
-            />
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity onPress={this.nextStep} >
-                <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
-              </TouchableOpacity>
-            </View>
-        </View>
-      </SafeAreaView>
+      <Container style={dStyles.container}>
+            <Content>
+              <Card style={dStyles.cardStyle}>
+                <CardItem header bordered>
+                  <Text style={dStyles.formTitle}> Capture Prescription - {`Step ${currentStep} of ${totalSteps}`}</Text>
+                </CardItem>
+                <CardItem bordered style={dStyles.cardItemBodyStyle}>
+                  <Form>
+                    <Item stackedLabel>
+                      <Label>Upload Document</Label>
+                      <Input value={this.state.uploadDoc} 
+                        onChangeText={(val) => this.inputValueUpdate(val, 'uploadDoc')} />
+                    </Item>
+                    <Item stackedLabel>
+                      <Label>Upload Photo</Label>
+                      <Input value={this.state.uploadPic} 
+                        onChangeText={(val) => this.inputValueUpdate(val, 'uploadPic')} />
+                    </Item>
+                    <Item stackedLabel>
+                      <Label>Take Picture</Label>
+                      <Input value={this.state.takePhoto} 
+                        onChangeText={(val) => this.inputValueUpdate(val, 'takePhoto')} />
+                    </Item>
+                    <View style={dStyles.buttonContainer}>
+                      <TouchableOpacity onPress={this.nextStep} >
+                        <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
+                      </TouchableOpacity>
+                    </View>
+                  </Form>
+                </CardItem>
+              </Card>
+            </Content>
+          </Container>
     );
   }
 }

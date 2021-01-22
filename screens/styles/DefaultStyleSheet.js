@@ -27,7 +27,7 @@ const dStyles = StyleSheet.create({
     pageSubTitle: {
         color: '#4CAF50',
         fontFamily: 'Arial',
-        fontSize: 24,
+        fontSize: 20,
         alignSelf: 'center',
         fontWeight: '700',
         marginVertical: 16
@@ -49,6 +49,7 @@ const dStyles = StyleSheet.create({
     buttonStyle: {
         flex: 1,
         padding: 0,
+        backgroundColor:'#4CAF50',
         marginVertical: 20,
         alignSelf: 'center'
     },
@@ -78,6 +79,12 @@ const dStyles = StyleSheet.create({
         fontSize: 12,
         fontWeight: '400',
         marginVertical: 15
+    },
+    textLabelNormal: {
+        color: '#202020',
+        fontSize: 16,
+        fontFamily: 'Arial',
+        fontWeight: '100'
     },
     linkText: {
         color: '#ff6633',

@@ -1,9 +1,9 @@
-import React, { Component, useState } from "react";
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, TouchableOpacity} from "react-native";
-import { Content, ListItem, Radio, Left, Right, Text, Thumbnail } from 'native-base';
+import React, { Component } from "react";
+import { View, TouchableOpacity } from "react-native";
+import { Container, Content, Text, Form, Radio, ListItem,
+  Left, Right, Card, CardItem, Thumbnail } from 'native-base';
 
-import { styles } from '../../styles/defaultStyles.js'
+import { dStyles } from '../../styles/DefaultStyleSheet.js'
 
 class SelectDelivery extends Component {
 
@@ -42,16 +42,17 @@ class SelectDelivery extends Component {
     const { currentStep, totalSteps } = this.state;
     
     return (
-      <SafeAreaView style={styles.safeAreaContainer}>
-          <View style={styles.container}>
-            <View>
-              <Text style={styles.pageTitle2}>{`Step ${currentStep} of ${totalSteps}`}</Text>
-            </View>
-            
-            <Content>
-                <ListItem selected={true} >
+      <Container style={dStyles.container}>
+        <Content>
+          <Card style={dStyles.cardStyle}>
+            <CardItem header bordered>
+              <Text style={dStyles.formTitle}> Select Delivery - {`Step ${currentStep} of ${totalSteps}`}</Text>
+            </CardItem>
+            <CardItem bordered style={dStyles.cardItemBodyStyle}>
+              <Form>
+              <ListItem selected={true} >
                     <Left>
-                        <Text style={styles.textLabelNormal}>One week</Text>
+                        <Text style={dStyles.textLabelNormal}>One week</Text>
                     </Left>
                     <Right>
                         <Radio color={"#f0ad4e"} selectedColor={"#5cb85c"} selected={true}
@@ -60,7 +61,7 @@ class SelectDelivery extends Component {
                 </ListItem>
                 <ListItem selected={false} >
                     <Left>
-                        <Text style={styles.textLabelNormal}>Two week</Text>
+                        <Text style={dStyles.textLabelNormal}>Two week</Text>
                     </Left>
                     <Right>
                         <Radio color={"#f0ad4e"} selectedColor={"#5cb85c"} selected={false}
@@ -69,7 +70,7 @@ class SelectDelivery extends Component {
                 </ListItem>
                 <ListItem selected={false} >
                     <Left>
-                        <Text style={styles.textLabelNormal}>Four week (Monthly)</Text>
+                        <Text style={dStyles.textLabelNormal}>Four week (Monthly)</Text>
                     </Left>
                     <Right>
                         <Radio color={"#f0ad4e"} selectedColor={"#5cb85c"} selected={false}
@@ -78,26 +79,27 @@ class SelectDelivery extends Component {
                 </ListItem>
                 <ListItem selected={false} >
                     <Left>
-                        <Text style={styles.textLabelNormal}>Auto-repeat Monthly</Text>
+                        <Text style={dStyles.textLabelNormal}>Auto-repeat Monthly</Text>
                     </Left>
                     <Right>
                         <Radio color={"#f0ad4e"} selectedColor={"#5cb85c"} selected={false}
                      />
                     </Right>
                 </ListItem>
-            </Content>
-
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity onPress={this.goBack} >
-                <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
-              </TouchableOpacity>
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              <TouchableOpacity onPress={this.nextStep} >
-                <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
-              </TouchableOpacity>
-            </View>
-        </View>
-      </SafeAreaView>
+                <View style={dStyles.buttonContainer}>
+                  <TouchableOpacity onPress={this.goBack} >
+                    <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                  </TouchableOpacity>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <TouchableOpacity onPress={this.nextStep} >
+                    <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
+                  </TouchableOpacity>
+                </View>
+              </Form>
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>
     );
   }
 }

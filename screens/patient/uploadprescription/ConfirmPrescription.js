@@ -1,9 +1,9 @@
-import React, { Component, useState } from "react";
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, TouchableOpacity, TextInput, Text } from "react-native";
-import { Thumbnail } from 'native-base';
+import React, { Component } from "react";
+import { View, TouchableOpacity } from "react-native";
+import { Container, Content, Text, Form, Item, 
+  Card, CardItem, Thumbnail } from 'native-base';
 
-import { styles } from '../../styles/defaultStyles.js'
+import { dStyles } from '../../styles/DefaultStyleSheet.js'
 
 class ConfirmPrescription extends Component {
 
@@ -42,23 +42,31 @@ class ConfirmPrescription extends Component {
     const { currentStep, totalSteps } = this.state;
 
     return (
-      <SafeAreaView style={styles.safeAreaContainer}>
-          <View style={styles.container}>
-            <View>
-              <Text style={styles.pageTitle2}>{`Step ${currentStep} of ${totalSteps}`}</Text>
-            </View>
-            <Thumbnail large source={require('../../images/prescription.jfif')}/>
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity onPress={this.goBack} >
-                <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
-              </TouchableOpacity>
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              <TouchableOpacity onPress={this.nextStep} >
-                <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
-              </TouchableOpacity>
-            </View>
-        </View>
-      </SafeAreaView>
+      <Container style={dStyles.container}>
+        <Content>
+          <Card style={dStyles.cardStyle}>
+            <CardItem header bordered>
+              <Text style={dStyles.formTitle}> Confirm Prescription - {`Step ${currentStep} of ${totalSteps}`}</Text>
+            </CardItem>
+            <CardItem bordered style={dStyles.cardItemBodyStyle}>
+              <Form>
+                <Item stackedLabel>
+                  <Thumbnail large source={require('../../images/prescription.jfif')}/>
+                </Item>
+                <View style={dStyles.buttonContainer}>
+                  <TouchableOpacity onPress={this.goBack} >
+                    <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                  </TouchableOpacity>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <TouchableOpacity onPress={this.nextStep} >
+                    <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
+                  </TouchableOpacity>
+                </View>
+              </Form>
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>
     );
   }
 }

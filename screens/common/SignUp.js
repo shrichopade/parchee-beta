@@ -90,7 +90,7 @@ export default class SignUp extends Component {
                                     <Input value={this.state.password}  secureTextEntry
                                         onChangeText={(val) => this.inputValueUpdate(val, 'password')}  />
                                 </Item>
-                                <Item stackedLabel style={dStyles.buttonContainer}>
+                                <Item stackedLabel>
                                     <Label>Your status</Label>
                                     <ListItem>
                                         <Left><Radio selected={true}/></Left>
@@ -119,7 +119,7 @@ export default class SignUp extends Component {
                                         textContentType="numeric"
                                         onChangeText={(val) => this.inputValueUpdate(val, 'registrationNumber')}  />
                                 </Item>
-                                <Item stackedLabel style={dStyles.buttonContainer}>
+                                <Item stackedLabel>
                                     <Label>Marketing Preferences</Label>
                                     <ListItem>
                                         <CheckBox checked={true} />
