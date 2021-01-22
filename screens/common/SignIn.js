@@ -56,7 +56,7 @@ export default class SignIn extends Component {
                 <CardItem header bordered>
                   <Text style={dStyles.formTitle}> Sign In </Text>
                 </CardItem>
-                <CardItem bordered>
+                <CardItem bordered style={dStyles.cardItemBodyStyle}>
                   <Form>
                     <Item stackedLabel>
                       <Label>Username (Email)</Label>

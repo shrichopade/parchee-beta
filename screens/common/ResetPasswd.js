@@ -31,7 +31,7 @@ export default class ResetPasswd extends Component {
             <CardItem header bordered>
               <Text style={dStyles.formTitle}> Request OTP </Text>
             </CardItem>
-            <CardItem bordered>
+            <CardItem bordered style={dStyles.cardItemBodyStyle}>
               <Form>
                 <Item stackedLabel>
                   <Label>Username (Email)</Label>

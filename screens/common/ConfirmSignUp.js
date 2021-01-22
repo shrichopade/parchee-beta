@@ -27,11 +27,13 @@ export default class ConfirmSignUp extends Component {
             <CardItem header bordered>
               <Text style={dStyles.formTitle}> Reset Password </Text>
             </CardItem>
-            <CardItem bordered>
+            <CardItem bordered style={dStyles.cardItemBodyStyle}>
               <Form>
                 <Item stackedLabel>
                   <Label>Passcode</Label>
                   <Input value={this.state.passcode} 
+                    keyboardType="phone-pad"
+                    textContentType="numeric"
                     onChangeText={(val) => this.inputValueUpdate(val, 'passcode')} />
                 </Item>
                 <Item stackedLabel>

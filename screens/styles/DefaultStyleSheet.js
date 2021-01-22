@@ -12,6 +12,10 @@ const dStyles = StyleSheet.create({
         alignSelf: 'center',
         width:'95%'
     },
+    cardItemBodyStyle: {
+        padding:0,
+        alignSelf: 'center'
+    },
     pageTitle: {
         color: '#4CAF50',
         fontFamily: 'Arial',
