@@ -16,6 +16,7 @@ import UploadPrescription from './screens/patient/UploadPrescription';
 
 import DoctorHome from './screens/doctor/DoctorHome';
 import ChemistHome from './screens/chemist/ChemistHome';
+import OrderDetails from './screens/chemist/OrderDetails';
 
 //Aws Amplify Imports
 import Amplify from 'aws-amplify';
@@ -36,10 +37,14 @@ export default class App extends React.Component {
           <Stack.Screen name="ConfirmSignUp" component={ConfirmSignUp}/>
           <Stack.Screen name="RequestOTP" component={RequestOTP}/>
           <Stack.Screen name="ResetPassword" component={ResetPassword}/>
+
           <Stack.Screen name="PatientHome" component={PatientHome}/>
-          <Stack.Screen name="DoctorHome" component={DoctorHome}/>
-          <Stack.Screen name="ChemistHome" component={ChemistHome}/>
           <Stack.Screen name="UploadPrescription" component={UploadPrescription}/>
+
+          <Stack.Screen name="DoctorHome" component={DoctorHome}/>
+          
+          <Stack.Screen name="ChemistHome" component={ChemistHome}/>
+          <Stack.Screen name="OrderDetails" component={OrderDetails}/>
         </Stack.Navigator>
       </NavigationContainer>
     );
