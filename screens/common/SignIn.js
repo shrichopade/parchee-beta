@@ -30,7 +30,7 @@ export default class SignIn extends Component {
             } else if(this.state.username == "D" || this.state.username == "d" ) {
               this.props.navigation.navigate('DoctorHome')
             } else if(this.state.username == "C" || this.state.username == "c" ) {
-              this.props.navigation.navigate('ChemistHome')
+              this.props.navigation.navigate('ChemistHome', {orderStatus:'Open'})
             } else {
               this.props.navigation.navigate('PatientHome')
             }

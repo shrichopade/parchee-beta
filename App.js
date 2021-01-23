@@ -46,6 +46,7 @@ export default class App extends React.Component {
 
           <Stack.Screen name="DoctorHome" component={DoctorHome}/>
           <Stack.Screen name="PrescribeMedication" component={PrescribeMedication}/>
+          
           <Stack.Screen name="ChemistHome" component={ChemistHome}/>
           <Stack.Screen name="OrdersList" component={OrdersList}/>
           <Stack.Screen name="OrderDetails" component={OrderDetails}/>

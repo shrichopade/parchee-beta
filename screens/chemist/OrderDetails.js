@@ -21,6 +21,7 @@ export default class OrderDetails extends Component {
   }
 
   render() {
+    const isOrderStatusOpen = (this.props.route.params.orderStatus  == 'Open')
     return (
       <Container style={dStyles.container}>
         <Content>
@@ -87,12 +88,12 @@ export default class OrderDetails extends Component {
                 </CardItem>
                 <View style={dStyles.buttonContainer}>
                     <Button success style={dStyles.buttonStyle} 
-                        onPress={() => this.props.navigation.navigate('OrdersList', {orderStatus:this.props.route.params.orderStatus})}>
+                        onPress={() => this.props.navigation.navigate('ChemistHome', {orderStatus:this.props.route.params.orderStatus})}>
                         <Text style={dStyles.buttonText}>Back</Text>
                     </Button>
                     <Button success style={dStyles.buttonStyle}
-                        onPress={() => this.props.navigation.navigate('OrdersList', {orderStatus:this.props.route.params.orderStatus})}>
-                        <Text style={dStyles.buttonText}>Dispatched</Text>
+                        onPress={() => this.props.navigation.navigate('ChemistHome', {orderStatus:this.props.route.params.orderStatus})}>
+                        <Text style={dStyles.buttonText}>{isOrderStatusOpen?'Dispatched':''}</Text>
                     </Button> 
                 </View>
             </Card>

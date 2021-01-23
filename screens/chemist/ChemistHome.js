@@ -6,6 +6,7 @@ import { dStyles } from '../styles/DefaultStyleSheet.js'
 
 import ChemistFooter from './ChemistFooter';
 import OrdersList from './OrdersList';
+import ChemistHeader from './ChemistHeader';
 
 export default class ChemistHome extends Component {
 
@@ -16,15 +17,18 @@ export default class ChemistHome extends Component {
     render(){
         return (
             <Container>
-                <OrdersList navigation={this.props.navigation} orderStatus='Open'/>
+                <ChemistHeader navigation={this.props.navigation}/>
+                <OrdersList navigation={this.props.navigation} orderStatus={this.props.route.params.orderStatus}/>
                 <Content>
                     <View style={dStyles.buttonContainer}>
                         <Button success style={dStyles.buttonStyle} 
-                            onPress={() => this.props.navigation.navigate('OrdersList', {orderStatus:'Dispatched'})}>
-                            <Text style={dStyles.buttonText}>Dispatched Orders</Text>
+                            onPress={() => this.props.navigation.navigate('ChemistHome', 
+                                {orderStatus: this.props.route.params.orderStatus === 'Open' ? 'Dispatched' : 'Open'})}>
+                            <Text style={dStyles.buttonText}>{ this.props.route.params.orderStatus === 'Open' ? 'Dispatched' : 'Open'} Orders</Text>
                         </Button>
                         <Button success style={dStyles.buttonStyle}
-                            onPress={() => this.props.navigation.navigate('OrdersList', {orderStatus:'Closed'})}>
+                            onPress={() => this.props.navigation.navigate('ChemistHome',     
+                                {orderStatus:'Closed'})}>
                             <Text style={dStyles.buttonText}>Closed Orders</Text>
                         </Button>
                     </View>
