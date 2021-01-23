@@ -5,6 +5,7 @@ import { dStyles } from '../styles/DefaultStyleSheet.js'
 
 import DoctorHeader from './DoctorHeader.js';
 import DoctorFooter from './DoctorFooter.js';
+import Lasttenpatients from './LastTenPatients.js';
 
 export default class DoctorHome extends Component {
 
@@ -18,6 +19,7 @@ export default class DoctorHome extends Component {
                 <DoctorHeader />
                 <Content>
                     <Text style={dStyles.pageSubTitle}>Doctor Home Page</Text>
+                    <Lasttenpatients/>
                 </Content>
                 <DoctorFooter />
         </Container>
