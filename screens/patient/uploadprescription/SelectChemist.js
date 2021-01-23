@@ -41,7 +41,7 @@ class SelectChemist extends Component {
     next();
   };
 
-  goBack() {
+  goBack = () =>  {
     const { back } = this.props;
     // Go to previous step
     back();

@@ -57,7 +57,8 @@ const dStyles = StyleSheet.create({
         color: '#fff',
         fontFamily: 'Arial',
         fontSize: 12,
-        fontWeight: '600'
+        fontWeight: '600',
+        alignSelf: 'center'
     },
     footerText: {
         color: '#202020',
