@@ -11,7 +11,9 @@ export default class SignIn extends Component {
       super();
       this.state = {
         username: '',
-        password: ''
+        password: '',
+        usernameError: '',
+        passwordError: ''
       }
     }
 
@@ -19,15 +21,6 @@ export default class SignIn extends Component {
       const state = this.state;
       state[prop] = val;
       this.setState(state);
-    }
-
-    validateInput() {
-      if(this.state.username === '') {
-        alert('User name is mandatory')
-      }
-      if(this.state.password === '') {
-        alert('Password is mandatory')
-      }
     }
 
     signIn = () => {

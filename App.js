@@ -24,21 +24,24 @@ import config from './aws-exports';
 Amplify.configure(config);
 
 const Stack = createStackNavigator();
+  
+export default class App extends React.Component {
 
-export default function App() {
-  return (  
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="SignIn" headerMode="none">
-        <Stack.Screen name="SignIn" component={SignIn}/>
-        <Stack.Screen name="SignUp" component={SignUp}/>
-        <Stack.Screen name="ConfirmSignUp" component={ConfirmSignUp}/>
-        <Stack.Screen name="RequestOTP" component={RequestOTP}/>
-        <Stack.Screen name="ResetPassword" component={ResetPassword}/>
-        <Stack.Screen name="PatientHome" component={PatientHome}/>
-        <Stack.Screen name="DoctorHome" component={DoctorHome}/>
-        <Stack.Screen name="ChemistHome" component={ChemistHome}/>
-        <Stack.Screen name="UploadPrescription" component={UploadPrescription}/>
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+  render() {
+    return (  
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="SignIn" headerMode="none">
+          <Stack.Screen name="SignIn" component={SignIn}/>
+          <Stack.Screen name="SignUp" component={SignUp}/>
+          <Stack.Screen name="ConfirmSignUp" component={ConfirmSignUp}/>
+          <Stack.Screen name="RequestOTP" component={RequestOTP}/>
+          <Stack.Screen name="ResetPassword" component={ResetPassword}/>
+          <Stack.Screen name="PatientHome" component={PatientHome}/>
+          <Stack.Screen name="DoctorHome" component={DoctorHome}/>
+          <Stack.Screen name="ChemistHome" component={ChemistHome}/>
+          <Stack.Screen name="UploadPrescription" component={UploadPrescription}/>
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
 }
