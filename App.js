@@ -13,6 +13,7 @@ import RequestOTP from './screens/common/RequestOTP';
 import ResetPassword from './screens/common/ResetPassword';
 import PatientHome from './screens/patient/PatientHome';
 import UploadPrescription from './screens/patient/UploadPrescription';
+import PrescribeMedication from './screens/doctor/PrescribeMedication';
 
 import DoctorHome from './screens/doctor/DoctorHome';
 
@@ -44,7 +45,7 @@ export default class App extends React.Component {
           <Stack.Screen name="UploadPrescription" component={UploadPrescription}/>
 
           <Stack.Screen name="DoctorHome" component={DoctorHome}/>
-          
+          <Stack.Screen name="PrescribeMedication" component={PrescribeMedication}/>
           <Stack.Screen name="ChemistHome" component={ChemistHome}/>
           <Stack.Screen name="OrdersList" component={OrdersList}/>
           <Stack.Screen name="OrderDetails" component={OrderDetails}/>
