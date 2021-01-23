@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     accordionTitle: {
       fontSize: 20, 
       fontWeight:'bold',
+      fontFamily: 'Arial',
       marginBottom: 20,
       color: '#62625A'
     },
@@ -45,6 +46,7 @@ const styles = StyleSheet.create({
     accordionItemValueBadge: {
       color: '#42C382',
       padding: 5,
+      fontFamily: 'Arial',
       fontWeight: 'bold'
     },
     accordionItemValueName: {

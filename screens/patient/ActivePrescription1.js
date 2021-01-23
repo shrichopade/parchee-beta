@@ -6,8 +6,8 @@ import { styles } from '../styles/accordianStyles.js'
 
 export default class ActivePrescription1 extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             isReady: false,
             expended: 0,
@@ -140,7 +140,7 @@ export default class ActivePrescription1 extends Component {
                             renderContent={this.renderContent}
                             onAccordionOpen={(item) => this.setState({expended: item.id})}
                             onAccordionClose={(item) => this.setState({expended: 0})}
-                        />
+                        /> 
                     </View>
                 </View>
             </Container>
