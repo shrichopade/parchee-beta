@@ -11,11 +11,13 @@ import SignUp from './screens/common/SignUp';
 import ConfirmSignUp from './screens/common/ConfirmSignUp';
 import RequestOTP from './screens/common/RequestOTP';
 import ResetPassword from './screens/common/ResetPassword';
+
 import PatientHome from './screens/patient/PatientHome';
 import UploadPrescription from './screens/patient/UploadPrescription';
-import PrescribeMedication from './screens/doctor/PrescribeMedication';
+import AddAgency from './screens/patient/AddAgency';
 
 import DoctorHome from './screens/doctor/DoctorHome';
+import PrescribeMedication from './screens/doctor/PrescribeMedication';
 
 import ChemistHome from './screens/chemist/ChemistHome';
 import OrdersList from './screens/chemist/OrdersList';
@@ -43,6 +45,7 @@ export default class App extends React.Component {
 
           <Stack.Screen name="PatientHome" component={PatientHome}/>
           <Stack.Screen name="UploadPrescription" component={UploadPrescription}/>
+          <Stack.Screen name="AddAgency" component={AddAgency}/>
 
           <Stack.Screen name="DoctorHome" component={DoctorHome}/>
           <Stack.Screen name="PrescribeMedication" component={PrescribeMedication}/>

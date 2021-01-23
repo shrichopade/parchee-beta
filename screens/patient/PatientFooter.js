@@ -10,7 +10,7 @@ export default class PatientFooter extends Component {
             <Button vertical>
               <Icon name="apps" />
             </Button>
-            <Button vertical>
+            <Button vertical onPress={() => this.props.navigation.navigate('AddAgency')}>
               <Icon name="person" /> 
             </Button>
             <Button vertical>

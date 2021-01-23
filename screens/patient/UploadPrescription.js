@@ -14,7 +14,7 @@ const allSteps = [
   { name: "Confirm Prescription", component: ConfirmPrescription },
   { name: "Select Medicines", component: SelectMedicine },
   { name: "Select Delivery", component: SelectDelivery },
-  { name: "Select chemist", component: SelectChemist }
+  { name: "Select Chemist", component: SelectChemist }
 ];
 
 /* Define your class */

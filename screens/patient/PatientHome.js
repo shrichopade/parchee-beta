@@ -17,10 +17,10 @@ export default class PatientHome extends Component {
     render() {
         return (
             <Container>
-                <PatientHeader />
+                <PatientHeader navigation={this.props.navigation}/>
                 <Content>
                     <Text style={dStyles.pageSubTitle}>My Active Prescription</Text>
-                    <ActivePrescription />
+                    <ActivePrescription navigation={this.props.navigation} />
                     <View style={dStyles.buttonContainer}>
                         <Button success style={dStyles.buttonStyle} 
                             onPress={() => this.props.navigation.navigate('UploadPrescription')}>
@@ -31,7 +31,7 @@ export default class PatientHome extends Component {
                         </Button>
                     </View>
                 </Content>
-                <PatientFooter />
+                <PatientFooter navigation={this.props.navigation}/>
             </Container>
         );
     }

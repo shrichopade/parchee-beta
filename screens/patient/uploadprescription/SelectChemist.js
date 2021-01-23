@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { View } from "react-native";
-import { Container, Content, Text, Form, Radio, ListItem,
+import { View, TouchableOpacity } from "react-native";
+import { Container, Content, Text, Form, Radio, ListItem, Thumbnail,
   Left, Right, Card, CardItem, Button } from 'native-base';
 
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
@@ -25,7 +25,7 @@ class SelectChemist extends Component {
 
   sendParcheeToChemist = () => {
         try {
-            navigation.navigate('PatientHome')
+            this.props.navigation.navigate('PatientHome')
             console.log(' Success');
         } catch (error) {
             console.log(' Error signing in...', error);
@@ -86,8 +86,11 @@ class SelectChemist extends Component {
                       />
                       </Right>
                   </ListItem>
-                  <View style={dStyles.container}>
-                    <Button iconLeft style={dStyles.buttonStyle}  onPress={() => this.props.navigation.navigate('PatientHome')}>
+                  <View style={dStyles.buttonContainer}>
+                    <TouchableOpacity onPress={this.goBack} >
+                      <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                    </TouchableOpacity>
+                    <Button iconLeft style={dStyles.buttonStyle}  onPress={this.sendParcheeToChemist}>
                         <Text style={dStyles.buttonText}>&nbsp;&nbsp;Send to Chemist&nbsp;&nbsp;</Text>
                     </Button>
                   </View>
