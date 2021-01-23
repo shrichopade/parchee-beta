@@ -3,12 +3,12 @@ import { DataTable } from 'react-native-paper';
 import { Thumbnail } from 'native-base';
 import { styles } from '../styles/defaultStyles.js'
 
-const ActivePrescription = () => (
+const LastTenPatients = () => (
   <DataTable>
     <DataTable.Header style={styles.tableHeaderBgColor}>
-      <DataTable.Title sortDirection='ascending' style={styles.tableHeaderText}>Medicine Name</DataTable.Title>
-      <DataTable.Title>Date</DataTable.Title>
+      <DataTable.Title sortDirection='ascending' style={styles.tableHeaderText}>Date</DataTable.Title>
       <DataTable.Title>Patient</DataTable.Title>
+      <DataTable.Title>Patient Image</DataTable.Title>
       <DataTable.Title>Dignosis</DataTable.Title>
       <DataTable.Title>Followup</DataTable.Title>
       <DataTable.Title>Notes</DataTable.Title>
@@ -51,4 +51,4 @@ const ActivePrescription = () => (
   </DataTable>
 );
 
-export default ActivePrescription;
+export default LastTenPatients;
