@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { DataTable } from 'react-native-paper';
+import { View } from 'react-native';
 import { Container, Content, Text, Thumbnail, Card, CardItem, Button, ListItem } from 'native-base';
 
 import { dStyles } from '../styles/DefaultStyleSheet.js'
@@ -27,24 +28,28 @@ export default class OrderDetails extends Component {
             <CardItem header bordered>
               <Text style={dStyles.formTitle}> Order No - ODR00024 </Text>
             </CardItem>
-            <CardItem bordered style={dStyles.cardItemBodyStyle}>
+            <CardItem bordered>
                 <ListItem>
-                    <Text style={dStyles.generalText}>Patient : Mr P Datar</Text>
+                    <Text style={styles.tableHeaderText}>Patient : Mr P Datar</Text>
                 </ListItem>
                 <ListItem>
-                    <Text style={dStyles.generalText}>Doctor : Mr T Joshi</Text>
+                    <Text style={styles.tableHeaderText}>Doctor : Mr T Joshi</Text>
                 </ListItem>
                 <ListItem>
-                    <Text style={dStyles.generalText}>Order Date : 21/01/2021</Text>
+                    <Text style={styles.tableHeaderText}>Order Type : One Time</Text>
+                </ListItem>
+            </CardItem>
+            <CardItem>
+                <ListItem>
+                    <Text style={styles.tableHeaderText}>Order Date : 21/01/2021</Text>
                 </ListItem>
                 <ListItem>
-                    <Text style={dStyles.generalText}>Due Date : 24/01/2021</Text>
+                    <Text style={styles.tableHeaderText}>Due Date : 24/01/2021</Text>
                 </ListItem>
                 <ListItem>
-                    <Text style={dStyles.generalText}>Order Type : One Time</Text>
-                </ListItem>
-                <ListItem>
-                    <Text style={dStyles.generalText}>Status : Open</Text>
+                    <Text style={styles.tableHeaderText}>
+                        Status : { this.props.route.params.orderStatus } 
+                    </Text>
                 </ListItem>
             </CardItem>
             <CardItem footer bordered>
@@ -80,10 +85,16 @@ export default class OrderDetails extends Component {
 
                   
                 </CardItem>
-                <Button success style={dStyles.buttonStyle} 
-                    onPress={() => this.props.navigation.navigate('OpenOrders')}>
-                    <Text style={dStyles.buttonText}>Dispatched</Text>
-                </Button>
+                <View style={dStyles.buttonContainer}>
+                    <Button success style={dStyles.buttonStyle} 
+                        onPress={() => this.props.navigation.navigate('OrdersList', {orderStatus:this.props.route.params.orderStatus})}>
+                        <Text style={dStyles.buttonText}>Back</Text>
+                    </Button>
+                    <Button success style={dStyles.buttonStyle}
+                        onPress={() => this.props.navigation.navigate('OrdersList', {orderStatus:this.props.route.params.orderStatus})}>
+                        <Text style={dStyles.buttonText}>Dispatched</Text>
+                    </Button> 
+                </View>
             </Card>
           </Content>
       </Container>

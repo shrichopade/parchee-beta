@@ -4,9 +4,8 @@ import { View } from 'react-native';
 
 import { dStyles } from '../styles/DefaultStyleSheet.js'
 
-import ChemistHeader from './ChemistHeader';
 import ChemistFooter from './ChemistFooter';
-import OpenOrders from './OpenOrders';
+import OrdersList from './OrdersList';
 
 export default class ChemistHome extends Component {
 
@@ -17,18 +16,15 @@ export default class ChemistHome extends Component {
     render(){
         return (
             <Container>
-                <ChemistHeader navigation={this.props.navigation}/>
+                <OrdersList navigation={this.props.navigation} orderStatus='Open'/>
                 <Content>
-                    <Text style={dStyles.pageSubTitle}>My Open Orders</Text>
-                    <OpenOrders navigation={this.props.navigation} />
                     <View style={dStyles.buttonContainer}>
                         <Button success style={dStyles.buttonStyle} 
-                            onPress={() => this.props.navigation.navigate('UploadPrescription')}>
+                            onPress={() => this.props.navigation.navigate('OrdersList', {orderStatus:'Dispatched'})}>
                             <Text style={dStyles.buttonText}>Dispatched Orders</Text>
                         </Button>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <Button success style={dStyles.buttonStyle}>
+                        <Button success style={dStyles.buttonStyle}
+                            onPress={() => this.props.navigation.navigate('OrdersList', {orderStatus:'Closed'})}>
                             <Text style={dStyles.buttonText}>Closed Orders</Text>
                         </Button>
                     </View>

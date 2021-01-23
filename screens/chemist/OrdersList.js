@@ -1,9 +1,12 @@
 import * as React from 'react';
 import { DataTable } from 'react-native-paper';
-import { Thumbnail, Button, Text } from 'native-base';
+import { Button, Text, Content } from 'native-base';
 import { styles } from '../styles/defaultStyles.js'
+import { dStyles } from '../styles/DefaultStyleSheet.js'
 
-export default class OrderDetails extends React.Component {
+import ChemistHeader from './ChemistHeader';
+
+export default class OrdersList extends React.Component {
 
     constructor() {
         super();
@@ -11,6 +14,9 @@ export default class OrderDetails extends React.Component {
 
     render() {
         return(
+        <Content>
+            <ChemistHeader navigation={this.props.navigation}/>
+            <Text style={dStyles.pageSubTitle}>My { this.props.orderStatus === 'Open' ? 'Open' : this.props.route.params.orderStatus } Orders</Text>
             <DataTable>
                 <DataTable.Header style={styles.tableHeaderBgColor}>
                     <DataTable.Title sortDirection='ascending' style={styles.tableHeaderText}>Order No</DataTable.Title>
@@ -28,7 +34,9 @@ export default class OrderDetails extends React.Component {
                     <DataTable.Cell>Dr T Joshi</DataTable.Cell>
                     <DataTable.Cell>23/01/2021</DataTable.Cell>
                     <DataTable.Cell>
-                        <Button transparent onPress={() => this.props.navigation.navigate('OrderDetails')}>
+                        <Button transparent 
+                            onPress={() => this.props.navigation.navigate('OrderDetails', 
+                                {orderStatus:  this.props.orderStatus === 'Open' ? 'Open' : this.props.route.params.orderStatus })}>
                             <Text style={styles.tableCellText}>View</Text>
                         </Button>
                     </DataTable.Cell>
@@ -41,7 +49,9 @@ export default class OrderDetails extends React.Component {
                     <DataTable.Cell>Dr S Kulkarni</DataTable.Cell>
                     <DataTable.Cell>24/01/2021</DataTable.Cell>
                     <DataTable.Cell>
-                        <Button transparent onPress={() => this.props.navigation.navigate('OrderDetails')}>
+                        <Button transparent 
+                            onPress={() => this.props.navigation.navigate('OrderDetails', 
+                                {orderStatus:  this.props.orderStatus === 'Open' ? 'Open' : this.props.route.params.orderStatus })}>
                             <Text style={styles.tableCellText}>View</Text>
                         </Button>
                     </DataTable.Cell>                
@@ -54,7 +64,9 @@ export default class OrderDetails extends React.Component {
                     <DataTable.Cell>Dr S Sutar</DataTable.Cell>
                     <DataTable.Cell>28/01/2021</DataTable.Cell>
                     <DataTable.Cell>
-                        <Button transparent onPress={() => this.props.navigation.navigate('OrderDetails')}>
+                        <Button transparent 
+                            onPress={() => this.props.navigation.navigate('OrderDetails', 
+                                {orderStatus:  this.props.orderStatus === 'Open' ? 'Open' : this.props.route.params.orderStatus })}>
                             <Text style={styles.tableCellText}>View</Text>
                         </Button>
                     </DataTable.Cell>
@@ -69,6 +81,7 @@ export default class OrderDetails extends React.Component {
                 label="1-2 of 6"
                 />
             </DataTable>
+        </Content>
         )
     }
 };

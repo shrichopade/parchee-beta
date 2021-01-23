@@ -47,7 +47,6 @@ const dStyles = StyleSheet.create({
         borderBottomColor: '#cccccc',
     },
     buttonStyle: {
-        flex: 1,
         padding: 0,
         backgroundColor:'#4CAF50',
         marginVertical: 20,
