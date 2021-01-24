@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { TouchableOpacity } from 'react-native';
+import { View } from 'react-native';
 import { Container, Content, Text, Form, Item, Input, 
     Label, Card, CardItem, Button, DatePicker, ListItem, Picker, Icon,
     Left, Right, Radio, Body, CheckBox } from 'native-base';
 
-import { dStyles } from '../styles/DefaultStyleSheet.js'
-import PatientHeader from './PatientHeader';
-import PatientFooter from './PatientFooter';
+import { dStyles } from '../../styles/DefaultStyleSheet.js'
+import PatientHeader from '../PatientHeader';
+import PatientFooter from '../PatientFooter';
 
 export default class AddAgency extends Component {
     constructor() {
@@ -71,9 +71,16 @@ export default class AddAgency extends Component {
                                         keyboardType="default"
                                         onChangeText={(val) => this.inputValueUpdate(val, 'givenNames')} />
                                 </Item>
-                                <Button success style={dStyles.buttonStyle} onPress={() => this.props.navigation.navigate('PatientHome')}>
-                                    <Text style={dStyles.buttonText}>Add Agency</Text>
-                                </Button>
+                                <View style={dStyles.buttonContainer}>
+                                    <Button success style={dStyles.buttonStyle} 
+                                        onPress={() => this.props.navigation.navigate('ViewAgency')}>
+                                        <Text style={dStyles.buttonText}>Cancel</Text>
+                                    </Button>
+                                    <Button success style={dStyles.buttonStyle} 
+                                        onPress={() => this.props.navigation.navigate('ViewAgency')}>
+                                        <Text style={dStyles.buttonText}>Submit</Text>
+                                    </Button>
+                                </View>
                             </Form>
                         </CardItem>
                     </Card>

@@ -19,7 +19,6 @@ export default class ChemistHome extends Component {
             <Container>
                 <ChemistHeader navigation={this.props.navigation}/>
                 <OrdersList navigation={this.props.navigation} orderStatus={this.props.route.params.orderStatus}/>
-                <Content>
                     <View style={dStyles.buttonContainer}>
                         <Button success style={dStyles.buttonStyle} 
                             onPress={() => this.props.navigation.navigate('ChemistHome', 
@@ -32,7 +31,6 @@ export default class ChemistHome extends Component {
                             <Text style={dStyles.buttonText}>Closed Orders</Text>
                         </Button>
                     </View>
-                </Content>
                 <ChemistFooter />
         </Container>
         );
