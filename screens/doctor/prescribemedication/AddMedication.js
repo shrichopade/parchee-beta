@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { View, TouchableOpacity } from "react-native";
-import { Container, Content, Text, Form, Item, 
+import { Container, Content, Text,Button, Form, Item, 
   Input, Label, Card, CardItem, Thumbnail } from 'native-base';
 
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
+import NewPrescription from './NewPrescription.js';
 
 class IdentifyPatient extends Component {
 
@@ -47,6 +48,10 @@ class IdentifyPatient extends Component {
     return (
       <Container style={dStyles.container}>
             <Content>
+                <Text style={dStyles.pageSubTitle}>My Patient Visits</Text>
+                   <NewPrescription/>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <Card style={dStyles.cardStyle}>
                 <CardItem header bordered>
                   <Text style={dStyles.formTitle}> Prescribe Medication - {`Step ${currentStep} of ${totalSteps}`}</Text>
@@ -54,24 +59,42 @@ class IdentifyPatient extends Component {
                 <CardItem bordered style={dStyles.cardItemBodyStyle}>
                   <Form>
                     <Item stackedLabel>
-                      <Label>Scan QR Code</Label>
-                      <Input value={this.state.uploadDoc} 
-                        onChangeText={(val) => this.inputValueUpdate(val, 'scanQRCode')} />
+                      <Label>Medication</Label>
+                      <Input value={this.state.medication} 
+                        onChangeText={(val) => this.inputValueUpdate(val, 'medication')} />
                     </Item>
                     <Item stackedLabel>
-                      <Label>Enter OPT</Label>
-                      <Input value={this.state.uploadPic} 
-                        onChangeText={(val) => this.inputValueUpdate(val, 'enterOPT')} />
+                      <Label>Strength</Label>
+                      <Input value={this.state.strength} 
+                        onChangeText={(val) => this.inputValueUpdate(val, 'strength')} />
                     </Item>
                     <Item stackedLabel>
-                      <Label>Search Patient</Label>
-                      <Input value={this.state.takePhoto} 
-                        onChangeText={(val) => this.inputValueUpdate(val, 'searchPatient')} />
+                      <Label>Dosage</Label>
+                      <Input value={this.state.dosage} 
+                        onChangeText={(val) => this.inputValueUpdate(val, 'dosage')} />
+                    </Item>
+                    <Item stackedLabel>
+                      <Label>Notes</Label>
+                      <Input value={this.state.note} 
+                        onChangeText={(val) => this.inputValueUpdate(val, 'note')} />
                     </Item>
                     <View style={dStyles.buttonContainer}>
-                      <TouchableOpacity onPress={this.nextStep} >
+                        <TouchableOpacity onPress={this.nextStep} >
+                        <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                        </TouchableOpacity>
+                        <Button success style={dStyles.buttonStyle} 
+                            onPress={() => this.props.navigation.navigate('PrescribeMedication')}>
+                            <Text style={dStyles.buttonText}>Add</Text>
+                        </Button>
+                        <Button success style={dStyles.buttonStyle}>
+                            <Text style={dStyles.buttonText}>Update</Text>
+                        </Button>
+                        <Button success style={dStyles.buttonStyle}>
+                            <Text style={dStyles.buttonText}>Delete</Text>
+                        </Button>
+                        <TouchableOpacity onPress={this.nextStep} >
                         <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
-                      </TouchableOpacity>
+                        </TouchableOpacity>
                     </View>
                   </Form>
                 </CardItem>

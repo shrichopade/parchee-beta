@@ -22,7 +22,7 @@ export default class DoctorHome extends Component {
                     <Text style={dStyles.pageSubTitle}>My Patient Visits</Text>
                     <LastTenPatients/>
                     <View style={dStyles.buttonContainer}>
-                    <Button success style={dStyles.buttonStyle} 
+                        <Button success style={dStyles.buttonStyle} 
                             onPress={() => this.props.navigation.navigate('PrescribeMedication')}>
                             <Text style={dStyles.buttonText}>Prescribe Medication</Text>
                         </Button>
