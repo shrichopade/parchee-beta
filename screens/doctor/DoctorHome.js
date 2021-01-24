@@ -28,7 +28,8 @@ export default class DoctorHome extends Component {
                         </Button>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <Button success style={dStyles.buttonStyle}>
+                        <Button success style={dStyles.buttonStyle} 
+                            onPress={() => this.props.navigation.navigate('PrescribeTests')}>
                             <Text style={dStyles.buttonText}>Prescribe Tests</Text>
                         </Button>
                     </View>

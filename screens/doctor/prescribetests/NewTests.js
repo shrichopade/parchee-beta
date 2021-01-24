@@ -9,6 +9,7 @@ const NewTests = () => (
       <DataTable.Title sortDirection='ascending' style={styles.tableHeaderText}>Tests Name</DataTable.Title>
       <DataTable.Title>Description</DataTable.Title>
       <DataTable.Title>Timing</DataTable.Title>
+      <DataTable.Title>Image</DataTable.Title>
       <DataTable.Title>Notes</DataTable.Title>     
     </DataTable.Header>
 
