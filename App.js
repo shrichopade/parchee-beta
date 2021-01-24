@@ -18,6 +18,7 @@ import AddAgency from './screens/patient/AddAgency';
 
 import DoctorHome from './screens/doctor/DoctorHome';
 import PrescribeMedication from './screens/doctor/PrescribeMedication';
+import PrescribeMedication from './screens/doctor/PrescribeTests';
 
 import ChemistHome from './screens/chemist/ChemistHome';
 import OrdersList from './screens/chemist/OrdersList';
@@ -49,6 +50,7 @@ export default class App extends React.Component {
 
           <Stack.Screen name="DoctorHome" component={DoctorHome}/>
           <Stack.Screen name="PrescribeMedication" component={PrescribeMedication}/>
+          <Stack.Screen name="PrescribeTests" component={PrescribeTests}/>
           
           <Stack.Screen name="ChemistHome" component={ChemistHome}/>
           <Stack.Screen name="OrdersList" component={OrdersList}/>
