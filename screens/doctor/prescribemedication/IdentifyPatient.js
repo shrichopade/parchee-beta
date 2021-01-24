@@ -59,7 +59,7 @@ class IdentifyPatient extends Component {
                         onChangeText={(val) => this.inputValueUpdate(val, 'scanQRCode')} />
                     </Item>
                     <Item stackedLabel>
-                      <Label>Enter OPT</Label>
+                      <Label>Enter OTP</Label>
                       <Input value={this.state.enterOPT} 
                         onChangeText={(val) => this.inputValueUpdate(val, 'enterOPT')} />
                     </Item>
