@@ -23,8 +23,6 @@ export default class OrderDetails extends Component {
   render() {
     const isOrderStatusOpen = (this.props.route.params.orderStatus  == 'Open')
     return (
-      <Container style={dStyles.container}>
-        <Content>
           <Card style={dStyles.cardStyle}>
             <CardItem header bordered>
               <Text style={dStyles.formTitle}> Order No - ODR00024 </Text>
@@ -97,8 +95,6 @@ export default class OrderDetails extends Component {
                     </Button> 
                 </View>
             </Card>
-          </Content>
-      </Container>
     );
   }
 };
