@@ -11,6 +11,10 @@ const footerStyles = StyleSheet.create({
         color: '#ffffff',
         fontWeight: '100',
         marginVertical: 4
+    },
+    headerFooterIcon: {
+        height: 27,
+        width: 27
     }
 });
 

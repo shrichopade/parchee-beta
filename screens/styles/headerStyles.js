@@ -18,6 +18,10 @@ const headerStyles = StyleSheet.create({
         color: '#000000',
         fontWeight: '100',
         marginVertical: 4
+    },
+    headerFooterIcon: {
+        height: 27,
+        width: 27
     }
 });
 

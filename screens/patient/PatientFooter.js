@@ -8,19 +8,24 @@ export default class PatientFooter extends Component {
         <Footer style={footerStyles.footerBgColor}>
           <FooterTab>
             <Button vertical>
-              {<Thumbnail small square source={require('../images/myprescriptions.png')}/> }
+              {<Thumbnail style={footerStyles.headerFooterIcon} 
+                small square source={require('../images/myprescriptions.png')}/> }
             </Button>
             <Button vertical>
-              {<Thumbnail small square source={require('../images/myappointments.png')}/> }
+              {<Thumbnail style={footerStyles.headerFooterIcon} 
+                small square source={require('../images/myappointments.png')}/> }
             </Button>
             <Button vertical onPress={() => this.props.navigation.navigate('ViewAgency')}>
-              {<Thumbnail small square source={require('../images/myagency.png')}/> }
+              {<Thumbnail style={footerStyles.headerFooterIcon} 
+                small square source={require('../images/myagency.png')}/> }
             </Button>
             <Button vertical>
-              {<Thumbnail small square source={require('../images/myorders.png')}/> }
+              {<Thumbnail style={footerStyles.headerFooterIcon} 
+                small square source={require('../images/myorders.png')}/> }
             </Button>
             <Button vertical onPress={() => this.props.navigation.navigate('SignIn')}>
-              {<Thumbnail small square source={require('../images/signout.png')}/> }
+              {<Thumbnail style={footerStyles.headerFooterIcon} 
+                small square source={require('../images/signout.png')}/> }
             </Button>
           </FooterTab>
         </Footer>

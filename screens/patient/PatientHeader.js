@@ -8,19 +8,24 @@ export default class PatientHeader extends Component {
       <Footer style={headerStyles.headerBgColor}>
         <FooterTab>
             <Button vertical>
-              {<Thumbnail small square source={require('../images/alarm.png')}/> }
+              {<Thumbnail style={headerStyles.headerFooterIcon} 
+                small square source={require('../images/alarm.png')}/> }
             </Button>
             <Button vertical>
-              {<Thumbnail small square source={require('../images/notes.png')}/> }
+              {<Thumbnail style={headerStyles.headerFooterIcon} 
+                small square source={require('../images/notes.png')}/> }
             </Button>
             <Button vertical>
-              {<Thumbnail small square source={require('../images/qrcode.png')}/> }
+              {<Thumbnail style={headerStyles.headerFooterIcon} 
+                small square source={require('../images/qrcode.png')}/> }
             </Button>
             <Button vertical>
-              {<Thumbnail small square source={require('../images/offers.png')}/> }
+              {<Thumbnail style={headerStyles.headerFooterIcon} 
+                small square source={require('../images/offers.png')}/> }
             </Button>
             <Button vertical>
-              {<Thumbnail small source={require('../images/profile.jpg')}/> }
+              {<Thumbnail style={headerStyles.headerFooterIcon} 
+                small source={require('../images/profile.jpg')}/> }
             </Button>
           </FooterTab>
       </Footer>
