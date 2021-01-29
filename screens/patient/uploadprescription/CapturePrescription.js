@@ -93,7 +93,7 @@ class CapturePrescription extends Component {
                         <Input value={this.state.takePhoto} 
                           onChangeText={(val) => this.inputValueUpdate(val, 'takePhoto')} />
                         <MaterialCommunityIcons
-                          name={"camera-image"}
+                          name={"camera"}
                           size={20}
                           color="#6e6869"
                           style={styles.icon}

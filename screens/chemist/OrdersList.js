@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import { DataTable } from 'react-native-paper';
 import { Button, Text, Content } from 'native-base';
 import { styles } from '../styles/defaultStyles.js'
@@ -14,7 +14,7 @@ export default class OrdersList extends React.Component {
 
     render() {
         return(
-        <Content>
+        <View>
             <Text style={dStyles.pageSubTitle}>My { this.props.orderStatus } Orders</Text>
             <DataTable>
                 <DataTable.Header style={styles.tableHeaderBgColor}>
@@ -64,6 +64,19 @@ export default class OrdersList extends React.Component {
                     <DataTable.Cell>28/01/2021</DataTable.Cell>
                 </DataTable.Row>
 
+                <DataTable.Row>
+                    <DataTable.Cell>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('OrderDetails', 
+                                {orderStatus:  this.props.orderStatus })}>
+                            <Text style={dStyles.linkText}>ODR00090</Text>
+                        </TouchableOpacity>
+                    </DataTable.Cell>
+                    <DataTable.Cell style={styles.tableCellText}>28/01/2021</DataTable.Cell>
+                    <DataTable.Cell>Mr A Gadgil</DataTable.Cell>
+                    <DataTable.Cell>Dr S Sutar</DataTable.Cell>
+                    <DataTable.Cell>05/02/2021</DataTable.Cell>
+                </DataTable.Row>
+
                 <DataTable.Pagination
                 page={1}
                 numberOfPages={3}
@@ -73,7 +86,7 @@ export default class OrdersList extends React.Component {
                 label="1-2 of 6"
                 />
             </DataTable>
-        </Content>
+        </View>
         )
     }
 };
