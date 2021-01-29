@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, Footer, FooterTab, Button, Icon, Text } from 'native-base';
+import { Container, Header, Thumbnail, Footer, FooterTab, Button, Icon, Text } from 'native-base';
 import { footerStyles } from '../styles/footerStyles.js'
 
 export default class PatientFooter extends Component {
@@ -8,16 +8,19 @@ export default class PatientFooter extends Component {
         <Footer style={footerStyles.footerBgColor}>
           <FooterTab>
             <Button vertical>
-              <Icon name="apps" />
+              {<Thumbnail small square source={require('../images/myprescriptions.png')}/> }
+            </Button>
+            <Button vertical>
+              {<Thumbnail small square source={require('../images/myappointments.png')}/> }
             </Button>
             <Button vertical onPress={() => this.props.navigation.navigate('ViewAgency')}>
-              <Icon name="person" /> 
+              {<Thumbnail small square source={require('../images/myagency.png')}/> }
             </Button>
             <Button vertical>
-              <Icon active name="grid" />
+              {<Thumbnail small square source={require('../images/myorders.png')}/> }
             </Button>
-            <Button vertical>
-              <Icon name="menu" />
+            <Button vertical onPress={() => this.props.navigation.navigate('SignIn')}>
+              {<Thumbnail small square source={require('../images/signout.png')}/> }
             </Button>
           </FooterTab>
         </Footer>
