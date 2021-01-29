@@ -79,8 +79,8 @@ class IdentifyPatient extends Component {
                         onChangeText={(val) => this.inputValueUpdate(val, 'note')} />
                     </Item>
                     <View style={dStyles.buttonContainer}>
-                        <TouchableOpacity onPress={this.nextStep} >
-                        <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                        <TouchableOpacity onPress={this.goBack} >
+                          <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
                         </TouchableOpacity>
                         <Button success style={dStyles.buttonStyle} 
                             onPress={() => this.props.navigation.navigate('PrescribeMedication')}>
@@ -93,7 +93,7 @@ class IdentifyPatient extends Component {
                             <Text style={dStyles.buttonText}>Delete</Text>
                         </Button>
                         <TouchableOpacity onPress={this.nextStep} >
-                        <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
+                          <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
                         </TouchableOpacity>
                     </View>
                   </Form>

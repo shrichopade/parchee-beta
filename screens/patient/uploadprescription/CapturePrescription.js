@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Container, Content, Text, Form, Item, 
   Input, Label, Card, CardItem, Thumbnail } from 'native-base';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
+import { styles } from '../../styles/defaultStyles.js'
 
 class CapturePrescription extends Component {
 
@@ -55,18 +57,48 @@ class CapturePrescription extends Component {
                   <Form>
                     <Item stackedLabel>
                       <Label>Upload Document</Label>
-                      <Input value={this.state.uploadDoc} 
-                        onChangeText={(val) => this.inputValueUpdate(val, 'uploadDoc')} />
+                      <View style={dStyles.buttonContainer}>
+                        <Input value={this.state.uploadDoc} 
+                          onChangeText={(val) => this.inputValueUpdate(val, 'uploadDoc')} />
+                        <MaterialCommunityIcons
+                          name={"google-drive"}
+                          size={20}
+                          color="#6e6869"
+                          style={styles.icon}
+                        />
+                        <MaterialCommunityIcons
+                          name={"apple-icloud"}
+                          size={20}
+                          color="#6e6869"
+                          style={styles.icon}
+                        />
+                      </View>
                     </Item>
                     <Item stackedLabel>
                       <Label>Upload Photo</Label>
-                      <Input value={this.state.uploadPic} 
-                        onChangeText={(val) => this.inputValueUpdate(val, 'uploadPic')} />
+                      <View style={dStyles.buttonContainer}>
+                        <Input value={this.state.uploadPic} 
+                          onChangeText={(val) => this.inputValueUpdate(val, 'uploadPic')} />
+                        <MaterialCommunityIcons
+                          name={"google-photos"}
+                          size={20}
+                          color="#6e6869"
+                          style={styles.icon}
+                        />
+                      </View>
                     </Item>
                     <Item stackedLabel>
                       <Label>Take Picture</Label>
-                      <Input value={this.state.takePhoto} 
-                        onChangeText={(val) => this.inputValueUpdate(val, 'takePhoto')} />
+                      <View style={dStyles.buttonContainer}>
+                        <Input value={this.state.takePhoto} 
+                          onChangeText={(val) => this.inputValueUpdate(val, 'takePhoto')} />
+                        <MaterialCommunityIcons
+                          name={"camera-image"}
+                          size={20}
+                          color="#6e6869"
+                          style={styles.icon}
+                        />
+                      </View>
                     </Item>
                     <View style={dStyles.buttonContainer}>
                       <TouchableOpacity onPress={this.nextStep} >

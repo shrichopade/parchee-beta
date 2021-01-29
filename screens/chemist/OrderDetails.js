@@ -24,32 +24,28 @@ export default class OrderDetails extends Component {
     const isOrderStatusOpen = (this.props.route.params.orderStatus  == 'Open')
     return (
           <Card style={dStyles.cardStyle}>
-            <CardItem header bordered>
+            <CardItem header>
               <Text style={dStyles.formTitle}> Order No - ODR00024 </Text>
             </CardItem>
-            <CardItem bordered>
-                <ListItem>
-                    <Text style={styles.tableHeaderText}>Patient : Mr P Datar</Text>
-                </ListItem>
-                <ListItem>
-                    <Text style={styles.tableHeaderText}>Doctor : Mr T Joshi</Text>
-                </ListItem>
-                <ListItem>
-                    <Text style={styles.tableHeaderText}>Order Type : One Time</Text>
-                </ListItem>
-            </CardItem>
             <CardItem>
-                <ListItem>
-                    <Text style={styles.tableHeaderText}>Order Date : 21/01/2021</Text>
-                </ListItem>
-                <ListItem>
-                    <Text style={styles.tableHeaderText}>Due Date : 24/01/2021</Text>
-                </ListItem>
-                <ListItem>
-                    <Text style={styles.tableHeaderText}>
-                        Status : { this.props.route.params.orderStatus } 
-                    </Text>
-                </ListItem>
+                <DataTable>
+                    <DataTable.Row>
+                        <DataTable.Cell style={styles.tableCellText}>Patient :</DataTable.Cell>
+                        <DataTable.Cell>Mr P Datar</DataTable.Cell>
+                        <DataTable.Cell>Doctor :</DataTable.Cell>
+                        <DataTable.Cell>Dr T Joshi</DataTable.Cell>
+                        <DataTable.Cell>Order Type :</DataTable.Cell>
+                        <DataTable.Cell>One Time</DataTable.Cell>
+                    </DataTable.Row>
+                    <DataTable.Row>
+                        <DataTable.Cell style={styles.tableCellText}>Order Date :</DataTable.Cell>
+                        <DataTable.Cell>21/01/2021</DataTable.Cell>
+                        <DataTable.Cell>Due Date :</DataTable.Cell>
+                        <DataTable.Cell>24/01/2021</DataTable.Cell>
+                        <DataTable.Cell>Status :</DataTable.Cell>
+                        <DataTable.Cell>{ this.props.route.params.orderStatus } </DataTable.Cell>
+                    </DataTable.Row>
+                </DataTable>
             </CardItem>
             <CardItem footer bordered>
                 <DataTable>
@@ -63,21 +59,21 @@ export default class OrderDetails extends Component {
                     <DataTable.Row>
                         <DataTable.Cell style={styles.tableCellText}>Amoxycyline</DataTable.Cell>
                         <DataTable.Cell>500 mg</DataTable.Cell>
-                        <DataTable.Cell></DataTable.Cell>
+                        <DataTable.Cell><Thumbnail small square source={require('../images/tablet.jfif')}/></DataTable.Cell>
                         <DataTable.Cell>90</DataTable.Cell>
                     </DataTable.Row>
 
                     <DataTable.Row>
                         <DataTable.Cell>Amlodipine</DataTable.Cell>
                         <DataTable.Cell>10 mg</DataTable.Cell>
-                        {/* <DataTable.Cell><Thumbnail small square source={require('assets\app_assets\capsule.jfif')}/></DataTable.Cell>  */}
+                        <DataTable.Cell><Thumbnail small square source={require('../images/capsule.jfif')}/></DataTable.Cell> 
                         <DataTable.Cell>60</DataTable.Cell>
                     </DataTable.Row>
 
                     <DataTable.Row>
                         <DataTable.Cell>Novolin Insulin</DataTable.Cell>
                         <DataTable.Cell>30 ml</DataTable.Cell>
-                        {/* <DataTable.Cell><Thumbnail small square source={require('..\assets\app_assets\insulin.jfif')}/></DataTable.Cell> */}
+                        <DataTable.Cell><Thumbnail small square source={require('../images/insulin.jfif')}/></DataTable.Cell> 
                         <DataTable.Cell>30</DataTable.Cell>
                     </DataTable.Row>
                   </DataTable>

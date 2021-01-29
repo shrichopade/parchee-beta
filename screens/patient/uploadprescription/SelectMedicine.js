@@ -51,19 +51,19 @@ class SelectMedicine extends Component {
             <CardItem bordered style={dStyles.cardItemBodyStyle}>
               <Form>
                 <ListItem>
-                    <CheckBox checked={false}  color="green"/>
+                    <CheckBox checked={true}  color="green"/>
                     <Body>
                         <Text style={dStyles.textLabelNormal}>Amoxcyline</Text>
                     </Body>
                 </ListItem>
                 <ListItem>
-                    <CheckBox checked={false}  color="green"/>
+                    <CheckBox checked={true}  color="green"/>
                     <Body>
                         <Text style={dStyles.textLabelNormal}>Amoldipine</Text>
                     </Body>
                 </ListItem>
                 <ListItem>
-                    <CheckBox checked={false} color="green"/>
+                    <CheckBox checked={true} color="green"/>
                     <Body>
                         <Text style={dStyles.textLabelNormal}>Novolin Insulin</Text>
                     </Body>

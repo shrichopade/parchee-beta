@@ -50,15 +50,6 @@ const ActivePrescription = () => (
       <DataTable.Cell></DataTable.Cell>
     </DataTable.Row>
 
-    <DataTable.Row>
-      <DataTable.Cell>Paracetemol</DataTable.Cell>
-      <DataTable.Cell>10 mg</DataTable.Cell>
-      <DataTable.Cell>1-0-1</DataTable.Cell>
-      <DataTable.Cell><Thumbnail small square source={require('../images/capsule.jfif')}/></DataTable.Cell>
-      <DataTable.Cell><Thumbnail small source={require('../images/drmote.png')}/></DataTable.Cell>
-      <DataTable.Cell></DataTable.Cell>
-    </DataTable.Row>
-
     <DataTable.Pagination
       page={1}
       numberOfPages={3}

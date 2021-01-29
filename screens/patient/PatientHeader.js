@@ -20,7 +20,7 @@ export default class PatientHeader extends Component {
               <Icon name="medkit" />
             </Button>
             <Button vertical>
-              {/* <Thumbnail small source={require('../images/profile.jpg')}/> */}
+              {<Thumbnail small source={require('../images/profile.jpg')}/> }
             </Button>
           </FooterTab>
       </Footer>

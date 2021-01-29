@@ -103,7 +103,16 @@ const dStyles = StyleSheet.create({
         height: 150,
         alignSelf: 'center',
         marginVertical: 8
+    },
+    imagePrescription:{
+        width: 191,
+        height: 263,
+        alignSelf: 'center',
+        borderWidth:1,
+        borderColor: '#4CAF50',
+        marginVertical: 8
     }
+
 })
 
 export { dStyles }

@@ -26,7 +26,8 @@ export default class PatientHome extends Component {
                             onPress={() => this.props.navigation.navigate('UploadPrescription')}>
                             <Text style={dStyles.buttonText}>Upload Prescription</Text>
                         </Button>
-                        <Button success style={dStyles.buttonStyle}>
+                        <Button success style={dStyles.buttonStyle}
+                            onPress={() => this.props.navigation.navigate('SendToChemist')}>
                             <Text style={dStyles.buttonText}>Send to Chemist</Text>
                         </Button>
                     </View>
