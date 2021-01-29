@@ -20,7 +20,7 @@ export default class DoctorHeader extends Component {
               <Icon name="medkit" />
             </Button>
             <Button vertical>
-              <Thumbnail small source={require('../images/drprofile.jfif')}/>
+              {/* <Thumbnail small source={require('../images/drprofile.jfif')}/> */}
             </Button>
           </FooterTab>
       </Footer>

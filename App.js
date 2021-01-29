@@ -23,6 +23,7 @@ import ViewAgencyDetails from './screens/patient/agency/ViewAgencyDetails';
 import DoctorHome from './screens/doctor/DoctorHome';
 import PrescribeMedication from './screens/doctor/PrescribeMedication';
 import PrescribeTests from './screens/doctor/PrescribeTests';
+import CameraPage from './screens/doctor/prescribemedication/CameraPage';
 
 import ChemistHome from './screens/chemist/ChemistHome';
 import OrdersList from './screens/chemist/OrdersList';
@@ -59,7 +60,7 @@ export default class App extends React.Component {
           <Stack.Screen name="DoctorHome" component={DoctorHome}/>
           <Stack.Screen name="PrescribeMedication" component={PrescribeMedication}/>
           <Stack.Screen name="PrescribeTests" component={PrescribeTests}/>
-
+          <Stack.Screen name="CameraPage" component={CameraPage}/>
           <Stack.Screen name="ChemistHome" component={ChemistHome}/>
           <Stack.Screen name="OrdersList" component={OrdersList}/>
           <Stack.Screen name="OrderDetails" component={OrderDetails}/>

@@ -6,12 +6,14 @@ import AnimatedMultistep from "react-native-animated-multistep";
 import IdentifyPatient from "./prescribemedication/IdentifyPatient";
 import AddMedication from "./prescribemedication/AddMedication";
 import ViewPrescription from "./prescribemedication/ViewPrescription";
+import CameraPage from "./prescribemedication/CameraPage";
 import SignPrescription from "./prescribemedication/SignPrescription";
  
 
 const allSteps = [
   { name: "Identify Patient", component: IdentifyPatient },
   { name: "Add Medication", component: AddMedication },
+  { name: "Camera", component: CameraPage },
   { name: "View Prescription", component: ViewPrescription },
   { name: "Sign Prescription", component: SignPrescription }
   ];

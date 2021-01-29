@@ -3,6 +3,10 @@
     "name": "parchee-beta-app",
     "slug": "parchee-beta-app",
     "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {

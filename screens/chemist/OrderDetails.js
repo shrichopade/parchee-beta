@@ -65,21 +65,21 @@ export default class OrderDetails extends Component {
                     <DataTable.Row>
                         <DataTable.Cell style={styles.tableCellText}>Amoxycyline</DataTable.Cell>
                         <DataTable.Cell>500 mg</DataTable.Cell>
-                        <DataTable.Cell><Thumbnail small square source={require('../images/tablet.jfif')}/></DataTable.Cell>
+                        <DataTable.Cell></DataTable.Cell>
                         <DataTable.Cell>90</DataTable.Cell>
                     </DataTable.Row>
 
                     <DataTable.Row>
                         <DataTable.Cell>Amlodipine</DataTable.Cell>
                         <DataTable.Cell>10 mg</DataTable.Cell>
-                        <DataTable.Cell><Thumbnail small square source={require('../images/capsule.jfif')}/></DataTable.Cell>
+                        {/* <DataTable.Cell><Thumbnail small square source={require('assets\app_assets\capsule.jfif')}/></DataTable.Cell>  */}
                         <DataTable.Cell>60</DataTable.Cell>
                     </DataTable.Row>
 
                     <DataTable.Row>
                         <DataTable.Cell>Novolin Insulin</DataTable.Cell>
                         <DataTable.Cell>30 ml</DataTable.Cell>
-                        <DataTable.Cell><Thumbnail small square source={require('../images/insulin.jfif')}/></DataTable.Cell>
+                        {/* <DataTable.Cell><Thumbnail small square source={require('..\assets\app_assets\insulin.jfif')}/></DataTable.Cell> */}
                         <DataTable.Cell>30</DataTable.Cell>
                     </DataTable.Row>
                   </DataTable>

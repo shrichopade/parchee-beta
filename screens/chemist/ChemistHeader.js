@@ -21,10 +21,10 @@ export default class ChemistHeader extends Component {
               <Icon name="medkit" />
             </Button>
             <Button vertical>
-              <Thumbnail small source={require('../images/chemistprofile.jfif')}/>
+              {/* <Thumbnail small source={require('../images/chemistprofile.jfif')}/> */}
             </Button>
             <Button vertical onPress={() => this.props.navigation.navigate('SignIn')}>
-              <Thumbnail small source={require('../images/signout.jfif')}/>
+              {/* <Thumbnail small source={require('../images/signout.jfif')}/> */}
             </Button>
           </FooterTab>
       </Footer>

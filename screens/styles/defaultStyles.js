@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
   footerText: {
     color: '#202020',
     fontSize: 12,
+    alignSelf: 'auto',
     fontWeight: '600'
   },
   pickerStyle: {

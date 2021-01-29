@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { View, TouchableOpacity } from "react-native";
-import { Container, Content, Text, Form, Item, 
+import { Container, Content,Button, Text, Form, Item, 
   Input, Label, Card, CardItem, Thumbnail } from 'native-base';
+ 
 
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
 
@@ -57,7 +58,7 @@ class IdentifyPatient extends Component {
                       <Label>Scan QR Code</Label>
                       <Input value={this.state.scanQRCode} 
                         onChangeText={(val) => this.inputValueUpdate(val, 'scanQRCode')} />
-                    </Item>
+                    </Item> 
                     <Item stackedLabel>
                       <Label>Enter OTP</Label>
                       <Input value={this.state.enterOPT} 
@@ -67,7 +68,7 @@ class IdentifyPatient extends Component {
                       <Label>Search Patient</Label>
                       <Input value={this.state.searchPatient} 
                         onChangeText={(val) => this.inputValueUpdate(val, 'searchPatient')} />
-                    </Item>
+                    </Item>                  
                     <View style={dStyles.buttonContainer}>
                       <TouchableOpacity onPress={this.nextStep} >
                         <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
@@ -77,6 +78,14 @@ class IdentifyPatient extends Component {
                 </CardItem>
               </Card>
             </Content>
+            <content>
+              <View style={dStyles.buttonContainer}>  
+                      <Button success style={dStyles.buttonStyle} 
+                              onPress={() => this.props.navigation.navigate('camera')}>
+                              <Text style={dStyles.buttonText}>Camera</Text>
+                      </Button>            
+              </View>     
+            </content>
           </Container>
     );
   }
