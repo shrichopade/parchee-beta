@@ -64,7 +64,7 @@ const dStyles = StyleSheet.create({
         fontFamily: 'Arial',
         fontSize: 10,
         fontWeight: '400',
-        alignSelf: 'right'
+        marginVertical: 8
     },
     labelText: {
         color: '#546467',
@@ -98,6 +98,12 @@ const dStyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around'
     },
+    imageTitle:{
+        width: 350,
+        height: 150,
+        alignSelf: 'center',
+        marginVertical: 8
+    }
 })
 
 export { dStyles }
