@@ -41,6 +41,24 @@ const ActivePrescription = () => (
       <DataTable.Cell>10 min before meal</DataTable.Cell>
     </DataTable.Row>
 
+    <DataTable.Row>
+      <DataTable.Cell style={styles.tableCellText}>Nurofen</DataTable.Cell>
+      <DataTable.Cell>200 mg</DataTable.Cell>
+      <DataTable.Cell>1-0-0</DataTable.Cell>
+      <DataTable.Cell><Thumbnail small square source={require('../images/tablet.jfif')}/></DataTable.Cell>
+      <DataTable.Cell><Thumbnail small source={require('../images/drjoshi.jfif')}/></DataTable.Cell>
+      <DataTable.Cell></DataTable.Cell>
+    </DataTable.Row>
+
+    <DataTable.Row>
+      <DataTable.Cell>Paracetemol</DataTable.Cell>
+      <DataTable.Cell>10 mg</DataTable.Cell>
+      <DataTable.Cell>1-0-1</DataTable.Cell>
+      <DataTable.Cell><Thumbnail small square source={require('../images/capsule.jfif')}/></DataTable.Cell>
+      <DataTable.Cell><Thumbnail small source={require('../images/drmote.png')}/></DataTable.Cell>
+      <DataTable.Cell></DataTable.Cell>
+    </DataTable.Row>
+
     <DataTable.Pagination
       page={1}
       numberOfPages={3}
