@@ -19,7 +19,7 @@ export default class PatientHeader extends Component {
               {<Thumbnail style={headerStyles.headerFooterIcon} 
                 small square source={require('../images/qrcode.png')}/> }
             </Button>
-            <Button vertical>
+            <Button vertical onPress={() => this.props.navigation.navigate('MyOffers')}>
               {<Thumbnail style={headerStyles.headerFooterIcon} 
                 small square source={require('../images/offers.png')}/> }
             </Button>
