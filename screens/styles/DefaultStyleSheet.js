@@ -10,18 +10,26 @@ const dStyles = StyleSheet.create({
     cardStyle: {
         padding:0,
         alignSelf: 'center',
-        width:'95%'
+        width:'97%'
     },
     cardItemBodyStyle: {
         padding:0,
         alignSelf: 'center'
     },
-    pageTitle: {
+    welcomeLeft: {
         color: '#4CAF50',
         fontFamily: 'Arial',
-        fontSize: 28,
+        fontSize: 12,
         fontWeight: '900',
-        alignSelf: 'center',
+        alignSelf: 'left',
+        marginVertical: 8
+    },
+    welcomeRight: {
+        color: '#4CAF50',
+        fontFamily: 'Arial',
+        fontSize: 12,
+        fontWeight: '900',
+        alignSelf: 'left',
         marginVertical: 8
     },
     pageSubTitle: {
@@ -97,6 +105,11 @@ const dStyles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-around'
+    },
+    welcomeContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     },
     imageTitle:{
         width: 350,

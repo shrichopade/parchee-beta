@@ -18,7 +18,11 @@ export default class DoctorHome extends Component {
         return (
             <Container>
                 <DoctorHeader navigation={this.props.navigation} />
-                <Content>
+                <Content style={dStyles.cardStyle}>
+                    <View style={dStyles.welcomeContainer}>
+                        <Text style={dStyles.welcomeLeft}>Good Morning Dr Kulkarni</Text>
+                        <Text style={dStyles.welcomeRight}>Date: 15/01/2021</Text>
+                    </View>
                     <Text style={dStyles.pageSubTitle}>My Patient Visits</Text>
                     <LastTenPatients/>
                     <View style={dStyles.buttonContainer}>
