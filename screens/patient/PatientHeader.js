@@ -11,7 +11,7 @@ export default class PatientHeader extends Component {
               {<Thumbnail style={headerStyles.headerFooterIcon} 
                 small square source={require('../images/home.png')}/> }
             </Button>
-            <Button vertical>
+            <Button vertical onPress={() => this.props.navigation.navigate('MyReminders')}>
               {<Thumbnail style={headerStyles.headerFooterIcon} 
                 small square source={require('../images/alarm.png')}/> }
             </Button>

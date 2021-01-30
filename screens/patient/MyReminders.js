@@ -20,11 +20,11 @@ export default class MyPrescriptions extends Component {
             <Container>
                 <PatientHeader navigation={this.props.navigation}/>
                 <Content>
-                    <Text style={dStyles.pageSubTitle}>My Appointments</Text>
+                    <Text style={dStyles.pageSubTitle}>My Reminders</Text>
                     <DataTable>
                         <DataTable.Header style={styles.tableHeaderBgColor}>
-                            <DataTable.Title sortDirection='ascending'>Date Time</DataTable.Title>
-                            <DataTable.Title>Doctor</DataTable.Title>
+                            <DataTable.Title>Date Time</DataTable.Title>
+                            <DataTable.Title>Meet with</DataTable.Title>
                             <DataTable.Title>Contact No</DataTable.Title>
                             <DataTable.Title>Reason</DataTable.Title>
                             <DataTable.Title>Status</DataTable.Title>
@@ -38,29 +38,7 @@ export default class MyPrescriptions extends Component {
                             <DataTable.Cell>Upcoming</DataTable.Cell>                        
                         </DataTable.Row>
 
-                        <DataTable.Row>
-                            <DataTable.Cell>20/02/2021 11:00</DataTable.Cell>
-                            <DataTable.Cell>Dr P Kulkarni</DataTable.Cell>
-                            <DataTable.Cell>9877656567</DataTable.Cell> 
-                            <DataTable.Cell>Blood test</DataTable.Cell>                      
-                            <DataTable.Cell>Upcoming</DataTable.Cell>                        
-                        </DataTable.Row>
-
-                        <DataTable.Row>
-                            <DataTable.Cell>15/01/2021 14:00</DataTable.Cell>
-                            <DataTable.Cell>Surya Hospital</DataTable.Cell>
-                            <DataTable.Cell>9876333456</DataTable.Cell> 
-                            <DataTable.Cell>Urine test</DataTable.Cell>                      
-                            <DataTable.Cell>Closed</DataTable.Cell>                        
-                        </DataTable.Row>
-
-                        <DataTable.Row>
-                            <DataTable.Cell>15/12/2020 15:30</DataTable.Cell>
-                            <DataTable.Cell>Dr P Datar</DataTable.Cell>
-                            <DataTable.Cell>9876333456</DataTable.Cell> 
-                            <DataTable.Cell>Regular Checkup</DataTable.Cell>                      
-                            <DataTable.Cell>Closed</DataTable.Cell>                        
-                        </DataTable.Row>
+                        
 
                         <DataTable.Pagination
                         page={1}
