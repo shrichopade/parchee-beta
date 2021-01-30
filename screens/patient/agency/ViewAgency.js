@@ -20,7 +20,7 @@ export default class ViewAgency extends Component {
             <Container>
                 <PatientHeader navigation={this.props.navigation}/>
                 <Content>
-                    <Text style={dStyles.pageSubTitle}>View My Agencies</Text>
+                    <Text style={dStyles.pageSubTitle}>My Agencies</Text>
                     <DataTable>
                         <DataTable.Header style={styles.tableHeaderBgColor}>
                             <DataTable.Title sortDirection='ascending' style={styles.tableHeaderText}>Agency Id</DataTable.Title>

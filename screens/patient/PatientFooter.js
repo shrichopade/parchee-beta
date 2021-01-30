@@ -7,11 +7,11 @@ export default class PatientFooter extends Component {
     return (
         <Footer style={footerStyles.footerBgColor}>
           <FooterTab>
-            <Button vertical>
+            <Button vertical onPress={() => this.props.navigation.navigate('MyPrescriptions')}>
               {<Thumbnail style={footerStyles.headerFooterIcon} 
                 small square source={require('../images/myprescriptions.png')}/> }
             </Button>
-            <Button vertical>
+            <Button vertical onPress={() => this.props.navigation.navigate('MyAppointments')}>
               {<Thumbnail style={footerStyles.headerFooterIcon} 
                 small square source={require('../images/myappointments.png')}/> }
             </Button>
@@ -19,7 +19,7 @@ export default class PatientFooter extends Component {
               {<Thumbnail style={footerStyles.headerFooterIcon} 
                 small square source={require('../images/myagency.png')}/> }
             </Button>
-            <Button vertical>
+            <Button vertical onPress={() => this.props.navigation.navigate('MyOrders')}>
               {<Thumbnail style={footerStyles.headerFooterIcon} 
                 small square source={require('../images/myorders.png')}/> }
             </Button>
