@@ -9,7 +9,6 @@ class SelectChemist extends Component {
 
   constructor(props) {
     super(props);
-    this.sendParcheeToChemist = this.sendParcheeToChemist.bind(this.props.navigation);
     this.state = {
       totalSteps: "",
       currentStep: ""
@@ -91,7 +90,7 @@ class SelectChemist extends Component {
                     <TouchableOpacity onPress={this.goBack} >
                       <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
                     </TouchableOpacity>
-                    <TouchableOpacity  onPress={() => this.props.navigation.navigate('PatientHome')} >
+                    <TouchableOpacity  onPress={this.sendParcheeToChemist} >
                       <Thumbnail small source={require('../../images/submit.png')}/>
                     </TouchableOpacity>
                   </View>
