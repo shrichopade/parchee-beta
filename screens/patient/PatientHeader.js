@@ -7,13 +7,13 @@ export default class PatientHeader extends Component {
     return (
       <Footer style={headerStyles.headerBgColor}>
         <FooterTab>
-            <Button vertical>
+            <Button vertical onPress={() => this.props.navigation.navigate('PatientHome')}>
               {<Thumbnail style={headerStyles.headerFooterIcon} 
-                small square source={require('../images/alarm.png')}/> }
+                small square source={require('../images/home.png')}/> }
             </Button>
             <Button vertical>
               {<Thumbnail style={headerStyles.headerFooterIcon} 
-                small square source={require('../images/notes.png')}/> }
+                small square source={require('../images/alarm.png')}/> }
             </Button>
             <Button vertical>
               {<Thumbnail style={headerStyles.headerFooterIcon} 

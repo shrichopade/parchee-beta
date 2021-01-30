@@ -33,7 +33,7 @@ export default class ChemistHome extends Component {
                         </Button>
                     </View>
                 </Content>
-                <ChemistFooter />
+                <ChemistFooter navigation={this.props.navigation}/>
             </Container>
         );
     }
