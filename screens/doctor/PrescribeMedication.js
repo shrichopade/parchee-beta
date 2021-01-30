@@ -15,8 +15,7 @@ import DoctorFooter from './DoctorFooter.js';
 const allSteps = [
   { name: "Identify Patient", component: IdentifyPatient },
   { name: "Add Medication", component: AddMedication },
-  { name: "View Prescription", component: ViewPrescription },
-  { name: "Sign Prescription", component: SignPrescription }
+  { name: "View Prescription", component: ViewPrescription }
   ];
 
 /* Define your class */

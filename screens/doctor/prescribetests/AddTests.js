@@ -48,13 +48,12 @@ class AddTests extends Component {
     return (
       <Container style={dStyles.container}>
             <Content>
-                <Text style={dStyles.pageSubTitle}>My Patient Visits</Text>
-                   <NewTests/>
-                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <Card style={dStyles.cardStyle}>
                 <CardItem header bordered>
                   <Text style={dStyles.formTitle}> Prescribe Tests - {`Step ${currentStep} of ${totalSteps}`}</Text>
+                </CardItem>
+                <CardItem bordered>
+                  <NewTests/>
                 </CardItem>
                 <CardItem bordered style={dStyles.cardItemBodyStyle}>
                   <Form>

@@ -10,6 +10,7 @@ class ViewPrescription extends Component {
 
   constructor(props) {
     super(props);
+    this.goBack = this.goBack.bind(this);
     this.state = {
       totalSteps: "",
       currentStep: "",
@@ -48,13 +49,12 @@ class ViewPrescription extends Component {
     return (
       <Container style={dStyles.container}>
             <Content>
-                <Text style={dStyles.pageSubTitle}>My Patient Visits</Text>
-                   <NewPrescription/>
-                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <Card style={dStyles.cardStyle}>
                 <CardItem header bordered>
                   <Text style={dStyles.formTitle}> Prescribe Medication - {`Step ${currentStep} of ${totalSteps}`}</Text>
+                </CardItem>
+                <CardItem bordered>
+                  <NewPrescription/>
                 </CardItem>
                 <CardItem bordered style={dStyles.cardItemBodyStyle}>
                   <Form> 
@@ -62,7 +62,7 @@ class ViewPrescription extends Component {
                         <TouchableOpacity onPress={this.goBack} >
                           <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={this.nextStep} >
+                        <TouchableOpacity onPress={this.finish} >
                           <Thumbnail small source={require('../../images/submit.png')}/>
                         </TouchableOpacity>                
                     </View>

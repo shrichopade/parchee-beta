@@ -10,6 +10,7 @@ class AddMedication extends Component {
 
   constructor(props) {
     super(props);
+    this.goBack = this.goBack.bind(this);
     this.state = {
       totalSteps: "",
       currentStep: "",
@@ -20,7 +21,7 @@ class AddMedication extends Component {
   }
 
   static getDerivedStateFromProps = props => {
-    const { getTotalSteps, getCurrentStep, uploadDocument } = props;
+    const { getTotalSteps, getCurrentStep } = props;
     return {
       totalSteps: getTotalSteps(),
       currentStep: getCurrentStep()
@@ -48,13 +49,12 @@ class AddMedication extends Component {
     return (
       <Container style={dStyles.container}>
             <Content>
-                <Text style={dStyles.pageSubTitle}>My Patient Visits</Text>
-                   <NewPrescription/>
-                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <Card style={dStyles.cardStyle}>
                 <CardItem header bordered>
                   <Text style={dStyles.formTitle}> Prescribe Medication - {`Step ${currentStep} of ${totalSteps}`}</Text>
+                </CardItem>
+                <CardItem bordered>
+                  <NewPrescription/>
                 </CardItem>
                 <CardItem bordered style={dStyles.cardItemBodyStyle}>
                   <Form>
@@ -82,8 +82,7 @@ class AddMedication extends Component {
                         <TouchableOpacity onPress={this.goBack} >
                           <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
                         </TouchableOpacity>
-                        <Button success style={dStyles.buttonStyle} 
-                            onPress={() => this.props.navigation.navigate('PrescribeMedication')}>
+                        <Button success style={dStyles.buttonStyle} >
                             <Text style={dStyles.buttonText}>Add</Text>
                         </Button>
                         <Button success style={dStyles.buttonStyle}>
