@@ -70,7 +70,7 @@ class CapturePrescription extends Component {
                     </Item>
                     <View style={dStyles.buttonContainer}>
                       <TouchableOpacity onPress={this.nextStep} >
-                        <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
+                        <Thumbnail small source={require('../../../assets/app_assets/rightarrow.jfif')}/>                        
                       </TouchableOpacity>
                     </View>
                   </Form>

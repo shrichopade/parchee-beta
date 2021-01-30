@@ -64,7 +64,7 @@ const dStyles = StyleSheet.create({
         fontFamily: 'Arial',
         fontSize: 10,
         fontWeight: '400',
-        alignSelf: 'right'
+        alignSelf: 'auto'
     },
     labelText: {
         color: '#546467',

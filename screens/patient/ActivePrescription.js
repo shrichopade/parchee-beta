@@ -18,7 +18,7 @@ const ActivePrescription = () => (
       <DataTable.Cell style={styles.tableCellText}>Amoxycyline</DataTable.Cell>
       <DataTable.Cell>500 mg</DataTable.Cell>
       <DataTable.Cell>1-1-0</DataTable.Cell>
-      <DataTable.Cell><Thumbnail small square source={require('../images/tablet.jfif')}/></DataTable.Cell>
+      <DataTable.Cell><Thumbnail small square source={require('../images/tablet.jfif')}/></DataTable.Cell>      
       <DataTable.Cell><Thumbnail small source={require('../images/drjoshi.jfif')}/></DataTable.Cell>
       <DataTable.Cell></DataTable.Cell>
     </DataTable.Row>
