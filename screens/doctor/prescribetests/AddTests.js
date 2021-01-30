@@ -6,7 +6,7 @@ import { Container, Content, Text,Button, Form, Item,
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
 import NewTests from './NewTests.js';
 
-class IdentifyPatient extends Component {
+class AddTests extends Component {
 
   constructor(props) {
     super(props);
@@ -48,13 +48,12 @@ class IdentifyPatient extends Component {
     return (
       <Container style={dStyles.container}>
             <Content>
-                <Text style={dStyles.pageSubTitle}>My Patient Visits</Text>
-                   <NewTests/>
-                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <Card style={dStyles.cardStyle}>
                 <CardItem header bordered>
                   <Text style={dStyles.formTitle}> Prescribe Tests - {`Step ${currentStep} of ${totalSteps}`}</Text>
+                </CardItem>
+                <CardItem bordered>
+                  <NewTests/>
                 </CardItem>
                 <CardItem bordered style={dStyles.cardItemBodyStyle}>
                   <Form>
@@ -105,4 +104,4 @@ class IdentifyPatient extends Component {
   }
 }
 
-export default IdentifyPatient;
+export default AddTests;

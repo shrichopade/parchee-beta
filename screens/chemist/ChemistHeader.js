@@ -8,8 +8,9 @@ export default class ChemistHeader extends Component {
     return (
       <Footer style={headerStyles.headerBgColor}>
         <FooterTab>
-            <Button vertical>
-              <Icon name="alarm" /> 
+            <Button vertical onPress={() => this.props.navigation.navigate('ChemistHome')}>
+              {<Thumbnail style={headerStyles.headerFooterIcon} 
+                small square source={require('../images/home.png')}/> }
             </Button>
             <Button vertical>
               <Icon name="keypad" />
@@ -21,10 +22,7 @@ export default class ChemistHeader extends Component {
               <Icon name="medkit" />
             </Button>
             <Button vertical>
-              {/* <Thumbnail small source={require('../images/chemistprofile.jfif')}/> */}
-            </Button>
-            <Button vertical onPress={() => this.props.navigation.navigate('SignIn')}>
-              {/* <Thumbnail small source={require('../images/signout.jfif')}/> */}
+              { <Thumbnail small source={require('../images/chemistprofile.jfif')}/> }
             </Button>
           </FooterTab>
       </Footer>

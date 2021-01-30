@@ -39,6 +39,14 @@ const LastTenPatients = () => (
       <DataTable.Cell>In 3 months</DataTable.Cell>
       <DataTable.Cell>Refered testing</DataTable.Cell>
     </DataTable.Row>
+    <DataTable.Row>
+      <DataTable.Cell style={styles.tableCellText}>23/01/2021</DataTable.Cell>
+      <DataTable.Cell>Mahesh Joshi</DataTable.Cell>
+      <DataTable.Cell><Thumbnail small source={require('../images/drmote.png')}/></DataTable.Cell>
+      <DataTable.Cell>Kidney checkup</DataTable.Cell>
+      <DataTable.Cell>In 4 months</DataTable.Cell>
+      <DataTable.Cell>Revisit requested</DataTable.Cell>
+    </DataTable.Row>
 
     <DataTable.Pagination
       page={1}

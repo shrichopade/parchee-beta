@@ -17,8 +17,12 @@ export default class DoctorHome extends Component {
     render() {
         return (
             <Container>
-                <DoctorHeader />
-                <Content>
+                <DoctorHeader navigation={this.props.navigation} />
+                <Content style={dStyles.cardStyle}>
+                    <View style={dStyles.welcomeContainer}>
+                        <Text style={dStyles.welcomeLeft}>Good Morning Dr Kulkarni</Text>
+                        <Text style={dStyles.welcomeRight}>Date: 15/01/2021</Text>
+                    </View>
                     <Text style={dStyles.pageSubTitle}>My Patient Visits</Text>
                     <LastTenPatients/>
                     <View style={dStyles.buttonContainer}>
@@ -26,15 +30,13 @@ export default class DoctorHome extends Component {
                             onPress={() => this.props.navigation.navigate('PrescribeMedication')}>
                             <Text style={dStyles.buttonText}>Prescribe Medication</Text>
                         </Button>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <Button success style={dStyles.buttonStyle} 
                             onPress={() => this.props.navigation.navigate('PrescribeTests')}>
                             <Text style={dStyles.buttonText}>Prescribe Tests</Text>
                         </Button>
                     </View>
                 </Content>
-                <DoctorFooter />
+                <DoctorFooter navigation={this.props.navigation} />
         </Container>
         );
     }

@@ -78,14 +78,6 @@ class IdentifyPatient extends Component {
                 </CardItem>
               </Card>
             </Content>
-            <content>
-              <View style={dStyles.buttonContainer}>  
-                      <Button success style={dStyles.buttonStyle} 
-                              onPress={() => this.props.navigation.navigate('camera')}>
-                              <Text style={dStyles.buttonText}>Camera</Text>
-                      </Button>            
-              </View>     
-            </content>
           </Container>
     );
   }

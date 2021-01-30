@@ -10,18 +10,26 @@ const dStyles = StyleSheet.create({
     cardStyle: {
         padding:0,
         alignSelf: 'center',
-        width:'95%'
+        width:'97%'
     },
     cardItemBodyStyle: {
         padding:0,
         alignSelf: 'center'
     },
-    pageTitle: {
+    welcomeLeft: {
         color: '#4CAF50',
         fontFamily: 'Arial',
-        fontSize: 28,
+        fontSize: 12,
         fontWeight: '900',
-        alignSelf: 'center',
+        alignSelf: 'left',
+        marginVertical: 8
+    },
+    welcomeRight: {
+        color: '#4CAF50',
+        fontFamily: 'Arial',
+        fontSize: 12,
+        fontWeight: '900',
+        alignSelf: 'left',
         marginVertical: 8
     },
     pageSubTitle: {
@@ -65,6 +73,7 @@ const dStyles = StyleSheet.create({
         fontSize: 10,
         fontWeight: '400',
         alignSelf: 'auto'
+        marginVertical: 8
     },
     labelText: {
         color: '#546467',
@@ -98,6 +107,26 @@ const dStyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around'
     },
+    welcomeContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    imageTitle:{
+        width: 350,
+        height: 150,
+        alignSelf: 'center',
+        marginVertical: 8
+    },
+    imagePrescription:{
+        width: 191,
+        height: 263,
+        alignSelf: 'center',
+        borderWidth:1,
+        borderColor: '#4CAF50',
+        marginVertical: 8
+    }
+
 })
 
 export { dStyles }

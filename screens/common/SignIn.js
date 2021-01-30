@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, Image } from 'react-native';
 import { Container, Content, Text, Form, Item, 
   Input, Label, Card, CardItem, Button } from 'native-base';
 
@@ -44,13 +44,9 @@ export default class SignIn extends Component {
       return (
           <Container style={dStyles.container}>
             <Content>
-              <Text style={dStyles.pageTitle}>Welcome to Parchee App</Text>
-              <Text style={dStyles.pageSubTitle}>Your Medical Assistant</Text>
+              <Image source={require('../images/logo.PNG')} style={dStyles.imageTitle} />
               <Card style={dStyles.cardStyle}>
-                <CardItem header bordered>
-                  <Text style={dStyles.formTitle}> Sign In </Text>
-                </CardItem>
-                <CardItem bordered style={dStyles.cardItemBodyStyle}>
+                <CardItem style={dStyles.cardItemBodyStyle}>
                   <Form>
                     <Item stackedLabel>
                       <Label>Username (Email)</Label>
@@ -72,10 +68,9 @@ export default class SignIn extends Component {
                     <TouchableOpacity onPress={() => this.props.navigation.navigate('SignUp')}>
                       <Text style={dStyles.linkText}>Don't have an account? Sign Up</Text>
                     </TouchableOpacity>
+                    <Text style={dStyles.footerText}>Copyright Parchee, all rights reserved</Text>
+
                   </Form>
-                </CardItem>
-                <CardItem footer bordered>
-                  <Text style={dStyles.footerText}>Copyright Parchee, all rights reserved</Text>
                 </CardItem>
               </Card>
             </Content>

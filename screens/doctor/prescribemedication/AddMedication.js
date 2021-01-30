@@ -6,10 +6,11 @@ import { Container, Content, Text,Button, Form, Item,
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
 import NewPrescription from './NewPrescription.js';
 
-class IdentifyPatient extends Component {
+class AddMedication extends Component {
 
   constructor(props) {
     super(props);
+    this.goBack = this.goBack.bind(this);
     this.state = {
       totalSteps: "",
       currentStep: "",
@@ -20,7 +21,7 @@ class IdentifyPatient extends Component {
   }
 
   static getDerivedStateFromProps = props => {
-    const { getTotalSteps, getCurrentStep, uploadDocument } = props;
+    const { getTotalSteps, getCurrentStep } = props;
     return {
       totalSteps: getTotalSteps(),
       currentStep: getCurrentStep()
@@ -48,13 +49,12 @@ class IdentifyPatient extends Component {
     return (
       <Container style={dStyles.container}>
             <Content>
-                <Text style={dStyles.pageSubTitle}>My Patient Visits</Text>
-                   <NewPrescription/>
-                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <Card style={dStyles.cardStyle}>
                 <CardItem header bordered>
                   <Text style={dStyles.formTitle}> Prescribe Medication - {`Step ${currentStep} of ${totalSteps}`}</Text>
+                </CardItem>
+                <CardItem bordered>
+                  <NewPrescription/>
                 </CardItem>
                 <CardItem bordered style={dStyles.cardItemBodyStyle}>
                   <Form>
@@ -79,11 +79,10 @@ class IdentifyPatient extends Component {
                         onChangeText={(val) => this.inputValueUpdate(val, 'note')} />
                     </Item>
                     <View style={dStyles.buttonContainer}>
-                        <TouchableOpacity onPress={this.nextStep} >
-                        <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                        <TouchableOpacity onPress={this.goBack} >
+                          <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
                         </TouchableOpacity>
-                        <Button success style={dStyles.buttonStyle} 
-                            onPress={() => this.props.navigation.navigate('PrescribeMedication')}>
+                        <Button success style={dStyles.buttonStyle} >
                             <Text style={dStyles.buttonText}>Add</Text>
                         </Button>
                         <Button success style={dStyles.buttonStyle}>
@@ -93,7 +92,7 @@ class IdentifyPatient extends Component {
                             <Text style={dStyles.buttonText}>Delete</Text>
                         </Button>
                         <TouchableOpacity onPress={this.nextStep} >
-                        <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
+                          <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
                         </TouchableOpacity>
                     </View>
                   </Form>
@@ -105,4 +104,4 @@ class IdentifyPatient extends Component {
   }
 }
 
-export default IdentifyPatient;
+export default AddMedication;

@@ -20,13 +20,13 @@ export default class ViewAgency extends Component {
             <Container>
                 <PatientHeader navigation={this.props.navigation}/>
                 <Content>
-                    <Text style={dStyles.pageSubTitle}>View My Agencies</Text>
+                    <Text style={dStyles.pageSubTitle}>My Agencies</Text>
                     <DataTable>
                         <DataTable.Header style={styles.tableHeaderBgColor}>
                             <DataTable.Title sortDirection='ascending' style={styles.tableHeaderText}>Agency Id</DataTable.Title>
                             <DataTable.Title>Type</DataTable.Title>
-                            <DataTable.Title>Name</DataTable.Title>
-                            <DataTable.Title>Edit</DataTable.Title>
+                            <DataTable.Title>Name and Address</DataTable.Title>
+                            <DataTable.Title>Contact Number</DataTable.Title>
                             <DataTable.Title>Delete</DataTable.Title>
                         </DataTable.Header>
 
@@ -37,12 +37,8 @@ export default class ViewAgency extends Component {
                                 </TouchableOpacity>
                             </DataTable.Cell>
                             <DataTable.Cell style={styles.tableCellText}>Doctor</DataTable.Cell>
-                            <DataTable.Cell>Mr Prakash Datar, Kothrud, Pune</DataTable.Cell>
-                            <DataTable.Cell>
-                                <TouchableOpacity onPress={() => this.props.navigation.navigate('EditAgency')}>
-                                    <Text style={dStyles.linkText}>Edit</Text>
-                                </TouchableOpacity>
-                            </DataTable.Cell>                            
+                            <DataTable.Cell>Mr Prakash Datar, Kothrud, Pune</DataTable.Cell> 
+                            <DataTable.Cell>9887654324</DataTable.Cell>                      
                             <DataTable.Cell>
                                 <TouchableOpacity onPress={() => this.props.navigation.navigate('DeleteAgency')}>
                                     <Text style={dStyles.linkText}>Delete</Text>
@@ -57,12 +53,8 @@ export default class ViewAgency extends Component {
                                 </TouchableOpacity>
                             </DataTable.Cell>
                             <DataTable.Cell style={styles.tableCellText}>Chemist</DataTable.Cell>
-                            <DataTable.Cell>Mahalaxmi Medicals, Kothrud, Pune</DataTable.Cell>
-                            <DataTable.Cell>
-                                <TouchableOpacity onPress={() => this.props.navigation.navigate('EditAgency')}>
-                                    <Text style={dStyles.linkText}>Edit</Text>
-                                </TouchableOpacity>
-                            </DataTable.Cell>                            
+                            <DataTable.Cell>Mahalaxmi Medicals, Kothrud, Pune</DataTable.Cell>    
+                            <DataTable.Cell>9887276394</DataTable.Cell>                   
                             <DataTable.Cell>
                                 <TouchableOpacity onPress={() => this.props.navigation.navigate('DeleteAgency')}>
                                     <Text style={dStyles.linkText}>Delete</Text>
@@ -77,12 +69,8 @@ export default class ViewAgency extends Component {
                                 </TouchableOpacity>
                             </DataTable.Cell>
                             <DataTable.Cell style={styles.tableCellText}>Chemist</DataTable.Cell>
-                            <DataTable.Cell>Suresh Pharmacy, Deccan, Pune</DataTable.Cell>
-                            <DataTable.Cell>
-                                <TouchableOpacity onPress={() => this.props.navigation.navigate('EditAgency')}>
-                                    <Text style={dStyles.linkText}>Edit</Text>
-                                </TouchableOpacity>
-                            </DataTable.Cell>                            
+                            <DataTable.Cell>Suresh Pharmacy, Deccan, Pune</DataTable.Cell>  
+                            <DataTable.Cell>9889735423</DataTable.Cell>                      
                             <DataTable.Cell>
                                 <TouchableOpacity onPress={() => this.props.navigation.navigate('DeleteAgency')}>
                                     <Text style={dStyles.linkText}>Delete</Text>
@@ -100,10 +88,6 @@ export default class ViewAgency extends Component {
                         />
                     </DataTable>
                     <View style={dStyles.buttonContainer}>
-                        <Button success style={dStyles.buttonStyle} 
-                            onPress={() => this.props.navigation.navigate('PatientHome')}>
-                            <Text style={dStyles.buttonText}>Home</Text>
-                        </Button>
                         <Button success style={dStyles.buttonStyle} 
                             onPress={() => this.props.navigation.navigate('AddAgency')}>
                             <Text style={dStyles.buttonText}>Add Agency</Text>

@@ -14,11 +14,17 @@ import ResetPassword from './screens/common/ResetPassword';
 
 import PatientHome from './screens/patient/PatientHome';
 import UploadPrescription from './screens/patient/UploadPrescription';
+import SendToChemist from './screens/patient/SendToChemist';
 import AddAgency from './screens/patient/agency/AddAgency';
 import EditAgency from './screens/patient/agency/EditAgency';
 import ViewAgency from './screens/patient/agency/ViewAgency';
 import DeleteAgency from './screens/patient/agency/DeleteAgency';
 import ViewAgencyDetails from './screens/patient/agency/ViewAgencyDetails';
+import MyPrescriptions from './screens/patient/MyPrescriptions';
+import MyAppointments from './screens/patient/MyAppointments';
+import MyOrders from './screens/patient/MyOrders';
+import MyOffers from './screens/patient/MyOffers';
+import MyReminders from './screens/patient/MyReminders';
 
 import DoctorHome from './screens/doctor/DoctorHome';
 import PrescribeMedication from './screens/doctor/PrescribeMedication';
@@ -51,11 +57,17 @@ export default class App extends React.Component {
 
           <Stack.Screen name="PatientHome" component={PatientHome}/>
           <Stack.Screen name="UploadPrescription" component={UploadPrescription}/>
+          <Stack.Screen name="SendToChemist" component={SendToChemist}/>
           <Stack.Screen name="AddAgency" component={AddAgency}/>
           <Stack.Screen name="EditAgency" component={EditAgency}/>
           <Stack.Screen name="ViewAgency" component={ViewAgency}/>
           <Stack.Screen name="ViewAgencyDetails" component={ViewAgencyDetails}/>
           <Stack.Screen name="DeleteAgency" component={DeleteAgency}/>
+          <Stack.Screen name="MyPrescriptions" component={MyPrescriptions}/>
+          <Stack.Screen name="MyAppointments" component={MyAppointments}/>
+          <Stack.Screen name="MyOrders" component={MyOrders}/>
+          <Stack.Screen name="MyOffers" component={MyOffers}/>
+          <Stack.Screen name="MyReminders" component={MyReminders}/>
 
           <Stack.Screen name="DoctorHome" component={DoctorHome}/>
           <Stack.Screen name="PrescribeMedication" component={PrescribeMedication}/>

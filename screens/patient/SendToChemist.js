@@ -4,21 +4,20 @@ import { Container, Content} from 'native-base';
 import AnimatedMultistep from "react-native-animated-multistep";
 
 /* Define the steps  */
-import IdentifyPatient from "./prescribemedication/IdentifyPatient";
-import AddTests from "./prescribetests/AddTests";
-import ViewTests from "./prescribetests/ViewTests";
-import SignTests from "./prescribetests/SignTests";
-import DoctorHeader from './DoctorHeader.js';
-import DoctorFooter from './DoctorFooter.js';
+import SelectMedicine from "./uploadprescription/SelectMedicine";
+import SelectDelivery from "./uploadprescription/SelectDelivery";
+import SelectChemist from "./uploadprescription/SelectChemist";
+import PatientHeader from './PatientHeader';
+import PatientFooter from './PatientFooter';
 
 const allSteps = [
-  { name: "Identify Patient", component: IdentifyPatient },
-  { name: "Add Tests", component: AddTests },
-  { name: "View Tests", component: ViewTests }
-  ];
+  { name: "Select Medicines", component: SelectMedicine },
+  { name: "Select Delivery", component: SelectDelivery },
+  { name: "Select Chemist", component: SelectChemist }
+];
 
 /* Define your class */
-export default class PrescribeTests extends Component {
+export default class SendToChemist extends Component {
   /* define the method to be called when you go on next step */
 
   onNext = () => {
@@ -41,7 +40,7 @@ export default class PrescribeTests extends Component {
   render() {
     return (
       <Container>
-          <DoctorHeader navigation={this.props.navigation}/>
+          <PatientHeader navigation={this.props.navigation}/>
           <Content>
             <View style={{ flex: 1 }}>
               <AnimatedMultistep
@@ -56,7 +55,7 @@ export default class PrescribeTests extends Component {
               />
             </View>
           </Content>
-          <DoctorFooter navigation={this.props.navigation}/>
+          <PatientFooter navigation={this.props.navigation}/>
       </Container>
     );
   }

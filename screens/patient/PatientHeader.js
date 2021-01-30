@@ -7,20 +7,25 @@ export default class PatientHeader extends Component {
     return (
       <Footer style={headerStyles.headerBgColor}>
         <FooterTab>
-            <Button vertical>
-              <Icon name="alarm" /> 
+            <Button vertical onPress={() => this.props.navigation.navigate('PatientHome')}>
+              {<Thumbnail style={headerStyles.headerFooterIcon} 
+                small square source={require('../images/home.png')}/> }
+            </Button>
+            <Button vertical onPress={() => this.props.navigation.navigate('MyReminders')}>
+              {<Thumbnail style={headerStyles.headerFooterIcon} 
+                small square source={require('../images/alarm.png')}/> }
             </Button>
             <Button vertical>
-              <Icon name="keypad" />
+              {<Thumbnail style={headerStyles.headerFooterIcon} 
+                small square source={require('../images/qrcode.png')}/> }
+            </Button>
+            <Button vertical onPress={() => this.props.navigation.navigate('MyOffers')}>
+              {<Thumbnail style={headerStyles.headerFooterIcon} 
+                small square source={require('../images/offers.png')}/> }
             </Button>
             <Button vertical>
-              <Icon name="film" />
-            </Button>
-            <Button vertical>
-              <Icon name="medkit" />
-            </Button>
-            <Button vertical>
-              {/* <Thumbnail small source={require('../images/profile.jpg')}/> */}
+              {<Thumbnail style={headerStyles.headerFooterIcon} 
+                small source={require('../images/profile.jpg')}/> }
             </Button>
           </FooterTab>
       </Footer>

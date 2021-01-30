@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity, Image } from "react-native";
 import { Container, Content, Text, Form, Item, 
   Card, CardItem, Thumbnail } from 'native-base';
 
@@ -51,7 +51,7 @@ class ConfirmPrescription extends Component {
             <CardItem bordered style={dStyles.cardItemBodyStyle}>
               <Form>
                 <Item stackedLabel>
-                  <Thumbnail large source={require('../../images/prescription.jfif')}/>
+                  <Image source={require('../../images/prescription.jfif')} style={dStyles.imagePrescription} />
                 </Item>
                 <View style={dStyles.buttonContainer}>
                   <TouchableOpacity onPress={this.goBack} >
