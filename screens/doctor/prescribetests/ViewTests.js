@@ -6,7 +6,7 @@ import { Container, Content, Text,Button, Form, Item,
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
 import NewTests from './NewTests.js';
 
-class IdentifyPatient extends Component {
+class ViewTests extends Component {
 
   constructor(props) {
     super(props);
@@ -59,13 +59,12 @@ class IdentifyPatient extends Component {
                 <CardItem bordered style={dStyles.cardItemBodyStyle}>
                   <Form> 
                     <View style={dStyles.buttonContainer}>
-                        <TouchableOpacity onPress={this.nextStep} >
-                        <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                        <TouchableOpacity onPress={this.goBack} >
+                          <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
                         </TouchableOpacity>
-                        <Button success style={dStyles.buttonStyle} 
-                            onPress={() => this.props.navigation.navigate('PrescribeMedication')}>
-                            <Text style={dStyles.buttonText}>Sign</Text>
-                        </Button>                        
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('PrescribeMedication')} >
+                          <Thumbnail small source={require('../../images/submit.png')}/>
+                        </TouchableOpacity>                       
                     </View>
                   </Form>
                 </CardItem>
@@ -76,4 +75,4 @@ class IdentifyPatient extends Component {
   }
 }
 
-export default IdentifyPatient;
+export default ViewTests;

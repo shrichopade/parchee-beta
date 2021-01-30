@@ -89,10 +89,6 @@ export default class ViewAgency extends Component {
                     </DataTable>
                     <View style={dStyles.buttonContainer}>
                         <Button success style={dStyles.buttonStyle} 
-                            onPress={() => this.props.navigation.navigate('PatientHome')}>
-                            <Text style={dStyles.buttonText}>Home</Text>
-                        </Button>
-                        <Button success style={dStyles.buttonStyle} 
                             onPress={() => this.props.navigation.navigate('AddAgency')}>
                             <Text style={dStyles.buttonText}>Add Agency</Text>
                         </Button>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
+import { Container, Content} from 'native-base';
 import AnimatedMultistep from "react-native-animated-multistep";
 
 /* Define the steps  */
@@ -8,12 +9,12 @@ import AddMedication from "./prescribemedication/AddMedication";
 import ViewPrescription from "./prescribemedication/ViewPrescription";
 import CameraPage from "./prescribemedication/CameraPage";
 import SignPrescription from "./prescribemedication/SignPrescription";
- 
+import DoctorHeader from './DoctorHeader.js';
+import DoctorFooter from './DoctorFooter.js'; 
 
 const allSteps = [
   { name: "Identify Patient", component: IdentifyPatient },
   { name: "Add Medication", component: AddMedication },
-  { name: "Camera", component: CameraPage },
   { name: "View Prescription", component: ViewPrescription },
   { name: "Sign Prescription", component: SignPrescription }
   ];
@@ -41,18 +42,24 @@ export default class PrescribeMedication extends Component {
   /* render MultiStep */
   render() {
     return (
-      <View style={{ flex: 1 }}>
-        <AnimatedMultistep
-          steps={allSteps}
-          onFinish={this.finish}
-          onBack={this.onBack}
-          onNext={this.onNext}
-          comeInOnNext="bounceInUp"
-          OutOnNext="bounceOutDown"
-          comeInOnBack="bounceInDown"
-          OutOnBack="bounceOutUp"
-        />
-      </View>
+      <Container>
+          <DoctorHeader navigation={this.props.navigation}/>
+          <Content>
+            <View style={{ flex: 1 }}>
+              <AnimatedMultistep
+                steps={allSteps}
+                onFinish={this.finish}
+                onBack={this.onBack}
+                onNext={this.onNext}
+                comeInOnNext="bounceInUp"
+                OutOnNext="bounceOutDown"
+                comeInOnBack="bounceInDown"
+                OutOnBack="bounceOutUp"
+              />
+            </View>
+          </Content>
+          <DoctorFooter navigation={this.props.navigation}/>
+      </Container>
     );
   }
 }

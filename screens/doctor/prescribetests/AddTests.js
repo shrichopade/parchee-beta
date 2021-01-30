@@ -6,7 +6,7 @@ import { Container, Content, Text,Button, Form, Item,
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
 import NewTests from './NewTests.js';
 
-class IdentifyPatient extends Component {
+class AddTests extends Component {
 
   constructor(props) {
     super(props);
@@ -105,4 +105,4 @@ class IdentifyPatient extends Component {
   }
 }
 
-export default IdentifyPatient;
+export default AddTests;

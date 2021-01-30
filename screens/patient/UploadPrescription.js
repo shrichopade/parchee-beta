@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
+import { Container, Content} from 'native-base';
 import AnimatedMultistep from "react-native-animated-multistep";
 
 /* Define the steps  */
@@ -8,6 +9,8 @@ import ConfirmPrescription from "./uploadprescription/ConfirmPrescription";
 import SelectMedicine from "./uploadprescription/SelectMedicine";
 import SelectDelivery from "./uploadprescription/SelectDelivery";
 import SelectChemist from "./uploadprescription/SelectChemist";
+import PatientHeader from './PatientHeader';
+import PatientFooter from './PatientFooter';
 
 const allSteps = [
   { name: "Capture Prescription", component: CapturePrescription },
@@ -40,18 +43,24 @@ export default class UploadPrescription extends Component {
   /* render MultiStep */
   render() {
     return (
-      <View style={{ flex: 1 }}>
-        <AnimatedMultistep
-          steps={allSteps}
-          onFinish={this.finish}
-          onBack={this.onBack}
-          onNext={this.onNext}
-          comeInOnNext="bounceInUp"
-          OutOnNext="bounceOutDown"
-          comeInOnBack="bounceInDown"
-          OutOnBack="bounceOutUp"
-        />
-      </View>
+      <Container>
+          <PatientHeader navigation={this.props.navigation}/>
+          <Content>
+            <View style={{ flex: 1 }}>
+              <AnimatedMultistep
+                steps={allSteps}
+                onFinish={this.finish}
+                onBack={this.onBack}
+                onNext={this.onNext}
+                comeInOnNext="bounceInUp"
+                OutOnNext="bounceOutDown"
+                comeInOnBack="bounceInDown"
+                OutOnBack="bounceOutUp"
+              />
+            </View>
+          </Content>
+          <PatientFooter navigation={this.props.navigation}/>
+      </Container>
     );
   }
 }

@@ -7,8 +7,9 @@ export default class DoctorHeader extends Component {
     return (
       <Footer style={headerStyles.headerBgColor}>
         <FooterTab>
-            <Button vertical>
-              <Icon name="alarm" /> 
+            <Button vertical onPress={() => this.props.navigation.navigate('DoctorHome')}>
+              {<Thumbnail style={headerStyles.headerFooterIcon} 
+                small square source={require('../images/home.png')}/> }
             </Button>
             <Button vertical>
               <Icon name="keypad" />

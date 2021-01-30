@@ -90,9 +90,9 @@ class SelectChemist extends Component {
                     <TouchableOpacity onPress={this.goBack} >
                       <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
                     </TouchableOpacity>
-                    <Button iconLeft style={dStyles.buttonStyle}  onPress={this.sendParcheeToChemist}>
-                        <Text style={dStyles.buttonText}>&nbsp;&nbsp;Send to Chemist&nbsp;&nbsp;</Text>
-                    </Button>
+                    <TouchableOpacity  onPress={this.sendParcheeToChemist} >
+                      <Thumbnail small source={require('../../images/submit.png')}/>
+                    </TouchableOpacity>
                   </View>
               </Form>
             </CardItem>
