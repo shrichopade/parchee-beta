@@ -19,13 +19,11 @@ const allSteps = [
 /* Define your class */
 export default class SendToChemist extends Component {
   /* define the method to be called when you go on next step */
-
   onNext = () => {
     console.log("Next");
   };
 
   /* define the method to be called when you go on back step */
-
   onBack = () => {
     console.log("Back");
   };
