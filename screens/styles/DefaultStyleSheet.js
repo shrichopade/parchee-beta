@@ -72,7 +72,7 @@ const dStyles = StyleSheet.create({
         fontFamily: 'Arial',
         fontSize: 10,
         fontWeight: '400',
-        alignSelf: 'auto'
+        alignSelf: 'auto',
         marginVertical: 8
     },
     labelText: {
