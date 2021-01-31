@@ -1,6 +1,6 @@
 To get latest changes from GIT
 =============================
-git pull origin
+git pull origin master
 
 
 
