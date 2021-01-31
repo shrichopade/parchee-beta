@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Footer, FooterTab, Button, Icon, Thumbnail } from 'native-base';
+import { footerStyles } from '../styles/footerStyles.js';
 
 
 export default class ChemistFooter extends Component {
