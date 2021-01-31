@@ -6,6 +6,7 @@ import { Container, Content, Text,Button, Form, Item,
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
 import NewPrescription from './NewPrescription.js';
 
+
 class ViewPrescription extends Component {
 
   constructor(props) {
@@ -60,7 +61,7 @@ class ViewPrescription extends Component {
                   <Form> 
                     <View style={dStyles.buttonContainer}>
                         <TouchableOpacity onPress={this.goBack} >
-                          <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                          <Thumbnail small source={require('../../images/leftarrow.png')}/>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={this.finish} >
                           <Thumbnail small source={require('../../images/submit.png')}/>

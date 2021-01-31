@@ -3,7 +3,8 @@ import { TouchableOpacity, Image } from 'react-native';
 import { Container, Content, Text, Form, Item, 
   Input, Label, Card, CardItem, Button } from 'native-base';
 
-import { dStyles } from '../styles/DefaultStyleSheet.js'
+import { dStyles } from '../styles/DefaultStyleSheet.js';
+
 
 export default class SignIn extends Component {
 
@@ -44,7 +45,7 @@ export default class SignIn extends Component {
       return (
           <Container style={dStyles.container}>
             <Content>
-              <Image source={require('../images/logo.PNG')} style={dStyles.imageTitle} />
+              <Image source={require('../images/Logo.png')} style={dStyles.imageTitle} />
               <Card style={dStyles.cardStyle}>
                 <CardItem style={dStyles.cardItemBodyStyle}>
                   <Form>

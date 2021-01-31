@@ -6,6 +6,7 @@ import { Container, Content,Button, Text, Form, Item,
 
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
 
+
 class IdentifyPatient extends Component {
 
   constructor(props) {
@@ -71,7 +72,7 @@ class IdentifyPatient extends Component {
                     </Item>                  
                     <View style={dStyles.buttonContainer}>
                       <TouchableOpacity onPress={this.nextStep} >
-                        <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
+                        <Thumbnail small source={require('../../images/rightarrow.png')}/>
                       </TouchableOpacity>
                     </View>
                   </Form>

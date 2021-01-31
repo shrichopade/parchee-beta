@@ -5,6 +5,8 @@ import { Container, Content, Text,Button, Form, Item,
 
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
 import NewTests from './NewTests.js';
+import leftarrow from '../../images/leftarrow.png';
+import submit from '../../images/submit.png';
 
 class ViewTests extends Component {
 
@@ -59,7 +61,7 @@ class ViewTests extends Component {
                   <Form> 
                     <View style={dStyles.buttonContainer}>
                         <TouchableOpacity onPress={this.goBack} >
-                          <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                          <Thumbnail small source={require('../../images/leftarrow.png')}/>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => this.props.navigation.navigate('PrescribeMedication')} >
                           <Thumbnail small source={require('../../images/submit.png')}/>

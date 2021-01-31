@@ -6,6 +6,7 @@ import { Container, Content, Text,Button, Form, Item,
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
 import NewPrescription from './NewPrescription.js';
 
+
 class AddMedication extends Component {
 
   constructor(props) {
@@ -80,7 +81,7 @@ class AddMedication extends Component {
                     </Item>
                     <View style={dStyles.buttonContainer}>
                         <TouchableOpacity onPress={this.goBack} >
-                          <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                          <Thumbnail small source={require('../../images/leftarrow.png')}/>
                         </TouchableOpacity>
                         <Button success style={dStyles.buttonStyle} >
                             <Text style={dStyles.buttonText}>Add</Text>
@@ -92,7 +93,7 @@ class AddMedication extends Component {
                             <Text style={dStyles.buttonText}>Delete</Text>
                         </Button>
                         <TouchableOpacity onPress={this.nextStep} >
-                          <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
+                          <Thumbnail small source={require('../../images/rightarrow.png')}/>
                         </TouchableOpacity>
                     </View>
                   </Form>

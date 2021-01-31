@@ -6,6 +6,7 @@ import { Container, Content, Text,Button, Form, Item,
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
 import NewTests from './NewTests.js';
 
+
 class AddTests extends Component {
 
   constructor(props) {
@@ -79,7 +80,7 @@ class AddTests extends Component {
                     </Item>
                     <View style={dStyles.buttonContainer}>
                         <TouchableOpacity onPress={this.nextStep} >
-                        <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                          <Thumbnail small source={require('../../images/leftarrow.png')}/>
                         </TouchableOpacity>
                         <Button success style={dStyles.buttonStyle} 
                             onPress={() => this.props.navigation.navigate('PrescribeTests')}>
@@ -92,7 +93,7 @@ class AddTests extends Component {
                             <Text style={dStyles.buttonText}>Delete</Text>
                         </Button>
                         <TouchableOpacity onPress={this.nextStep} >
-                        <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
+                          <Thumbnail small source={require('../../images/rightarrow.png')}/>
                         </TouchableOpacity>
                     </View>
                   </Form>

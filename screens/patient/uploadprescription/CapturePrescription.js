@@ -3,6 +3,7 @@ import { View, TouchableOpacity } from "react-native";
 import { Container, Content, Text, Form, Item, 
   Input, Label, Card, CardItem, Thumbnail } from 'native-base';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+// import rightarrow from '../../../assets/app_assets/rightarrow.png';
 
 import { dStyles } from '../../styles/DefaultStyleSheet.js'
 import { styles } from '../../styles/defaultStyles.js'
@@ -102,7 +103,8 @@ class CapturePrescription extends Component {
                     </Item>
                     <View style={dStyles.buttonContainer}>
                       <TouchableOpacity onPress={this.nextStep} >
-                        <Thumbnail small source={require('../../../assets/app_assets/rightarrow.jfif')}/>                        
+                        {/* <Thumbnail small source={rightarrow}/>  */}
+                        <Thumbnail small source={require('../../images/rightarrow.png')}/>                        
                       </TouchableOpacity>
                     </View>
                   </Form>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Footer, FooterTab, Button, Icon, Text, Thumbnail } from 'native-base';
-import { headerStyles } from '../styles/headerStyles.js'
+import { headerStyles } from '../styles/headerStyles.js';
+
 
 export default class DoctorHeader extends Component {
   render() {
@@ -21,7 +22,7 @@ export default class DoctorHeader extends Component {
               <Icon name="medkit" />
             </Button>
             <Button vertical>
-              { <Thumbnail small source={require('../images/drprofile.jfif')}/> }
+              { <Thumbnail small source={require('../images/drprofile.png')}/> }
             </Button>
           </FooterTab>
       </Footer>

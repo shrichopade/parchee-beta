@@ -7,13 +7,13 @@ const AdvtBanner = () => (
     <Card> 
         <CardItem>
             <Body style={styles.buttonContainer}>           
-                <Thumbnail large square source={require('../images/advtBanner-1.jfif')} 
+                <Thumbnail large square source={require('../images/advtBanner-1.png')} 
                     style={{width:'23%'}}/>
                 <Thumbnail large square source={require('../images/advtBanner-2.png')} 
                     style={{width:'23%'}}/>
-                <Thumbnail large square source={require('../images/advtBanner-3.jfif')} 
+                <Thumbnail large square source={require('../images/advtBanner-3.png')} 
                     style={{width:'23%'}}/>
-                <Thumbnail large square source={require('../images/advtBanner-4.jfif')} 
+                <Thumbnail large square source={require('../images/advtBanner-4.png')} 
                     style={{width:'23%'}}/>
             </Body>
         </CardItem>

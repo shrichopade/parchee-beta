@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { DataTable } from 'react-native-paper';
 import { Thumbnail } from 'native-base';
-import { styles } from '../../styles/defaultStyles.js'
+import { styles } from '../../styles/defaultStyles.js';
+
 
 const NewTests = () => (
   <DataTable>
@@ -17,7 +18,7 @@ const NewTests = () => (
       <DataTable.Cell style={styles.tableCellText}>Chest X-Ray</DataTable.Cell>
       <DataTable.Cell>Chest X Ray</DataTable.Cell>
       <DataTable.Cell> Tomorrow</DataTable.Cell>
-      <DataTable.Cell><Thumbnail small square source={require('../../images/tablet.jfif')}/></DataTable.Cell>
+      <DataTable.Cell><Thumbnail small square source={require('../../images/tablet.png')}/></DataTable.Cell>
       <DataTable.Cell></DataTable.Cell>
     </DataTable.Row>
 
@@ -25,7 +26,7 @@ const NewTests = () => (
       <DataTable.Cell>Blood Tests</DataTable.Cell>
       <DataTable.Cell>Lipid Profile , HBA1C, Thyroid Function , Kidney Function</DataTable.Cell>
       <DataTable.Cell>Tomororw</DataTable.Cell>
-      <DataTable.Cell><Thumbnail small square source={require('../../images/capsule.jfif')}/></DataTable.Cell>
+      <DataTable.Cell><Thumbnail small square source={require('../../images/capsule.png')}/></DataTable.Cell>
       <DataTable.Cell>14 hr fasting before tests</DataTable.Cell>
     </DataTable.Row>
 
@@ -33,7 +34,7 @@ const NewTests = () => (
       <DataTable.Cell>Blood Test</DataTable.Cell>
       <DataTable.Cell>HBA1C, Kidney Function</DataTable.Cell>
       <DataTable.Cell>After 1month</DataTable.Cell>
-      <DataTable.Cell><Thumbnail small square source={require('../../images/insulin.jfif')}/></DataTable.Cell>
+      <DataTable.Cell><Thumbnail small square source={require('../../images/insulin.png')}/></DataTable.Cell>
       <DataTable.Cell> </DataTable.Cell>
     </DataTable.Row>
 

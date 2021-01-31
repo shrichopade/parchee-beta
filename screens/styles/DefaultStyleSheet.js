@@ -21,7 +21,7 @@ const dStyles = StyleSheet.create({
         fontFamily: 'Arial',
         fontSize: 12,
         fontWeight: '900',
-        alignSelf: 'left',
+        alignSelf: 'auto',
         marginVertical: 8
     },
     welcomeRight: {
@@ -29,7 +29,7 @@ const dStyles = StyleSheet.create({
         fontFamily: 'Arial',
         fontSize: 12,
         fontWeight: '900',
-        alignSelf: 'left',
+        alignSelf: 'center',
         marginVertical: 8
     },
     pageSubTitle: {
@@ -72,7 +72,7 @@ const dStyles = StyleSheet.create({
         fontFamily: 'Arial',
         fontSize: 10,
         fontWeight: '400',
-        alignSelf: 'auto',
+        alignSelf: 'center',
         marginVertical: 8
     },
     labelText: {

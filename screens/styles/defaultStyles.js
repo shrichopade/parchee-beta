@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
     width: '500',
     height: '40',
     fontSize: 18,
-    fontColor: '#101010',
     color: '#101010'
   },
   checkboxInput: {

@@ -3,8 +3,8 @@ import { DataTable } from 'react-native-paper';
 import { View } from 'react-native';
 import { Container, Content, Text, Thumbnail, Card, CardItem, Button, ListItem } from 'native-base';
 
-import { dStyles } from '../styles/DefaultStyleSheet.js'
-import { styles } from '../styles/defaultStyles.js'
+import { dStyles } from '../styles/DefaultStyleSheet.js';
+import { styles } from '../styles/defaultStyles.js';
 
 export default class OrderDetails extends Component {
   constructor() {
@@ -59,21 +59,24 @@ export default class OrderDetails extends Component {
                     <DataTable.Row>
                         <DataTable.Cell style={styles.tableCellText}>Amoxycyline</DataTable.Cell>
                         <DataTable.Cell>500 mg</DataTable.Cell>
-                        <DataTable.Cell><Thumbnail small square source={require('../images/tablet.jfif')}/></DataTable.Cell>
+                        {/* <DataTable.Cell><Thumbnail small square source={tablet}/></DataTable.Cell> */}
+                        <DataTable.Cell><Thumbnail small square source={require('../images/tablet.png')}/></DataTable.Cell>
                         <DataTable.Cell>90</DataTable.Cell>
                     </DataTable.Row>
 
                     <DataTable.Row>
                         <DataTable.Cell>Amlodipine</DataTable.Cell>
                         <DataTable.Cell>10 mg</DataTable.Cell>
-                        <DataTable.Cell><Thumbnail small square source={require('../images/capsule.jfif')}/></DataTable.Cell> 
+                        {/* <DataTable.Cell><Thumbnail small square source={capsule}/></DataTable.Cell>  */}
+                        <DataTable.Cell><Thumbnail small square source={require('../images/capsule.png')}/></DataTable.Cell> 
                         <DataTable.Cell>60</DataTable.Cell>
                     </DataTable.Row>
 
                     <DataTable.Row>
                         <DataTable.Cell>Novolin Insulin</DataTable.Cell>
                         <DataTable.Cell>30 ml</DataTable.Cell>
-                        <DataTable.Cell><Thumbnail small square source={require('../images/insulin.jfif')}/></DataTable.Cell> 
+                        {/* <DataTable.Cell><Thumbnail small square source={insulin}/></DataTable.Cell>  */}
+                        <DataTable.Cell><Thumbnail small square source={require('../images/insulin.png')}/></DataTable.Cell> 
                         <DataTable.Cell>30</DataTable.Cell>
                     </DataTable.Row>
                   </DataTable>

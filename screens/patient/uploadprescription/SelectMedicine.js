@@ -3,7 +3,10 @@ import { View, TouchableOpacity } from "react-native";
 import { Container, Content, Text, Form, ListItem, CheckBox, Body, 
   Card, CardItem, Thumbnail } from 'native-base';
 
-import { dStyles } from '../../styles/DefaultStyleSheet.js'
+import { dStyles } from '../../styles/DefaultStyleSheet.js';
+import leftarrow from '../../images/leftarrow.png';
+import rightarrow from '../../images/rightarrow.png';
+
 
 class SelectMedicine extends Component {
 
@@ -76,11 +79,13 @@ class SelectMedicine extends Component {
                 </ListItem>
                 <View style={dStyles.buttonContainer}>
                   <TouchableOpacity onPress={this.goBack} >
-                    <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                    <Thumbnail small source={leftarrow}/>
+                    {/* <Thumbnail small source={require('../../images/leftarrow.png')}/> */}
                   </TouchableOpacity>
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <TouchableOpacity onPress={this.nextStep} >
-                    <Thumbnail small source={require('../../images/rightarrow.jfif')}/>
+                    <Thumbnail small source={rightarrow}/>
+                    {/* <Thumbnail small source={require('../../images/rightarrow.png')}/> */}
                   </TouchableOpacity>
                 </View>
               </Form>

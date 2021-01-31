@@ -3,7 +3,10 @@ import { View, TouchableOpacity } from "react-native";
 import { Container, Content, Text, Form, Radio, ListItem, Thumbnail,
   Left, Right, Card, CardItem, Button } from 'native-base';
 
-import { dStyles } from '../../styles/DefaultStyleSheet.js'
+import { dStyles } from '../../styles/DefaultStyleSheet.js';
+import leftarrow from '../../images/leftarrow.png';
+import rightarrow from '../../images/rightarrow.png';
+import submit from '../../images/submit.png';
 
 class SelectChemist extends Component {
 
@@ -88,10 +91,12 @@ class SelectChemist extends Component {
                   </ListItem>
                   <View style={dStyles.buttonContainer}>
                     <TouchableOpacity onPress={this.goBack} >
-                      <Thumbnail small source={require('../../images/leftarrow.jfif')}/>
+                      <Thumbnail small source={leftarrow}/>
+                      {/* <Thumbnail small source={require('../../images/leftarrow.png')}/> */}
                     </TouchableOpacity>
                     <TouchableOpacity  onPress={this.sendParcheeToChemist} >
-                      <Thumbnail small source={require('../../images/submit.png')}/>
+                      <Thumbnail small source={submit}/>
+                      {/* <Thumbnail small source={require('../../images/submit.png')}/> */}
                     </TouchableOpacity>
                   </View>
               </Form>

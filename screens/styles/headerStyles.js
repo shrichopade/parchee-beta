@@ -8,7 +8,7 @@ const headerStyles = StyleSheet.create({
     headerTitle: {
         fontSize: 20,
         fontFamily: 'Arial',
-        color: '000fff',
+        color: '#000fff',
         fontWeight: '500',
         marginVertical: 15
     },

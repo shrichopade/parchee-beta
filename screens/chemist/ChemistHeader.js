@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Footer, FooterTab, Button, Icon, Thumbnail } from 'native-base';
-import { headerStyles } from '../styles/headerStyles.js'
+import { headerStyles } from '../styles/headerStyles.js';
+
 
 export default class ChemistHeader extends Component {
   
@@ -10,7 +11,7 @@ export default class ChemistHeader extends Component {
         <FooterTab>
             <Button vertical onPress={() => this.props.navigation.navigate('ChemistHome')}>
               {<Thumbnail style={headerStyles.headerFooterIcon} 
-                small square source={require('../images/home.png')}/> }
+                  small square source={require('../images/home.png')}/> }
             </Button>
             <Button vertical>
               <Icon name="keypad" />
@@ -22,7 +23,7 @@ export default class ChemistHeader extends Component {
               <Icon name="medkit" />
             </Button>
             <Button vertical>
-              { <Thumbnail small source={require('../images/chemistprofile.jfif')}/> }
+              { <Thumbnail small source={require('../images/chemistprofile.png')}/> }
             </Button>
           </FooterTab>
       </Footer>
