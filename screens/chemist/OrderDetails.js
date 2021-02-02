@@ -90,7 +90,7 @@ export default class OrderDetails extends Component {
                     </Button>
                     <Button success style={dStyles.buttonStyle}
                         onPress={() => this.props.navigation.navigate('ChemistHome', {orderStatus:this.props.route.params.orderStatus})}>
-                        <Text style={dStyles.buttonText}>{isOrderStatusOpen?'Dispatched':''}</Text>
+                        <Text style={dStyles.buttonText}>{isOrderStatusOpen?'Dispatched':'Home'}</Text>
                     </Button> 
                 </View>
             </Card>

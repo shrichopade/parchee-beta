@@ -59,26 +59,30 @@ class AddMedication extends Component {
                 </CardItem>
                 <CardItem bordered style={dStyles.cardItemBodyStyle}>
                   <Form>
-                    <Item stackedLabel>
-                      <Label>Medication</Label>
-                      <Input value={this.state.medication} 
-                        onChangeText={(val) => this.inputValueUpdate(val, 'medication')} />
-                    </Item>
-                    <Item stackedLabel>
-                      <Label>Strength</Label>
-                      <Input value={this.state.strength} 
-                        onChangeText={(val) => this.inputValueUpdate(val, 'strength')} />
-                    </Item>
-                    <Item stackedLabel>
-                      <Label>Dosage</Label>
-                      <Input value={this.state.dosage} 
-                        onChangeText={(val) => this.inputValueUpdate(val, 'dosage')} />
-                    </Item>
-                    <Item stackedLabel>
-                      <Label>Notes</Label>
-                      <Input value={this.state.note} 
-                        onChangeText={(val) => this.inputValueUpdate(val, 'note')} />
-                    </Item>
+                    <View style={dStyles.buttonContainer}>
+                      <Item stackedLabel>
+                        <Label>Medication</Label>
+                        <Input value={this.state.medication} 
+                          onChangeText={(val) => this.inputValueUpdate(val, 'medication')} />
+                      </Item>
+                      <Item stackedLabel>
+                        <Label>Strength</Label>
+                        <Input value={this.state.strength} 
+                          onChangeText={(val) => this.inputValueUpdate(val, 'strength')} />
+                      </Item>
+                    </View>
+                    <View style={dStyles.buttonContainer}>
+                      <Item stackedLabel>
+                        <Label>Dosage</Label>
+                        <Input value={this.state.dosage} 
+                          onChangeText={(val) => this.inputValueUpdate(val, 'dosage')} />
+                      </Item>
+                      <Item stackedLabel>
+                        <Label>Notes</Label>
+                        <Input value={this.state.note} 
+                          onChangeText={(val) => this.inputValueUpdate(val, 'note')} />
+                      </Item>
+                    </View>
                     <View style={dStyles.buttonContainer}>
                         <TouchableOpacity onPress={this.goBack} >
                           <Thumbnail small source={require('../../images/leftarrow.png')}/>
