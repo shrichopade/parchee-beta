@@ -45,7 +45,7 @@ export default class SignIn extends Component {
       return (
           <Container style={dStyles.container}>
             <Content>
-              <Image source={require('../images/logo1.PNG')} style={dStyles.imageTitle} />
+              <Image source={require('../images/parchee-logo.png')} style={dStyles.imageTitle} />
               <Card style={dStyles.cardStyle}>
                 <CardItem style={dStyles.cardItemBodyStyle}>
                   <Form>
